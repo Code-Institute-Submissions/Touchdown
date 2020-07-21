@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://code.jquery.com/jquery-3.5.1.js"
-		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Touchdown</title>
+  </head>
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
-		integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous" />
-	<link rel="stylesheet" href="style.css" />
-	<title>Touchdown</title>
-</head>
-
-<body>
-	<header>
-    <h1 class="title">Touchdown</h1>
-	</header>
-	<main>
-    Hello World
+  <body>
+    <header>
+      <h1 class="title">Touchdown <i class="fab fa-football-ball"></i></h1>
+    </header>
+    <main>
+      <div class="row">
+        <div class="col-lg-4 col-sm-12">
+          
+        </div>
+        <div class="col-lg-8 col-sm-12">
+          <div class="container">
+            <div class="row">
+              <div class="empty"></div>
+              <div data-id="kick" class="card kick">
+                Kick <img src="assets/images/kick.jpg" />
+              </div>
+              <div class="empty"></div>
+            </div>
+            <div class="row">
+              <div data-id="pass" class="card pass">
+                Pass<img src="assets/images/pass.jpg" />
+              </div>
+              <div class="empty"> <button id="play-btn" class="btn btn-lg btn-success">Play</button></div>
+              <div data-id="rush" class="card rush">
+                Rush <img src="assets/images/rush.jpg" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="empty"></div>
+              <div data-id="run" class="card run">
+                Run <img src="assets/images/run.jpg" />
+              </div>
+              <div class="empty"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-	<footer>
-		<div class="container-fluid"></div>
-	</footer>
-
-</body>
-<script src="assets/js/logic.js"></script>
-
+    <footer>
+      <div class="container-fluid"></div>
+    </footer>
+  </body>
+  <script src="assets/js/logic.js"></script>
 </html>
