@@ -31,25 +31,38 @@ const playOrder = [kick, pass, run, rush];
 var currentGame = [];
 var difficulty = Veteran;
 var clicked = [];
-var round = 2;
-var playTypeString;
+var round = 1;
+var lives = 3;
+var playTypeId;
 var playTypeObject;
-var randomOrder = []
+var randomOrder = [];
+var playType;
+
+//---------Restart Function--- Brings game to the begining------
+const restart = () => {
+  clicked = [];
+  round = 1;
+  lives = 3;
+  randomOrder = [];
+  makeGameSequence();
+};
+
 //-------- CREATES A NEW AND RANDOMISED CURRENT GAME LIST---BASED ON ROUND (each round increases by one)-----//
 
-// let makeGameSequence = () => {
-for (let x = 0; x < round; x++) {
-  var y = Math.round(Math.random() * (playOrder.length - 1));
-  currentGame.push(playOrder[y]);
-}
-console.log(currentGame); //---DEVELOPMENT VIEW
-playTypeObject = currentGame[0];
-playTypeString = playTypeObject.getAttribute("data-id");
-randomOrder.push(playTypeString);
-
-console.log(playTypeString);
-// }
-// makeGameSequence();
+let makeGameSequence = () => {
+//   for (let x = 0; x < round; x++) {
+    var y = Math.round(Math.random() * (playOrder.length - 1));
+    currentGame.push(playOrder[y]);
+//   }
+  console.log(currentGame); //---DEVELOPMENT VIEW
+  for (i in currentGame) {
+    playTypeObject = currentGame[i];
+    playTypeId = playTypeObject.getAttribute("data-id");
+    randomOrder.push(playTypeId);
+    i++;
+  }
+};
+makeGameSequence();
 // ------- FLASH FUNCTION INITIATES HIGHLIGHT ON CARD----//
 
 const flash = (card) => {
@@ -69,41 +82,36 @@ $("#play-btn").click(function () {
   main();
 });
 
-//-------USER SELECTION--------------------------------------------------
-//   $(".card").click(function () {
-//     $(this).addClass("active");
-//     setTimeout(function () {
-//       $(this).removeClass("active");
-//     }, 200);
-//     var id = $(this).attr("data-id"); //--This returns the data-id of the card the user has clicked--------
-//     clicked.push(id); //-------RECORDS DATA ID TO ARRAY-----------
-//     console.log(clicked);
-//   });
-
-let canClick = false;
-var playType;
 const cardClick = (card) => {
   playType = card.getAttribute("data-id");
   console.log(playType);
   clicked.push(playType);
   let choice = clicked.shift();
-  let correctAnswer = playTypeString;
-    if (choice === correctAnswer) {
-       clicked.shift()
-       randomOrder.shift();
-      console.log("Correct!");
-    } 
-    if(choice !== correctAnswer){
-        console.log("Incorrect");
-
+  let correctAnswer = randomOrder.shift();
+  if (lives > 0) {
+    if (clicked.length === randomOrder.length) {
+      if (choice === correctAnswer) {
+        clicked = [];
+        alert(`You completed round ${round}!`);
+        randomOrder = [];
+        round += 1;
+        makeGameSequence();
+      } else if (choice !== correctAnswer) {
+        alert("INCORRECT. YOU LOSE 1 LIFE!");
+        clicked = [];
+        currentGame = currentGame;
+        lives -= 1;
+      }
+    } else {
+      console.log("Make Selection!");
     }
-}
+  } else {
+      alert("OUT OF LIVES! GAME OVER!")
+  }
+};
 //----------main function iterates through currentGame (randomised sequence) and flashes each card within
 const main = async () => {
   for (let card of currentGame) {
     await flash(card);
   }
 };
-
-canClick = true;
-
