@@ -36,23 +36,24 @@
           <div class="container">
             <div class="row">
               <div class="empty"></div>
-              <div data-id="kick" class="card kick">
+              <div onclick="cardClick(event.currentTarget)" data-id="kick" class="card kick">
                 Kick <img src="assets/images/kick.jpg" />
               </div>
               <div class="empty"></div>
             </div>
             <div class="row">
-              <div data-id="pass" class="card pass">
+              <div onclick="cardClick(event.currentTarget)"  data-id="pass" class="card pass">
                 Pass<img src="assets/images/pass.jpg" />
               </div>
-              <div class="empty"> <button id="play-btn" class="btn btn-lg btn-success">Play</button></div>
-              <div data-id="rush" class="card rush">
+              <div class="empty"> <button id="play-btn" class="btn btn-lg btn-success">Play</button><br><br><button onclick = "restart()" id="restart-btn" class="btn btn-sm btn-danger">Restart</button></div>
+              
+              <div onclick="cardClick(event.currentTarget)"  data-id="rush" class="card rush">
                 Rush <img src="assets/images/rush.jpg" />
               </div>
             </div>
             <div class="row">
               <div class="empty"></div>
-              <div data-id="run" class="card run">
+              <div onclick="cardClick(event.currentTarget)" data-id="run" class="card run">
                 Run <img src="assets/images/run.jpg" />
               </div>
               <div class="empty"></div>
