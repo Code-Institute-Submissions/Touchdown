@@ -44,9 +44,22 @@ var playTypeObject;
 var randomOrder = [];
 var playType;
 
+//------Restart- Confirmation-----------
+const restartCheck = () => {
+  if (
+    confirm("Are you sure you want to restart? Your progress will be lost.")
+  ) {
+    restart();
+  } else {
+    return false;
+  }
+};
+
 //---------Restart Function--- Brings game to the begining------
 const restart = () => {
   clicked = [];
+  $("#round").text("1");
+  $("#play-btn").text("Start Game");
   round = 1;
   lives = 2;
   randomOrder = [];
@@ -81,9 +94,9 @@ makeGameSequence();
 
 const flash = (card) => {
   return new Promise((resolve, reject) => {
-    card.className += " active";
+    card.className += " flash";
     setTimeout(() => {
-      card.className = card.className.replace(" active", "");
+      card.className = card.className.replace(" flash", "");
       setTimeout(() => {
         //-----allows for repeating playtypes in the code so there is a gap between flashes-----
         resolve();
@@ -98,6 +111,7 @@ $("#play-btn").click(function () {
 
 //----------Play button initiates main function which iterates through currentGame (randomised sequence) and flashes each card
 const main = async () => {
+  $("#round").text(`${round}`);
   canClick = false;
   for (let card of currentGame) {
     await flash(card);
@@ -142,13 +156,20 @@ const cardClick = (card) => {
     if (choice === answer) {
       randomOrder.shift();
       console.log("correct");
-      alert(`You completed round ${round}!`);
+      $("#message").text(`Correct, You completed round ${round}!`);
+      setTimeout(function () {
+        $("#message").text("");
+      }, 3000);
       round += 1;
+      setTimeout(function () {
+        $("#play-btn").text(`Round ${round}`);
+      }, 1000);
       makeGameSequence();
     } else if (choice !== answer) {
       console.log("INCORRECT. YOU LOSE 1 LIFE!");
       clicked = [];
       lives -= 1;
+      $("#lives").removeClass(".heart");
     }
   } else {
     console.log("select more");

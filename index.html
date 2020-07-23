@@ -38,6 +38,54 @@
           </div>
         </div>
       </div>
+      <div class="row container-fluid status">
+        <div class="col-4">
+          Round:
+          <div id="round"></div>
+        </div>
+        <div class="col-4">
+          Lives:
+          <div id="lives">
+            <i class="far fa-heart"></i> <i class="far fa-heart"></i>
+            <i class="far fa-heart"></i>
+          </div>
+        </div>
+        <div class="col-4">
+          Difficulty:
+          <div id="difficulty">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary active">
+                <input
+                  type="radio"
+                  name="options"
+                  id="option1"
+                  autocomplete="off"
+                  checked
+                />
+                Rookie
+              </label>
+              <label class="btn btn-secondary">
+                <input
+                  type="radio"
+                  name="options"
+                  id="option2"
+                  autocomplete="off"
+                />
+                Veteran
+              </label>
+              <label class="btn btn-secondary">
+                <input
+                  type="radio"
+                  name="options"
+                  id="option3"
+                  autocomplete="off"
+                />
+                MVP
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <main>
       <div class="row">
@@ -46,7 +94,7 @@
           <div class="container game">
             <div class="buttons">
               <button id="play-btn" class="btn btn-lg btn-success">
-                Play</button
+                Start Game</button
               ><br /><br /><button
                 onclick="restart()"
                 id="restart-btn"
