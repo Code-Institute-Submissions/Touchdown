@@ -24,16 +24,16 @@
 
   <body>
     <header>
-      <div class="row">
+      <div class="row card-row">
         <div class="col-6 title">
           <h1 id="title">Touchdown <i class="fa fa-football-ball"></i></h1>
         </div>
         <div class="col-6 nav-menu">
           <div class="menu">
             <ul>
-              <li>Home</li>
-              <li>How to Play?</li>
-              <li>Contact Us</li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">How to Play?</a></li>
+              <li><a href="#">Contact Us</a></li>
             </ul>
           </div>
         </div>
@@ -42,10 +42,21 @@
     <main>
       <div class="row">
         <div class="col-lg-2 wing"></div>
-        <div class="col-lg-8 col-sm-12 wing">
+        <div class="col-lg-8">
           <div class="container game">
+            <div class="buttons">
+              <button id="play-btn" class="btn btn-lg btn-success">
+                Play</button
+              ><br /><br /><button
+                onclick="restart()"
+                id="restart-btn"
+                class="btn btn-sm btn-danger"
+              >
+                Restart
+              </button>
+            </div>
+            <br />
             <div class="row">
-              <div class="empty"></div>
               <div
                 onclick="cardClick(event.currentTarget)"
                 data-id="kick"
@@ -53,9 +64,6 @@
               >
                 Kick <img src="assets/images/kick.jpg" />
               </div>
-              <div class="empty"></div>
-            </div>
-            <div class="row">
               <div
                 onclick="cardClick(event.currentTarget)"
                 data-id="pass"
@@ -63,18 +71,6 @@
               >
                 Pass<img src="assets/images/pass.jpg" />
               </div>
-              <div class="empty">
-                <button id="play-btn" class="btn btn-lg btn-success">
-                  Play</button
-                ><br /><br /><button
-                  onclick="restart()"
-                  id="restart-btn"
-                  class="btn btn-sm btn-danger"
-                >
-                  Restart
-                </button>
-              </div>
-
               <div
                 onclick="cardClick(event.currentTarget)"
                 data-id="rush"
@@ -82,9 +78,6 @@
               >
                 Rush <img src="assets/images/rush.jpg" />
               </div>
-            </div>
-            <div class="row">
-              <div class="empty"></div>
               <div
                 onclick="cardClick(event.currentTarget)"
                 data-id="run"
@@ -92,7 +85,6 @@
               >
                 Run <img src="assets/images/run.jpg" />
               </div>
-              <div class="empty"></div>
             </div>
           </div>
         </div>

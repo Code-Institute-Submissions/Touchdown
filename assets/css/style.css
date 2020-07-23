@@ -5,33 +5,47 @@ body {
 }
 
 /*---------------------HEADER----------------------*/
-header{
-    padding: 2em;
-    margin-top: 2em;
+header {
+  padding: 2em;
+  margin-top: 2em;
 }
 
-.menu ul{
-    list-style-type: none;
+header i {
+  color: rgb(107, 69, 12);
 }
 
-.menu li{
-    font-size: 2em;
-    font-weight: 200;
+.menu ul {
+  list-style-type: none;
+}
+
+.menu li {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+.menu li a {
+  color: rgb(59, 59, 59);
 }
 /*---------------------FOOTER----------------------*/
 /*---------------------MAIN----------------------*/
-.game{
-    width:100%;
+.game {
+  width: 100%;
+  background-color: rgb(14, 114, 14);
+  height: 100vh;
 }
 .card {
-  width: 10em;
-  height: 10em;
-  margin: auto 0;
+  width: 10rem;
+  height: 10rem;
+  margin: auto 1rem;
   box-shadow: 0px 0px 1px rgb(150, 149, 149);
   border-radius: 1.4em;
 }
 
-.active {
+.card-row{
+    text-align: center;
+}
+
+.flash {
   border: solid rgb(209, 178, 4) 4px;
 }
 
@@ -41,21 +55,25 @@ header{
 }
 
 .empty {
-  width: 10em;
-  height: 10em;
+  width: 10rem;
+  height: 10rem;
   margin: auto 0;
   padding: 2em;
 }
 /*---------------------IMAGES----------------------*/
 .card img {
   height: 100%;
-  contain: content;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1.4em;
 }
+
 /*---------------------BUTTONS----------------------*/
-
-
-
-main .wing{
+.buttons{
+    padding-top: 1em;
+}
+/*-------Container Image--------*/
+main .wing {
   height: 100vh;
   width: 100%;
   background: url(../images/field.jpg) no-repeat bottom right fixed;
