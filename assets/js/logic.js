@@ -55,7 +55,7 @@ var playType;
 
 // $(document).ready(function () {
 console.log("ready");
-
+$(".status").hide();
 //---Play intro Function-----
 
 //------Restart- Confirmation-----------
@@ -148,19 +148,30 @@ let makeGameSequence = () => {
   }
 };
 
-makeGameSequence();
+makeGameSequence(); //************************
 console.log(currentGame);
 
 //--------PROGRESS FUNCTION----------//
 const updateProgress = () => {
-  if (round < 10) {
-    var x = round * 10;
-    var perc = `${x}%`;
-    $(".progress-bar").css("width", perc);
-  } else{
-      touchdown.play();
-      alert("TOUCHDOWN. CONGRATULATIONS, YOU WIN!");
-  }
+  var x = round * 10;
+  var perc = `${x}%`;
+  $(".progress-bar").css("width", perc);
+};
+
+//-------- CORRECT FUNCTION------//
+const correct = () => {
+  $(".winning").css("visibility", "visible");
+  setTimeout(function () {
+    $(".winning").css("visibility", "hidden");
+  }, 1000);
+};
+
+//-------- INCORRECT FUNCTION------//
+const wrong = () => {
+  $(".losing").css("visibility", "visible");
+  setTimeout(function () {
+    $(".losing").css("visibility", "hidden");
+  }, 1000);
 };
 
 // ------- FLASH FUNCTION INITIATES HIGHLIGHT ON CARD----//
@@ -250,8 +261,9 @@ const cardClick = (card) => {
         randomOrder.shift();
         console.log("correct");
         woo.play();
+        correct();
         updateProgress();
-        $("#message").text(`Correct, You completed round ${round}!`);
+        // $("#message").text(`Correct, You completed round ${round}!`);
         setTimeout(function () {
           $("#message").text("");
         }, 2000);
@@ -267,16 +279,16 @@ const cardClick = (card) => {
         console.log(currentGame);
       } else if (choice !== answer) {
         boo.play();
+        wrong();
         clicked = [];
         lives - 1;
-        $("#message").text("INCORRECT. YOU LOSE 1 LIFE!");
+        // $("#message").text("INCORRECT. YOU LOSE 1 LIFE!");
         setTimeout(function () {
           $("#message").text("");
         }, 2000);
         $("#play-btn").text("Try Again!");
         console.log("INCORRECT. YOU LOSE 1 LIFE!");
         console.log(currentGame);
-
         $(".heart").last().remove();
         $("#play-btn").text(`Round ${round}`);
         setTimeout(function () {
@@ -289,7 +301,7 @@ const cardClick = (card) => {
       }
     } else {
       console.log("pick another");
-      $("#play-btn").text("Make Selection...");
+    //   $("#play-btn").text("Make Selection...");
     }
   }
 };
