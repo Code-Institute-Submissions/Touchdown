@@ -117,9 +117,6 @@ const restart = () => {
   $("#play-btn").text("Start Game");
   $("#ball").addClass(" rotating ");
   $(".progress-bar").css("width", "0%");
-  clearTimeout();
-  clearTimeout();
-  clearTimeout(); //--- Stops all current Timeouts----//
   clicked = [];
   $("#round").text("1");
   $("#lives").show(500)
@@ -129,10 +126,12 @@ const restart = () => {
 
   round = 1;
 
-  lives = 2;
+  lives = 3;
   randomOrder = [];
   currentGame = [];
   makeGameSequence();
+  exit;
+
 };
 
 //-------- CREATES A NEW AND RANDOMISED CURRENT GAME LIST---BASED ON ROUND (each round increases by one)-----//
@@ -158,6 +157,19 @@ const updateProgress = () => {
   $(".progress-bar").css("width", perc);
 };
 
+//---------LIFE CHECK FUNCTION-------//
+const lifeCheck = () => {
+    if (lives === 0){
+        gameOver.play();
+        alert("GAME OVER");
+        restart();
+        exit;
+    }
+    else if (lives > 0){
+        return false;
+    }
+
+};
 //-------- CORRECT FUNCTION------//
 const correct = () => {
   $(".winning").css("visibility", "visible");
@@ -278,10 +290,11 @@ const cardClick = (card) => {
         }, 3000);
         console.log(currentGame);
       } else if (choice !== answer) {
+        lives -= 1;
+        lifeCheck();
         boo.play();
         wrong();
         clicked = [];
-        lives - 1;
         // $("#message").text("INCORRECT. YOU LOSE 1 LIFE!");
         setTimeout(function () {
           $("#message").text("");
