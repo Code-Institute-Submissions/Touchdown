@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -46,45 +47,32 @@
         <div class="col-4">
           Lives:
           <div id="lives">
-            <i class="far fa-heart"></i> <i class="far fa-heart"></i>
-            <i class="far fa-heart"></i>
+            <span class="heart"><i class="fa fa-heart"></i></span>
+            <span class="heart"><i class="fa fa-heart"></i></span>
+            <span class="heart"><i class="fa fa-heart"></i></span>
           </div>
         </div>
         <div class="col-4">
           Difficulty:
           <div id="difficulty">
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-secondary active">
-                <input
-                  type="radio"
-                  name="options"
-                  id="option1"
-                  autocomplete="off"
-                  checked
-                />
-                Rookie
-              </label>
-              <label class="btn btn-secondary">
-                <input
-                  type="radio"
-                  name="options"
-                  id="option2"
-                  autocomplete="off"
-                />
-                Veteran
-              </label>
-              <label class="btn btn-secondary">
-                <input
-                  type="radio"
-                  name="options"
-                  id="option3"
-                  autocomplete="off"
-                />
-                MVP
-              </label>
+            <div>
+              <label class="uppercase" for="rookie ">Rookie</label>
+              <input class="rookie" type="checkbox" id="rookie" name="rookie" />
+              <label class="uppercase" for="veteran">Veteran</label>
+              <input
+                class="veteran"
+                type="checkbox"
+                id="veteran"
+                name="veteran"
+              />
+              <label class="uppercase" for="mvp">MVP</label>
+              <input class="mvp" type="checkbox" id="mvp" name="mvp" />
             </div>
           </div>
         </div>
+      </div>
+      <div class="row container fluid message">
+        <div id="message"></div>
       </div>
     </header>
     <main>
@@ -93,10 +81,10 @@
         <div class="col-lg-8">
           <div class="container game">
             <div class="buttons">
-              <button id="play-btn" class="btn btn-lg btn-success">
+              <button id="play-btn" class="btn btn-lg">
                 Start Game</button
               ><br /><br /><button
-                onclick="restart()"
+                onclick="restartCheck()"
                 id="restart-btn"
                 class="btn btn-sm btn-danger"
               >
