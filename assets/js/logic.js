@@ -16,23 +16,26 @@ When the user selects the difficulty and clicks start:
 If Incorrect start from begining 
 */
 
-// $(document).ready(function () {
-console.log("ready");
-
+//-------Cards to select from ---------
 const kick = document.querySelector(".kick");
 const pass = document.querySelector(".pass");
 const run = document.querySelector(".run");
 const rush = document.querySelector(".rush");
 
+//---------Difficulty Levels----------
 const rookie = 2000;
 const veteran = 1000;
 const mvp = 500;
 const default_diff = 1200;
 
+//---------Audio/Sound Effects----------
+const intro = new Audio("assets/audio/intro.mp3");
 const woo = new Audio("assets/audio/woo.mp3");
 const boo = new Audio("assets/audio/boo.mp3");
 const whistle = new Audio("assets/audio/whistle.mp3");
-const ping = new Audio("assets/audio/ping.mp3")
+const ping = new Audio("assets/audio/ping.mp3");
+const restartSound = new Audio("assets/audio/restart.mp3");
+const gameOver = new Audio("assets/audio/gameOver.mp3");
 
 const roundLimit = 10;
 const playOrder = [kick, pass, run, rush];
@@ -50,11 +53,17 @@ var playTypeObject;
 var randomOrder = [];
 var playType;
 
+// $(document).ready(function () {
+console.log("ready");
+
+//---Play intro Function-----
+
 //------Restart- Confirmation-----------
 const restartCheck = () => {
   if (
     confirm("Are you sure you want to restart? Your progress will be lost.")
   ) {
+    restartSound.play();
     restart();
   } else {
     return false;
@@ -65,6 +74,8 @@ const restartCheck = () => {
 let checkBox = () => {
   $("input[name=rookie]").change(function () {
     if ($(this).is(":checked")) {
+      $(".veteran").remove("checked");
+      $(".mvp").remove("checked");
       // Checkbox is checked..
       difficulty = rookie;
       console.log("rookie is checked");
@@ -75,6 +86,8 @@ let checkBox = () => {
   });
   $("input[name=veteran]").change(function () {
     if ($(this).is(":checked")) {
+      $(".rookie").remove("checked");
+      $(".mvp").remove("checked");
       // Checkbox is checked..
       difficulty = veteran;
       console.log("veteran is checked");
@@ -85,6 +98,8 @@ let checkBox = () => {
   });
   $("input[name=mvp]").change(function () {
     if ($(this).is(":checked")) {
+      $(".rookie").remove("checked");
+      $(".veteran").remove("checked");
       // Checkbox is checked..
       difficulty = mvp;
       console.log("mvp is checked");
@@ -99,13 +114,19 @@ checkBox();
 
 //---------Restart Function--- Brings game to the begining------
 const restart = () => {
+  $("#play-btn").text("Start Game");
+  $("#ball").addClass(" rotating ");
+  $(".progress-bar").css("width", "0%");
+  clearTimeout();
+  clearTimeout();
+  clearTimeout(); //--- Stops all current Timeouts----//
   clicked = [];
   $("#round").text("1");
-  $("#play-btn").text("Start Game");
   $("#lives").show(500)
     .html(`<span class="heart"><i class="fa fa-heart"></i></span>
             <span class="heart"><i class="fa fa-heart"></i></span>
             <span class="heart"><i class="fa fa-heart"></i></span>`); //------This resets the 3 heart icons that represent the lives left
+
   round = 1;
 
   lives = 2;
@@ -113,12 +134,6 @@ const restart = () => {
   currentGame = [];
   makeGameSequence();
 };
-
-// const getRandomPlay = card => {
-//     let card = playOrder[parseInt(Math.random * playOrder.length)];
-//     return card;
-
-// }
 
 //-------- CREATES A NEW AND RANDOMISED CURRENT GAME LIST---BASED ON ROUND (each round increases by one)-----//
 
@@ -131,11 +146,22 @@ let makeGameSequence = () => {
     randomOrder.push(playTypeId);
     i++;
   }
-  console.log(currentGame);
-  console.log(randomOrder);
 };
 
 makeGameSequence();
+console.log(currentGame);
+
+//--------PROGRESS FUNCTION----------//
+const updateProgress = () => {
+  if (round < 10) {
+    var x = round * 10;
+    var perc = `${x}%`;
+    $(".progress-bar").css("width", perc);
+  } else{
+      touchdown.play();
+      alert("TOUCHDOWN. CONGRATULATIONS, YOU WIN!");
+  }
+};
 
 // ------- FLASH FUNCTION INITIATES HIGHLIGHT ON CARD----//
 
@@ -154,22 +180,32 @@ const flash = (card) => {
 };
 
 $("#play-btn").click(function () {
+  $(".whistle").show(2000);
   whistle.play();
-  main();
+
+  setTimeout(function () {}, 1000);
+  //   setTimeout(function () {
+  //     $(".count").text("2");
+  //   }, 2000);
+
+  setTimeout(function () {
+    main();
+  }, 2000);
 });
 
 //----------Play button initiates main function which iterates through currentGame (randomised sequence) and flashes each card
 const main = async () => {
   $(".card").prop("disabled", true);
-  $("#round").text(`${round}`);
+  $("#round").text(round);
+  $("#ball").removeClass("rotating");
+
   $("#play-btn").text("Wait...");
   for (let card of currentGame) {
     await flash(card);
-    setTimeout(function () {
-      $("#play-btn").text("Make your selection...");
-    }, difficulty * round);
-    $(".card").prop("disabled", false);
   }
+
+  $("#play-btn").text(`Round: ${round}`);
+  $(".card").prop("disabled", false);
 };
 
 //------Function to check answers with selections--------
@@ -197,53 +233,63 @@ const main = async () => {
 //   //   }
 
 //---------CARD CLICK FUNCTION RETRIEVES DATA ID OF CARD CLICKED AND INITIATES CHECK ANSWER FUNCTION -------
-
+console.log(randomOrder);
 const cardClick = (card) => {
+  ping.play();
   playType = card.getAttribute("data-id");
   clicked.push(playType);
-  if (clicked.length === randomOrder.length) {
-    var choice = clicked.shift();
-    var answer = randomOrder.shift();
-    if (choice == answer) {
-      console.log("correct");
-      woo.play();
-      $("#message").text(`Correct, You completed round ${round}!`);
-      setTimeout(function () {
-        $("#message").text("");
-      }, 2000);
-      round += 1;
-      setTimeout(function () {
-        $("#play-btn").text(`Round ${round}`);
-      }, 1000);
-      $("#round").text(round);
-      makeGameSequence();
-    } else if (choice !== answer) {
-      boo.play();
-      randomOrder.unshift();
-      $("#message").text("INCORRECT. YOU LOSE 1 LIFE!");
-      setTimeout(function () {
-        $("#message").text("");
-      }, 2000);
-
-      console.log("INCORRECT. YOU LOSE 1 LIFE!");
-      clicked = [];
-      lives -= 1;
-      $(".heart").last().remove();
-      $("#play-btn").text(`Round ${round}`);
-    }
+  if (lives === 0) {
+    alert("GAME OVER. OUT OF LIVES");
+    restart();
   } else {
-    console.log("select more");
+    if (clicked.length === randomOrder.length) {
+      var choice = clicked[0];
+      var answer = randomOrder[0];
+      if (choice == answer) {
+        clicked.shift();
+        randomOrder.shift();
+        console.log("correct");
+        woo.play();
+        updateProgress();
+        $("#message").text(`Correct, You completed round ${round}!`);
+        setTimeout(function () {
+          $("#message").text("");
+        }, 2000);
+        round += 1;
+        setTimeout(function () {}, 1000);
+        $("#round").text(round);
+        $("#play-btn").text(`Round ${round}`);
+        makeGameSequence();
+        console.log(randomOrder);
+        setTimeout(function () {
+          main();
+        }, 3000);
+        console.log(currentGame);
+      } else if (choice !== answer) {
+        boo.play();
+        clicked = [];
+        lives - 1;
+        $("#message").text("INCORRECT. YOU LOSE 1 LIFE!");
+        setTimeout(function () {
+          $("#message").text("");
+        }, 2000);
+        $("#play-btn").text("Try Again!");
+        console.log("INCORRECT. YOU LOSE 1 LIFE!");
+        console.log(currentGame);
+
+        $(".heart").last().remove();
+        $("#play-btn").text(`Round ${round}`);
+        setTimeout(function () {
+          main();
+        }, 3000);
+      } else if (lives === 0 && choice !== answer) {
+        gameOver.play();
+        alert("GAME OVER");
+        restart();
+      }
+    } else {
+      console.log("pick another");
+      $("#play-btn").text("Make Selection...");
+    }
   }
 };
-
-// while (clicked.length < currentGame.length) {
-//   selectionMade = false;
-// }
-
-// while (clicked.length === currentGame.length) {
-//   selectionMade = true;
-// }
-
-// if ((selectionMade = true)) {
-//   checkAnswer();
-// }
