@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -27,13 +29,17 @@
     <header>
       <div class="row card-row">
         <div class="col-6 title">
-          <h1 id="title">Touchdown <i class="fa fa-football-ball"></i></h1>
+          <h1 id="title">
+            Touchdown <i id="ball" class="rotating fa fa-football-ball"></i>
+          </h1>
         </div>
         <div class="col-6 nav-menu">
           <div class="menu">
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">How to Play?</a></li>
+              <li><a class="current" href="#">Home</a></li>
+              <li>
+                <a href="#">How to Play? </a>
+              </li>
               <li><a href="#">Contact Us</a></li>
             </ul>
           </div>
@@ -57,16 +63,17 @@
           <div id="difficulty">
             <div>
               <label class="uppercase" for="rookie ">Rookie</label>
-              <input class="rookie" type="checkbox" id="rookie" name="rookie" />
-              <label class="uppercase" for="veteran">Veteran</label>
               <input
-                class="veteran"
-                type="checkbox"
-                id="veteran"
-                name="veteran"
+                class="rookie"
+                type="radio"
+                id="rookie"
+                name="rookie"
+                checked
               />
+              <label class="uppercase" for="veteran">Veteran</label>
+              <input class="veteran" type="radio" id="veteran" name="veteran" />
               <label class="uppercase" for="mvp">MVP</label>
-              <input class="mvp" type="checkbox" id="mvp" name="mvp" />
+              <input class="mvp" type="radio" id="mvp" name="mvp" />
             </div>
           </div>
         </div>
@@ -83,7 +90,19 @@
             <div class="buttons">
               <button id="play-btn" class="btn btn-lg">
                 Start Game</button
-              ><br /><br /><button
+              ><br />
+              <div class="whistle"></div>
+              <br />
+              <div class="progress">
+                <div
+                  class="progress-bar bg-warning"
+                  role="progressbar"
+                  aria-valuenow="10"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+              <button
                 onclick="restartCheck()"
                 id="restart-btn"
                 class="btn btn-sm btn-danger"
@@ -92,7 +111,7 @@
               </button>
             </div>
             <br />
-            <div class="row">
+            <div class="row card-row">
               <div
                 onclick="cardClick(event.currentTarget)"
                 data-id="kick"
@@ -131,5 +150,11 @@
       <div class="container-fluid"></div>
     </footer>
   </body>
+
   <script src="assets/js/logic.js"></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"
+  ></script>
 </html>
