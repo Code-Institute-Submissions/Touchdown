@@ -24,9 +24,15 @@ const pass = document.querySelector(".pass");
 const run = document.querySelector(".run");
 const rush = document.querySelector(".rush");
 
-const Rookie = 2000;
-const Veteran = 1200;
-const MVP = 800;
+const rookie = 2000;
+const veteran = 1000;
+const mvp = 500;
+const default_diff = 1200;
+
+const woo = new Audio("assets/audio/woo.mp3");
+const boo = new Audio("assets/audio/boo.mp3");
+const whistle = new Audio("assets/audio/whistle.mp3");
+const ping = new Audio("assets/audio/ping.mp3")
 
 const roundLimit = 10;
 const playOrder = [kick, pass, run, rush];
@@ -35,7 +41,7 @@ var selectionMade = false;
 var answerCorrect = false;
 
 var currentGame = [];
-var difficulty = Veteran;
+var difficulty = default_diff;
 var clicked = [];
 var round = 1;
 var lives = 3;
@@ -55,12 +61,53 @@ const restartCheck = () => {
   }
 };
 
+//------- Checkbox Function ------------
+let checkBox = () => {
+  $("input[name=rookie]").change(function () {
+    if ($(this).is(":checked")) {
+      // Checkbox is checked..
+      difficulty = rookie;
+      console.log("rookie is checked");
+    } else {
+      // Checkbox is not checked..
+      console.log("rookie not checked");
+    }
+  });
+  $("input[name=veteran]").change(function () {
+    if ($(this).is(":checked")) {
+      // Checkbox is checked..
+      difficulty = veteran;
+      console.log("veteran is checked");
+    } else {
+      // Checkbox is not checked..
+      console.log("veteran not checked");
+    }
+  });
+  $("input[name=mvp]").change(function () {
+    if ($(this).is(":checked")) {
+      // Checkbox is checked..
+      difficulty = mvp;
+      console.log("mvp is checked");
+    } else {
+      // Checkbox is not checked..
+      console.log("mvp not checked");
+    }
+  });
+};
+
+checkBox();
+
 //---------Restart Function--- Brings game to the begining------
 const restart = () => {
   clicked = [];
   $("#round").text("1");
   $("#play-btn").text("Start Game");
+  $("#lives").show(500)
+    .html(`<span class="heart"><i class="fa fa-heart"></i></span>
+            <span class="heart"><i class="fa fa-heart"></i></span>
+            <span class="heart"><i class="fa fa-heart"></i></span>`); //------This resets the 3 heart icons that represent the lives left
   round = 1;
+
   lives = 2;
   randomOrder = [];
   currentGame = [];
@@ -93,6 +140,7 @@ makeGameSequence();
 // ------- FLASH FUNCTION INITIATES HIGHLIGHT ON CARD----//
 
 const flash = (card) => {
+  ping.play();
   return new Promise((resolve, reject) => {
     card.className += " flash";
     setTimeout(() => {
@@ -106,16 +154,21 @@ const flash = (card) => {
 };
 
 $("#play-btn").click(function () {
+  whistle.play();
   main();
 });
 
 //----------Play button initiates main function which iterates through currentGame (randomised sequence) and flashes each card
 const main = async () => {
+  $(".card").prop("disabled", true);
   $("#round").text(`${round}`);
-  canClick = false;
+  $("#play-btn").text("Wait...");
   for (let card of currentGame) {
     await flash(card);
-    canClick = true;
+    setTimeout(function () {
+      $("#play-btn").text("Make your selection...");
+    }, difficulty * round);
+    $(".card").prop("disabled", false);
   }
 };
 
@@ -148,28 +201,35 @@ const main = async () => {
 const cardClick = (card) => {
   playType = card.getAttribute("data-id");
   clicked.push(playType);
-  let selectedCards = [...clicked];
-  let sequence = [...randomOrder];
-  if (selectedCards.length === sequence.length) {
-    var choice = selectedCards.shift();
-    var answer = sequence.shift();
-    if (choice === answer) {
-      randomOrder.shift();
+  if (clicked.length === randomOrder.length) {
+    var choice = clicked.shift();
+    var answer = randomOrder.shift();
+    if (choice == answer) {
       console.log("correct");
+      woo.play();
       $("#message").text(`Correct, You completed round ${round}!`);
       setTimeout(function () {
         $("#message").text("");
-      }, 3000);
+      }, 2000);
       round += 1;
       setTimeout(function () {
         $("#play-btn").text(`Round ${round}`);
       }, 1000);
+      $("#round").text(round);
       makeGameSequence();
     } else if (choice !== answer) {
+      boo.play();
+      randomOrder.unshift();
+      $("#message").text("INCORRECT. YOU LOSE 1 LIFE!");
+      setTimeout(function () {
+        $("#message").text("");
+      }, 2000);
+
       console.log("INCORRECT. YOU LOSE 1 LIFE!");
       clicked = [];
       lives -= 1;
-      $("#lives").removeClass(".heart");
+      $(".heart").last().remove();
+      $("#play-btn").text(`Round ${round}`);
     }
   } else {
     console.log("select more");
