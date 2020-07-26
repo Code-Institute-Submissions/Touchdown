@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Touchdown</title>
   </head>
+  <audio src="assets/audio/intro.mp3" autoplay>
+    Your browser does not support the audio element.
+  </audio>
 
   <body>
     <header>
@@ -38,16 +41,30 @@
             <ul>
               <li><a class="current" href="#">Home</a></li>
               <li>
-                <a href="#">How to Play? </a>
+                <a  data-toggle="modal"
+      data-target="#howToPlayModal">How to Play? </a>
               </li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a data-toggle="modal"
+      data-target="#contactUs">Contact Us</a></li>
             </ul>
           </div>
         </div>
       </div>
-      <img class="winning" src="assets/images/winning.png" alt="Cartoon Football Player"/>
-    <img class="touchdown" src="assets/images/touchdown.png" alt="Touchdown"/>
-      <img class="losing" src="assets/images/losing.png" alt="Incorrect Cross"/>
+      <img
+        class="winning"
+        src="assets/images/winning.png"
+        alt="Cartoon Football Player"
+      />
+      <img
+        class="touchdown"
+        src="assets/images/touchdown.png"
+        alt="Touchdown"
+      />
+      <img
+        class="losing"
+        src="assets/images/losing.png"
+        alt="Incorrect Cross"
+      />
       <div id="status" class="row container-fluid">
         <div class="col-4">
           Round:
@@ -149,9 +166,84 @@
         <div class="col-lg-2 wing"></div>
       </div>
     </main>
+
     <footer>
       <div class="container-fluid"></div>
     </footer>
+    <div
+      class="modal fade"
+      id="howToPlayModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="howToPlay"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="howToPlay">How to Play</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="contactUs"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="contact"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contact">Contact Us</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 
   <script src="assets/js/logic.js"></script>
