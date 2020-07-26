@@ -44,33 +44,38 @@ body {
 }
 /*---------------------------------------------------*/
 
-
 header {
   padding: 1em;
   margin-top: 1em;
 }
-
-.current{
-     color: rgb(107, 69, 12);
-     text-decoration: none;
+main{
+    animation-name: fadein;
+  animation-duration: 4s;
 }
-h1{
-    font-size: 5em;
-    font-family:'Bungee Inline', cursive, sans-serif;
-    background-color: rgb(27, 143, 27);
-    border-radius: 1.4em;
-    width: 7em;
-    animation-name: banner;
-    animation-duration: 4s;
 
+.current {
+  color: rgb(107, 69, 12);
+  text-decoration: none;
+}
+h1 {
+  font-size: 5em;
+  font-family: "Bungee Inline", cursive, sans-serif;
+  background-color: rgb(27, 143, 27);
+  border-radius: 1.4em;
+  width: 7em;
+  animation-name: banner;
+  animation-duration: 4s;
 }
 @keyframes banner {
-    from {width: 0rem}
-    to {width: 7em}
+  from {
+    width: 0rem;
+  }
+  to {
+    width: 7em;
+  }
 }
 
 h1 i {
-    
   color: rgb(107, 69, 12);
   /* animation-name: expand;
   animation-duration: 4s; */
@@ -81,11 +86,19 @@ h1 i {
   to {font-size: 2em}
 } */
 
-
-
-.menu{
-    font-family:'Bungee Inline', cursive, sans-serif;
-    text-align: right;
+.menu {
+  font-family: "Bungee Inline", cursive, sans-serif;
+  text-align: right;
+  animation-name: fadein;
+  animation-duration: 4s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .menu ul {
@@ -93,8 +106,8 @@ h1 i {
 }
 
 .menu li {
-    position: relative;
-    right: 3em;
+  position: relative;
+  right: 3em;
   font-size: 2em;
   font-weight: 200;
 }
@@ -103,14 +116,20 @@ h1 i {
   color: rgb(59, 59, 59);
 }
 
-#status{
-    padding: .5em;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.4em;
+.menu li a:hover{
+    background-color: rgb(27, 143, 27);
+    color: rgb(255, 255, 255);
+    
+}
+
+#status {
+  padding: 0.5em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4em;
 }
 
 #status i {
-    color: rgb(194, 0, 0);
+  color: rgb(194, 0, 0);
 }
 /*---------------------MAIN----------------------*/
 .game {
@@ -127,10 +146,8 @@ h1 i {
   border-radius: 1.4em;
 }
 
-
-
-.card-row{
-   margin: auto 0;
+.card-row {
+  margin: auto 0;
 }
 
 .flash {
@@ -149,13 +166,13 @@ h1 i {
   padding: 2em;
 }
 
-.count{
-    float: center;
-    position: relative;
-    background: transparent;
-    font-size: 4em;
-    font-style: inherit;
-    z-index: 100;
+.count {
+  float: center;
+  position: relative;
+  background: transparent;
+  font-size: 4em;
+  font-style: inherit;
+  z-index: 100;
 }
 /*---------------------FOOTER----------------------*/
 
@@ -167,37 +184,43 @@ h1 i {
   border-radius: 1.4em;
 }
 
-
-.winning{
-    position: absolute;
-    z-index: 300;
-    bottom: 0px;
-    right: 240px;
-    visibility: hidden;
+.winning {
+  position: absolute;
+  z-index: 300;
+  bottom: 0px;
+  right: 240px;
+  visibility: hidden;
 }
-.losing{
-    position: absolute;
-    z-index: 300;
-    bottom: 0px;
-    right: 300px;
-    visibility: hidden;
+.losing {
+  position: absolute;
+  z-index: 300;
+  bottom: 0px;
+  right: 300px;
+  visibility: hidden;
+}
+.touchdown {
+  position: absolute;
+  z-index: 300;
+  bottom: 0px;
+  right: 300px;
+  visibility: hidden;
 }
 
 /*---------------------BUTTONS----------------------*/
-.buttons{
-    padding-top: 1em;
+.buttons {
+  padding-top: 1em;
 }
 
-#play-btn{
-    border: solid 2px rgb(148, 110, 14);
-    background-color: rgb(247, 245, 245);
-    color: rgb(148, 110, 14);
+#play-btn {
+  border: solid 2px rgb(148, 110, 14);
+  background-color: rgb(247, 245, 245);
+  color: rgb(148, 110, 14);
 }
 
-#play-btn:hover{
-    border: solid 2px rgb(247, 245, 245);
-    background-color: rgb(148, 110, 14);
-    color: rgb(247, 245, 245);
+#play-btn:hover {
+  border: solid 2px rgb(247, 245, 245);
+  background-color: rgb(148, 110, 14);
+  color: rgb(247, 245, 245);
 }
 /*-------Container Image--------*/
 main .wing {
