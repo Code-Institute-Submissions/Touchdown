@@ -23,7 +23,7 @@ const run = document.querySelector(".run");
 const rush = document.querySelector(".rush");
 
 //---------Difficulty Levels----------
-const rookie = 1500;
+const rookie = 2000;
 const veteran = 900;
 const mvp = 300;
 const default_diff = 1200;
@@ -60,9 +60,7 @@ const restartCheck = () => {
   if (
     confirm("Are you sure you want to restart? Your progress will be lost.")
   ) {
-    restartSound.play();
     restart();
-    $("#play-btn").text("Start Game");
   } else {
     return false; //----On cancel user returns to current game------//
   }
@@ -110,42 +108,43 @@ let checkBox = () => {
 
 checkBox();
 
+$("#status").hide();
 //---------Restart Function--- Brings game to the begining------
 const restart = () => {
-  $("#ball").addClass(" rotating ");
-  $(".progress-bar").css("width", "0%");
+  restartSound.play();
   clicked = [];
-  $("#round").text("1");
+  round = 1;
+  lives = 3;
+  randomOrder = [];
+  currentGame = [];
+  $("#ball").addClass(" rotating ");
+  $("#startGame").text("Start Game");
+  $(".progress-bar").css("width", "0%");
+  $("#round").text("");
   $("#lives").show(500)
     .html(`<span class="heart"><i class="fa fa-heart"></i></span>
             <span class="heart"><i class="fa fa-heart"></i></span>
             <span class="heart"><i class="fa fa-heart"></i></span>`); //------This resets the 3 heart icons that represent the lives left
-
-  round = 1;
-
-  lives = 3;
-  randomOrder = [];
-  currentGame = [];
-  setTimeout(function () {
-    makeGameSequence();
-  }, 2000);
 };
 
-//-------- CREATES A NEW AND RANDOMISED CURRENT GAME LIST---BASED ON ROUND (each round increases by one)-----//
+//-------- CREATES A NEW AND RANDOMISED CURRENT GAME LIST-------//
 
-let makeGameSequence = () => {
+const makeGameSequence = () => {
   var y = Math.round(Math.random() * (playOrder.length - 1));
   currentGame.push(playOrder[y]);
-  for (i in currentGame) {
+  convertAnswer();
+};
+
+//---------CONVERT ANSWER FUNCTION TO MAKE SELECTION AND ANSWER COMPARIBLE AS STRINGS----//
+const convertAnswer = () => {
+  for (let i = 0; i < currentGame.length; i++) {
     playTypeObject = currentGame[i];
     playTypeId = playTypeObject.getAttribute("data-id");
-    randomOrder.push(playTypeId);
+    randomOrder.push(playTypeId); //--------randomOrder stores converted answer------//
   }
 };
 
-makeGameSequence(); //************************
-
-//--------PROGRESS FUNCTION----------//
+//--------PROGRESS BAR FUNCTION----------//
 const updateProgress = () => {
   var x = round * 10;
   var perc = `${x}%`;
@@ -154,13 +153,23 @@ const updateProgress = () => {
 
 //-------- CORRECT FUNCTION------//
 const correct = () => {
-  $(".winning").css("visibility", "visible");
-  setTimeout(function () {
-    $(".winning").css("visibility", "hidden");
-  }, 1000);
+  if (round === roundLimit) {
+    //----------------CHECKS IF USER HAS COMPLETED GAME
+    touchdown.play();
+    gameWon();
+    setTimeout(function () {
+      location.reload();
+      return false;
+    }, 200);
+  } else {
+    $(".winning").css("visibility", "visible");
+    setTimeout(function () {
+      $(".winning").css("visibility", "hidden");
+    }, 1000);
+  }
 };
 
-//-------- INCORRECT FUNCTION------//
+//-------- WRONG FUNCTION------//
 const wrong = () => {
   $(".losing").css("visibility", "visible");
   setTimeout(function () {
@@ -169,33 +178,39 @@ const wrong = () => {
 };
 //-------- GAME WON FUNCTION------//
 const gameWon = () => {
+    touchdown.play()
   $(".touchdown").css("visibility", "visible");
   setTimeout(function () {
     $(".touchdown").css("visibility", "hidden");
-  }, 1000);
+  }, 3000);
+  alert("TOUCHDOWN YOU WIN!")
 };
 
 //-------ROUND CHECK FUNCTION-------// Determines if the player completes all 10 rounds
-const roundCheck = () => {
-  if (round === 11) {
-    gameWon();
-    touchdown.play();
-    alert("TOUCHDOWN YOU WIN!");
-    restart();
-  } else {
-    return false;
-  }
-};
+// const roundCheck = () => {
+//   if (round === 10) {
+//     touchdown.play();
+//     gameWon();
+//     setTimeout(function () {
+//       alert("TOUCHDOWN YOU WIN!");
+//     }, 2000);
+
+//     round = 0;
+//     restart();
+//   } else {
+//     return false;
+//   }
+// };
 
 //---------LIFE CHECK FUNCTION-------// 3 lives to start.
 const lifeCheck = () => {
   if (lives === 0) {
     gameOver.play();
     alert("GAME OVER");
-    $("#play-btn").text("Start Game");
+    $("#startGame").text("Start Game");
     restart();
   } else if (lives > 0) {
-    $("#play-btn").text(`Round ${round}`);
+    $("#startGame").text(`Round ${round}`);
     return false;
   }
 };
@@ -216,15 +231,15 @@ const flash = (card) => {
   });
 };
 
-$("#play-btn").click(function () {
+//---------
+$("#startGame").click(function () {
+    $(".card").css("pointer-events", "none");//------Prevents User Clicking or hovering
+    $("#status").show('slow');
   $(".whistle").show(2000);
   whistle.play();
-
-  setTimeout(function () {}, 1000);
-  //   setTimeout(function () {
-  //     $(".count").text("2");
-  //   }, 2000);
-
+  makeGameSequence();
+  console.log(currentGame);
+  
   setTimeout(function () {
     main();
   }, 2000);
@@ -232,17 +247,18 @@ $("#play-btn").click(function () {
 
 //----------Play button initiates main function which iterates through currentGame (randomised sequence) and flashes each card
 const main = async () => {
-  $(".card").prop("disabled", true);
+
+  
   $("#round").text(round);
   $("#ball").removeClass("rotating");
 
-  $("#play-btn").text("Wait...");
+  $("#startGame").text("Wait...");
   for (let card of currentGame) {
     await flash(card);
   }
 
-  $("#play-btn").text(`Round: ${round}`);
-  $(".card").prop("disabled", false);
+  $("#startGame").text(`Round: ${round}`);
+  $(".card").css("pointer-events", "auto");//------Enables User Clicking or hovering
 };
 
 //------Function to check answers with selections--------
@@ -269,103 +285,102 @@ const main = async () => {
 //   }
 //   //   }
 
-//---------CARD CLICK FUNCTION RETRIEVES DATA ID OF CARD CLICKED AND INITIATES CHECK ANSWER FUNCTION -------
+//---------CARD CLICK FUNCTION RETRIEVES DATA ID OF CARD CLICKED AND ADDS TO CLICKED ARRAY-------
 console.log(randomOrder);
 const cardClick = (card) => {
   ping.play();
   playType = card.getAttribute("data-id");
   clicked.push(playType);
-  console.log(randomOrder);
   console.log(clicked);
-  if (clicked.length === randomOrder.length) {
-    // var choice = clicked[0];
-    // var answer = randomOrder[0];
-     checkAnswer();
-    // if (choice === answer) {
-    //   round += 1;
-    //   roundCheck();
-    //   clicked.shift();
-    //   randomOrder.shift();
-    //   console.log(choice);
-    //   console.log("correct");
-    //   woo.play();
-    //   correct();
-    //   updateProgress();
-    //   // $("#message").text(`Correct, You completed round ${round}!`);
-    //   setTimeout(function () {
-    //     $("#message").text("");
-    //   }, 2000);
-
-    //   setTimeout(function () {}, 1000);
-    //   $("#round").text(round);
-    //   $("#play-btn").text(`Round ${round}`);
-    //   makeGameSequence();
-    //   setTimeout(function () {
-    //     main();
-    //   }, 3000);
-    // } else if (choice !== answer) {
-    //   lives -= 1;
-    //   $(".heart").last().remove();
-    //   setTimeout(function () {
-    //     lifeCheck();
-    //   }, 100);
-    //   boo.play();
-    //   wrong();
-    //   clicked = [];
-    //   // $("#message").text("INCORRECT. YOU LOSE 1 LIFE!");
-    //   setTimeout(function () {
-    //     $("#message").text("");
-    //   }, 2000);
-    //   $("#play-btn").text("Try Again!");
-    //   console.log("INCORRECT. YOU LOSE 1 LIFE!");
-    //   console.log(currentGame);
-    //   setTimeout(function () {
-    //     main();
-    //   }, 3000);
-    // }
-  } else {
-    console.log("pick another");
-    //   $("#play-btn").text("Make Selection...");
-  }
+  setTimeout(function () {
+    checkAnswer();
+  }, 200);
 };
 
+//---------CHECK ANSWER FUNCTION COMPARES SELECTION TO CORRECT ANSWER-------//
+const checkAnswer = () => {
+  for (let i = 0; i < randomOrder.length; i++) {
+    // if (clicked.length === randomOrder.length) {
+      var choice = clicked[i];
+      var answer = randomOrder[i];
+      console.log(answer);
+      if (choice == answer) {
+        round += 1;
+        clicked=[];
+        randomOrder = [];
+        console.log(choice);
+        console.log("correct");
+        woo.play();
+        correct();
+        updateProgress();
+        setTimeout(function () {}, 1000);
+        $("#round").text(round);
+        $("#startGame").text(`Round ${round}`);
+        $(".card").css("pointer-events", "none");//------Prevents User Clicking or hovering
+        makeGameSequence();
+        setTimeout(function () {
+          main();
+        }, 3000);
+      } else if (choice !== answer) {
+          randomOrder =[];
+          clicked =[];
+        lives -= 1;
+        $(".heart").last().remove();
+        setTimeout(function () {
+          lifeCheck();
+        }, 100);
+        boo.play();
+        wrong();
+        $("#startGame").text("Try Again!");
+        console.log("INCORRECT. YOU LOSE 1 LIFE!");
+        console.log(currentGame);
+        setTimeout(function () {
+          main();
+        }, 3000);
+      }
+    // } else {
+    //   console.log("pick another");
+    // //   $("#startGame").text("Make Selection...");
+    // }
+  }
+};
 //-------ALTERNATIVE CHECK ANSWER FUNCTION --------//
 
-const checkAnswer = () => {
-  for (var check = 0; check < currentGame.length; check++) {
-    if (clicked[check] === randomOrder[check]) {
-      //CORRECT
-      round += 1;
-      roundCheck();
-      clicked.shift();
-      //   randomOrder.shift();
-      console.log("correct");
-      woo.play();
-      correct();
-      updateProgress();
-      setTimeout(function () {}, 1000);
-      $("#round").text(round);
-      $("#play-btn").text(`Round ${round}`);
-      makeGameSequence();
-      setTimeout(function () {
-        main();
-      }, 3000);
-      //KEEP PLAYING
-    } else if (clicked[check] !== randomOrder[check]) {
-      lives -= 1;
-      $(".heart").last().remove();
-      setTimeout(function () {
-        lifeCheck();
-      }, 100);
-      boo.play();
-      wrong();
-      clicked = [];
-      $("#play-btn").text("Try Again!");
-      console.log("INCORRECT. YOU LOSE 1 LIFE!");
-      console.log(currentGame);
-      setTimeout(function () {
-        main();
-      }, 3000);
-    }
-  }
-};
+// const checkAnswer = () => {
+//   for (var check = 0; check < currentGame.length; check++) {
+//     if (clicked[check] === randomOrder[check]) {
+//       //CORRECT
+//       round += 1;
+//       roundCheck();
+//       clicked.shift();
+//       //   randomOrder.shift();
+//       console.log("correct");
+//       woo.play();
+//       correct();
+//       updateProgress();
+//       setTimeout(function () {}, 1000);
+//       $("#round").text(round);
+//       $("#play-btn").text(`Round ${round}`);
+//       makeGameSequence();
+//       setTimeout(function () {
+//         main();
+//       }, 3000);
+//       //KEEP PLAYING
+//     } if (clicked[check] !== randomOrder[check]) {
+//       lives -= 1;
+//       $(".heart").last().remove();
+//       setTimeout(function () {
+//         lifeCheck();
+//       }, 100);
+//       boo.play();
+//       wrong();
+//       clicked = [];
+//       $("#play-btn").text("Try Again!");
+//       console.log("INCORRECT. YOU LOSE 1 LIFE!");
+//       console.log(currentGame);
+//       setTimeout(function () {
+//         main();
+//       }, 3000);
+//     }
+//   }
+// };
