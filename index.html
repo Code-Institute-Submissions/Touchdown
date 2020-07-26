@@ -41,11 +41,13 @@
             <ul>
               <li><a class="current" href="#">Home</a></li>
               <li>
-                <a  data-toggle="modal"
-      data-target="#howToPlayModal">How to Play? </a>
+                <a class="howTo" data-toggle="modal" data-target="#howToPlayModal"
+                  >How to Play?
+                </a>
               </li>
-              <li><a data-toggle="modal"
-      data-target="#contactUs">Contact Us</a></li>
+              <li>
+                <a data-toggle="modal" data-target="#contactUs">Contact Us</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -65,42 +67,6 @@
         src="assets/images/losing.png"
         alt="Incorrect Cross"
       />
-      <div id="status" class="row container-fluid">
-        <div class="col-4">
-          Round:
-          <div id="round"></div>
-        </div>
-        <div class="col-4">
-          Lives:
-          <div id="lives">
-            <span class="heart"><i class="fa fa-heart"></i></span>
-            <span class="heart"><i class="fa fa-heart"></i></span>
-            <span class="heart"><i class="fa fa-heart"></i></span>
-          </div>
-        </div>
-        <div class="col-4">
-          Difficulty:
-          <div id="difficulty">
-            <div>
-              <label class="uppercase" for="rookie ">Rookie</label>
-              <input
-                class="rookie"
-                type="radio"
-                id="rookie"
-                name="rookie"
-                checked
-              />
-              <label class="uppercase" for="veteran">Veteran</label>
-              <input class="veteran" type="radio" id="veteran" name="veteran" />
-              <label class="uppercase" for="mvp">MVP</label>
-              <input class="mvp" type="radio" id="mvp" name="mvp" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row container fluid message">
-        <div id="message"></div>
-      </div>
     </header>
     <main>
       <div class="row">
@@ -108,7 +74,7 @@
         <div class="col-lg-8">
           <div class="container game">
             <div class="buttons">
-              <button id="play-btn" class="btn btn-lg">
+              <button id="startGame" class="btn btn-lg">
                 Start Game</button
               ><br />
               <div class="whistle"></div>
@@ -164,6 +130,39 @@
           </div>
         </div>
         <div class="col-lg-2 wing"></div>
+      </div>
+      <div id="status" class="row container-fluid">
+        <div class="col-4">
+          Round:
+          <div id="round"></div>
+        </div>
+        <div class="col-4">
+          Lives:
+          <div id="lives">
+            <span class="heart"><i class="fa fa-heart"></i></span>
+            <span class="heart"><i class="fa fa-heart"></i></span>
+            <span class="heart"><i class="fa fa-heart"></i></span>
+          </div>
+        </div>
+        <div class="col-4">
+          Difficulty:
+          <div id="difficulty">
+            <div>
+              <label class="uppercase" for="rookie ">Rookie</label>
+              <input
+                class="rookie"
+                type="radio"
+                id="rookie"
+                name="rookie"
+                checked
+              />
+              <label class="uppercase" for="veteran">Veteran</label>
+              <input class="veteran" type="radio" id="veteran" name="veteran" />
+              <label class="uppercase" for="mvp">MVP</label>
+              <input class="mvp" type="radio" id="mvp" name="mvp" />
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
