@@ -110,6 +110,10 @@ h1 i {
   right: 3em;
   font-size: 2em;
   font-weight: 200;
+  cursor: pointer;
+}
+.howTo:hover{
+    cursor: help;
 }
 
 .menu li a {
@@ -119,8 +123,9 @@ h1 i {
 .menu li a:hover{
     background-color: rgb(27, 143, 27);
     color: rgb(255, 255, 255);
-    
 }
+
+
 
 #status {
   padding: 0.5em;
@@ -136,7 +141,7 @@ h1 i {
   width: 100%;
   background-color: rgb(27, 143, 27);
   height: auto;
-  padding-bottom: 4em;
+  padding-bottom: 2em;
 }
 .card {
   width: 20%;
@@ -211,13 +216,13 @@ h1 i {
   padding-top: 1em;
 }
 
-#play-btn {
+#startGame {
   border: solid 2px rgb(148, 110, 14);
   background-color: rgb(247, 245, 245);
   color: rgb(148, 110, 14);
 }
 
-#play-btn:hover {
+#startGame:hover {
   border: solid 2px rgb(247, 245, 245);
   background-color: rgb(148, 110, 14);
   color: rgb(247, 245, 245);
