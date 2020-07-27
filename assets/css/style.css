@@ -241,3 +241,29 @@ main .wing {
   justify-content: center;
   position: relative;
 }
+
+/*--------Modals------------*/
+
+.modal-content {
+    background: url(../images/grass.jpg) no-repeat bottom right fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: auto;
+}
+
+.modal-header{
+    font-family: "Bungee Inline", cursive, sans-serif;
+    color: white;
+    font-size: 5rem;
+}
+.modal-body{
+    font-family: "Montserrat", cursive, sans-serif;
+    color: white;
+    font-weight: 600;
+}
