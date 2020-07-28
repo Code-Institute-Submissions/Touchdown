@@ -37,14 +37,14 @@ const restartSound = new Audio("assets/audio/restart.mp3");
 const gameOver = new Audio("assets/audio/gameOver.mp3");
 const touchdown = new Audio("assets/audio/touchdown.mp3");
 
-const roundLimit = 10;
 const playOrder = [kick, pass, run, rush];
 
-var difficulty = rookie;
+var difficulty = mvp;
 var currentGame = [];
 var clicked = [];
 var round = 1;
 var lives = 3;
+var points = 0;
 var playTypeId;
 var playTypeObject;
 var randomOrder = [];
@@ -113,6 +113,7 @@ const restart = () => {
   clicked = [];
   round = 1;
   lives = 3;
+  points = 0;
   randomOrder = [];
   currentGame = [];
   $("#startGame").css("pointer-events", "auto"); //------Prevents User Clicking or hovering
@@ -125,8 +126,7 @@ const restart = () => {
 };
 
 const loseLife = () => {
-    clicked =[];
-  lives -= 1;
+  clicked = [];
   $(".heart").last().remove();
   round = 1;
   randomOrder = [];
@@ -167,6 +167,7 @@ const updateProgress = () => {
 
 //-------- CORRECT FUNCTION------//
 const correct = () => {
+  const roundLimit = 2;
   if (round === 5) {
     alert("Youre halfway up the field. Keep going!!!");
     $(".winning").css("visibility", "visible");
@@ -174,7 +175,7 @@ const correct = () => {
       $(".winning").css("visibility", "hidden");
     }, 1000);
   }
-  if (round === 10) {
+  if (round === roundLimit) {
     //----------------CHECKS IF USER HAS COMPLETED GAME
     gameWon();
     setTimeout(function () {
@@ -199,13 +200,16 @@ const wrong = () => {
 };
 //-------- GAME WON FUNCTION------//
 const gameWon = () => {
+    var totalPoints = (lives*points)
   touchdown.play();
   $(".touchdown").css("visibility", "visible");
   setTimeout(function () {
     $(".touchdown").css("visibility", "hidden");
   }, 3000);
   setTimeout(function () {
-    alert("TOUCHDOWN YOU WIN!");
+    alert(
+      `TOUCHDOWN YOU WIN! \n YOU SCORED ${points} points. \n YOU HAD ${lives} LIVES LEFT. \n TOTAL SCORE = POINTS X LIVES LEFT \n YOUR TOTAL SCORE IS SCORED ${totalPoints} POINTS! \n `
+    );
   }, 3000);
   return false;
 };
@@ -237,6 +241,12 @@ const flash = (card) => {
       }, 500);
     }, difficulty);
   });
+};
+
+//-------- Points Counter function----------
+
+const showPoints = () => {
+  $("#currentPoints").text(points);
 };
 
 //---------
@@ -278,6 +288,8 @@ const cardClick = (card) => {
     console.log("correct");
 
     if (randomOrder.length === 0) {
+      points += 3;
+      showPoints();
       round += 1;
       $("#round").text(round); //---------Increase Round and update round count to user-------
       clicked = []; //---------Reset Clicked Array--------------
@@ -293,12 +305,15 @@ const cardClick = (card) => {
       }, 3000); //-----------Plays next sequence of card flashes--------
     }
   } else if (playType !== expectedAnswer) {
+    lives -= 1;
     if (lives === 0) {
       gameOver.play();
       alert("GAME OVER");
       $("#startGame").text("Start Game");
       restart();
     } else {
+      points -= 5;
+      showPoints();
       loseLife();
       wrong();
       $("#play-btn").text("Try Again!");
