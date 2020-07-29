@@ -22,6 +22,10 @@
     />
 
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
     <title>Touchdown</title>
   </head>
   <audio src="assets/audio/intro.mp3" autoplay>
@@ -40,7 +44,15 @@
           <i id="menu-btn" class="fas fa-bars"></i>
           <div class="menu">
             <ul>
-              <li><a class="current" data-toggle="modal" data-target="#selectDifficulty" href="#">Select Difficulty</a></li>
+              <li>
+                <a
+                  class="current"
+                  data-toggle="modal"
+                  data-target="#selectDifficulty"
+                  href="#"
+                  >Select Difficulty</a
+                >
+              </li>
               <li>
                 <a
                   class="howTo"
@@ -280,11 +292,6 @@
                   rows="3"
                 ></textarea>
                 <br />
-                <br />
-                <br />
-                <button class="btn btn-cta send-btn">
-                  SEND <i class="fas fa-paper-plane"></i>
-                </button>
               </form>
             </section>
           </div>
@@ -296,8 +303,8 @@
             >
               Close
             </button>
-            <button onclick="sendEmail()" type="button" class="btn btn-success">
-              Send
+            <button onclick="sendEmail()" type="button" class="btn btn-success" data-dismiss="modal">
+              Send <i class="fas fa-paper-plane"></i>
             </button>
           </div>
         </div>
@@ -368,7 +375,12 @@
             >
               Close
             </button>
-            <button type="button" id="letsPlay" class=" uppercase btn btn-primary">
+            <button
+              type="button"
+              id="letsPlay"
+              class="uppercase btn btn-primary"
+              data-dismiss="modal"
+            >
               Lets Play!
             </button>
           </div>
