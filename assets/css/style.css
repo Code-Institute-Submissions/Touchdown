@@ -86,9 +86,17 @@ h1 i {
   to {font-size: 2em}
 } */
 
+.trophy{
+    position: relative;
+    font-size: 8rem;
+    color: gold;
+    visibility: hidden;
+}
+
 .menu {
   font-family: "Bungee Inline", cursive, sans-serif;
   text-align: right;
+  display: none;
   animation-name: fadein;
   animation-duration: 4s;
 }
@@ -131,6 +139,12 @@ h1 i {
   padding: 0.5em;
   font-family: "Montserrat", sans-serif;
   font-size: 1.4em;
+}
+
+#difficulty{
+    width: 100%;
+    overflow: hidden;
+    font-size: 2em;
 }
 
 #status i {
@@ -207,11 +221,15 @@ h1 i {
   position: absolute;
   z-index: 300;
   bottom: 0px;
-  right: 300px;
+  margin: auto 0;
   visibility: hidden;
 }
 
 /*---------------------BUTTONS----------------------*/
+#menu-btn {
+    font-size: 7rem;
+}
+
 .buttons {
   padding-top: 1em;
 }
@@ -266,4 +284,15 @@ main .wing {
     font-family: "Montserrat", cursive, sans-serif;
     color: white;
     font-weight: 600;
+    text-align: left;
+    background-color: rgba(2, 141, 2, 0.76);
+}
+
+.modal-body li{
+    
+    text-align: left;
+}
+
+.email{
+    width: 100%;
 }
