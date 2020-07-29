@@ -254,28 +254,20 @@ const showPoints = () => {
 
 //--------- START GAME FUNCTION ----- makes user select difficulty----
 const startGame = () => {
-  if (difficultyPicked = false) {
-    $("#selectDifficulty").modal("show");
-    $("#letsPlay").click(function () {
-      difficultyPicked = true;
-    });
-  } else {
-    $(".card").css("pointer-events", "none"); //------Prevents User Clicking or hovering
-    $(this).css("pointer-events", "none"); //------Prevents User Clicking or hovering
-    $("#status").show("slow");
-    gameAudio.whistle.play();
-    makeGameSequence();
-    console.log(currentGame);
-    setTimeout(function () {
-      main();
-    }, 2000);
-  }
+  $(".menu").css("display", "none");
+  $("#letsPlay").click(function () {});
+  $(".card").css("pointer-events", "none"); //------Prevents User Clicking or hovering
+  $(this).css("pointer-events", "none"); //------Prevents User Clicking or hovering
+  $("#status").show("slow");
+  gameAudio.whistle.play();
+  makeGameSequence();
+  console.log(currentGame);
+  setTimeout(function () {
+    main();
+  }, 2000);
 };
 
 //---LETS PLAY FUNCTION ---- Recognises if difficulty has been selected and starts the game accordingly
-
-
-
 
 //----------MAIN FUNCTION -- iterates through currentGame (randomised sequence) and flashes each card
 const main = async () => {
@@ -339,4 +331,26 @@ const cardClick = (card) => {
       }, 3000); //------Plays Sequence of card flashes-------
     }
   }
+};
+
+//------SEND EMAIL FUNCTION using EmailJS API -------//
+const sendEmail = () => {
+  let full_name = ($("#fname").val() +" "+ $("#lname").val());
+  let emailAdress = $("#email").val();
+  let enquiry = $("#enquiry").val();
+  emailjs.init("user_rsvmwq5KBsvLqIljtmzs3");
+  emailjs
+    .send("gmail", "touchdown_user", {
+    "from_name": full_name,
+      "enquiry": enquiry,
+      "from_email": emailAdress,
+    })
+    .then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
 };
