@@ -52,7 +52,6 @@ var randomOrder = [];
 var playType;
 
 console.log("ready");
-//---Play intro Function-----
 
 //------Restart- Confirmation-----------
 const restartCheck = () => {
@@ -66,12 +65,12 @@ const restartCheck = () => {
 };
 
 //-------MENU TOGGLE FUNCTION-------//
-$("#menu-btn").click(function () {
+$("#title").click(function () {
   $(".menu").toggle();
 });
 
-//------- Checkbox Function ------------
-let checkBox = () => {
+//------- Check Difficulty Function ------------
+let checkDifficulty = () => {
   $("input[id=rookie]").change(function () {
     if ($(this).is(":checked")) {
       // Checkbox is checked..
@@ -107,7 +106,7 @@ let checkBox = () => {
   });
 };
 
-checkBox();
+checkDifficulty();
 
 $("#status").hide();
 //---------Restart Function--- Brings game to the begining------
@@ -119,12 +118,14 @@ const restart = () => {
   points = 0;
   randomOrder = [];
   currentGame = [];
-  $("#startGame").css("pointer-events", "auto"); //------Prevents User Clicking or hovering
+  $("#startGame").css("pointer-events", "auto"); //------Enables User Clicking or hovering
   $("#ball").addClass(" rotating ");
-  $("#startGame").text("Start Game");
+
   $(".progress-bar").css("width", "0%");
   $("#round").text("");
   resetLives();
+  showPoints();
+  $("#startGame").text("Start Game");
   //------This resets the 3 heart icons that represent the lives left
 };
 
@@ -254,10 +255,9 @@ const showPoints = () => {
 
 //--------- START GAME FUNCTION ----- makes user select difficulty----
 const startGame = () => {
-  $(".menu").css("display", "none");
   $("#letsPlay").click(function () {});
   $(".card").css("pointer-events", "none"); //------Prevents User Clicking or hovering
-  $(this).css("pointer-events", "none"); //------Prevents User Clicking or hovering
+  $("#startGame").css("pointer-events", "none"); //------Prevents User Clicking or hovering
   $("#status").show("slow");
   gameAudio.whistle.play();
   makeGameSequence();
@@ -266,8 +266,6 @@ const startGame = () => {
     main();
   }, 2000);
 };
-
-//---LETS PLAY FUNCTION ---- Recognises if difficulty has been selected and starts the game accordingly
 
 //----------MAIN FUNCTION -- iterates through currentGame (randomised sequence) and flashes each card
 const main = async () => {
@@ -333,23 +331,45 @@ const cardClick = (card) => {
   }
 };
 
+//----------- REPLAY FUNCTION--------Repeats the sequence
+const replay = () => {
+  if (confirm("Are you sure you want to replay? You will lose 3 points!")) {
+    main();
+    points -= 3;
+    showPoints();
+  } else {
+    return false; //----On cancel user returns to current game------//
+  }
+};
+
 //------SEND EMAIL FUNCTION using EmailJS API -------//
 const sendEmail = () => {
-  let full_name = ($("#fname").val() +" "+ $("#lname").val());
+  $("#startGame").css("pointer-events", "none"); //------Disables User Clicking or hovering
+  let full_name = $("#fname").val() + " " + $("#lname").val();
   let emailAdress = $("#email").val();
   let enquiry = $("#enquiry").val();
   emailjs.init("user_rsvmwq5KBsvLqIljtmzs3");
   emailjs
     .send("gmail", "touchdown_user", {
-    "from_name": full_name,
-      "enquiry": enquiry,
-      "from_email": emailAdress,
+      from_name: full_name,
+      enquiry: enquiry,
+      from_email: emailAdress,
     })
     .then(
       function (response) {
+        $("#send-btn")
+          .removeClass("send-btn")
+          .removeClass("btn-light")
+          .addClass("sent");
+        $("#send-btn").text("EMAIL SENT");
+        $("#contactUs").modal("hide");
+        setTimeout(function () {
+          $("#contactUs").modal("hide"); //-----------Waits for confirmation email has been sent before closing modal
+        }, 8000);
         console.log("SUCCESS!", response.status, response.text);
       },
       function (error) {
+        $("#startGame").css("pointer-events", "auto"); //------Enables User Clicking or hovering
         console.log("FAILED...", error);
       }
     );
