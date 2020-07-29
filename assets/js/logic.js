@@ -2,9 +2,7 @@
 When the user selects the difficulty and clicks start:
 -The 4 options will flash in a sequence. It will start with one and add on each time.
 - The difficulty setting relates to the speed (Rookie = slow)(Veteran = Medium)(MVP = fast)
-
-
-- Generate Sequence with Math Random Y
+- Generate Sequence with Math Random
 - Iterate through sequence and apply highlight function Y
 - May need to use a promise to let highlights be seperate  Y
 - Wait for sequence to end Y
@@ -23,23 +21,26 @@ const run = document.querySelector(".run");
 const rush = document.querySelector(".rush");
 
 //---------Difficulty Levels----------
-const rookie = 2000;
-const veteran = 900;
-const mvp = 300;
+const rookie = 1200;
+const veteran = 700;
+const mvp = 200;
 
 //---------Audio/Sound Effects----------
-const intro = new Audio("assets/audio/intro.mp3");
-const woo = new Audio("assets/audio/woo.mp3");
-const boo = new Audio("assets/audio/boo.mp3");
-const whistle = new Audio("assets/audio/whistle.mp3");
-const ping = new Audio("assets/audio/ping.mp3");
-const restartSound = new Audio("assets/audio/restart.mp3");
-const gameOver = new Audio("assets/audio/gameOver.mp3");
-const touchdown = new Audio("assets/audio/touchdown.mp3");
 
+const gameAudio = {
+  intro: new Audio("assets/audio/intro.mp3"),
+  woo: new Audio("assets/audio/woo.mp3"),
+  boo: new Audio("assets/audio/boo.mp3"),
+  whistle: new Audio("assets/audio/whistle.mp3"),
+  ping: new Audio("assets/audio/ping.mp3"),
+  restartSound: new Audio("assets/audio/restart.mp3"),
+  gameOver: new Audio("assets/audio/gameOver.mp3"),
+  touchdown: new Audio("assets/audio/touchdown.mp3"),
+};
 const playOrder = [kick, pass, run, rush];
 
-var difficulty = mvp;
+var difficultyPicked = false;
+var difficulty = rookie;
 var currentGame = [];
 var clicked = [];
 var round = 1;
@@ -64,38 +65,40 @@ const restartCheck = () => {
   }
 };
 
+//-------MENU TOGGLE FUNCTION-------//
+$("#menu-btn").click(function () {
+  $(".menu").toggle();
+});
+
 //------- Checkbox Function ------------
 let checkBox = () => {
-  $("input[name=rookie]").change(function () {
+  $("input[id=rookie]").change(function () {
     if ($(this).is(":checked")) {
-      $(".veteran").toggle(":checked");
-      $(".mvp").toggle(":checked");
       // Checkbox is checked..
       difficulty = rookie;
+      difficultyPicked = true;
       console.log("rookie is checked");
     } else {
       // Checkbox is not checked..
       console.log("rookie not checked");
     }
   });
-  $("input[name=veteran]").change(function () {
+  $("input[id=veteran]").change(function () {
     if ($(this).is(":checked")) {
-      $(".rookie").is(":unchecked");
-      $(".mvp").is(":unchecked");
       // Checkbox is checked..
       difficulty = veteran;
+      difficultyPicked = true;
       console.log("veteran is checked");
     } else {
       // Checkbox is not checked..
       console.log("veteran not checked");
     }
   });
-  $("input[name=mvp]").change(function () {
+  $("input[id=mvp]").change(function () {
     if ($(this).is(":checked")) {
-      $(".rookie").is(":unchecked");
-      $(".veteran").is(":unchecked");
       // Checkbox is checked..
       difficulty = mvp;
+      difficultyPicked = true;
       console.log("mvp is checked");
     } else {
       // Checkbox is not checked..
@@ -109,7 +112,7 @@ checkBox();
 $("#status").hide();
 //---------Restart Function--- Brings game to the begining------
 const restart = () => {
-  restartSound.play();
+  gameAudio.restartSound.play();
   clicked = [];
   round = 1;
   lives = 3;
@@ -167,7 +170,7 @@ const updateProgress = () => {
 
 //-------- CORRECT FUNCTION------//
 const correct = () => {
-  const roundLimit = 2;
+  const roundLimit = 10;
   if (round === 5) {
     alert("Youre halfway up the field. Keep going!!!");
     $(".winning").css("visibility", "visible");
@@ -192,7 +195,7 @@ const correct = () => {
 
 //-------- WRONG FUNCTION------//
 const wrong = () => {
-  boo.play();
+  gameAudio.boo.play();
   $(".losing").css("visibility", "visible");
   setTimeout(function () {
     $(".losing").css("visibility", "hidden");
@@ -200,8 +203,8 @@ const wrong = () => {
 };
 //-------- GAME WON FUNCTION------//
 const gameWon = () => {
-    var totalPoints = (lives*points)
-  touchdown.play();
+  var totalPoints = lives * points;
+  gameAudio.touchdown.play();
   $(".touchdown").css("visibility", "visible");
   setTimeout(function () {
     $(".touchdown").css("visibility", "hidden");
@@ -217,7 +220,7 @@ const gameWon = () => {
 //---------LIFE CHECK FUNCTION-------// 3 lives to start.
 const lifeCheck = () => {
   if (lives === 0) {
-    gameOver.play();
+    gameAudio.gameOver.play();
     alert("GAME OVER");
     $("#startGame").text("Start Game");
     restart();
@@ -230,7 +233,7 @@ const lifeCheck = () => {
 // ------- FLASH FUNCTION INITIATES HIGHLIGHT ON CARD----//
 
 const flash = (card) => {
-  ping.play();
+  gameAudio.ping.play();
   return new Promise((resolve, reject) => {
     card.className += " flash";
     setTimeout(() => {
@@ -249,20 +252,32 @@ const showPoints = () => {
   $("#currentPoints").text(points);
 };
 
-//---------
-$("#startGame").click(function () {
-  $(".card").css("pointer-events", "none"); //------Prevents User Clicking or hovering
-  $(this).css("pointer-events", "none"); //------Prevents User Clicking or hovering
-  $("#status").show("slow");
-  whistle.play();
-  makeGameSequence();
-  console.log(currentGame);
-  setTimeout(function () {
-    main();
-  }, 2000);
-});
+//--------- START GAME FUNCTION ----- makes user select difficulty----
+const startGame = () => {
+  if (difficultyPicked = false) {
+    $("#selectDifficulty").modal("show");
+    $("#letsPlay").click(function () {
+      difficultyPicked = true;
+    });
+  } else {
+    $(".card").css("pointer-events", "none"); //------Prevents User Clicking or hovering
+    $(this).css("pointer-events", "none"); //------Prevents User Clicking or hovering
+    $("#status").show("slow");
+    gameAudio.whistle.play();
+    makeGameSequence();
+    console.log(currentGame);
+    setTimeout(function () {
+      main();
+    }, 2000);
+  }
+};
 
-//----------Play button initiates main function which iterates through currentGame (randomised sequence) and flashes each card
+//---LETS PLAY FUNCTION ---- Recognises if difficulty has been selected and starts the game accordingly
+
+
+
+
+//----------MAIN FUNCTION -- iterates through currentGame (randomised sequence) and flashes each card
 const main = async () => {
   $("#round").text(round);
   $("#ball").removeClass("rotating");
@@ -277,7 +292,7 @@ const main = async () => {
 
 //---------CARD CLICK FUNCTION RETRIEVES DATA ID OF CARD CLICKED AND COMPARES WITH RANDOM ORDER ARRAY-------
 const cardClick = (card) => {
-  ping.play();
+  gameAudio.ping.play();
   playType = card.getAttribute("data-id");
   console.log(playType);
   clicked.push(playType);
@@ -293,7 +308,7 @@ const cardClick = (card) => {
       round += 1;
       $("#round").text(round); //---------Increase Round and update round count to user-------
       clicked = []; //---------Reset Clicked Array--------------
-      woo.play();
+      gameAudio.woo.play();
       correct();
       updateProgress();
 
@@ -307,7 +322,7 @@ const cardClick = (card) => {
   } else if (playType !== expectedAnswer) {
     lives -= 1;
     if (lives === 0) {
-      gameOver.play();
+      gameAudio.gameOver.play();
       alert("GAME OVER");
       $("#startGame").text("Start Game");
       restart();
