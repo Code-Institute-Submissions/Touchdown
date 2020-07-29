@@ -48,8 +48,31 @@ header {
   padding: 1em;
   margin-top: 1em;
 }
-main{
-    animation-name: fadein;
+#title {
+  pointer-events: none;
+}
+
+#title h1 {
+  font-size: 5rem;
+  font-family: "Bungee Inline", cursive, sans-serif;
+  background-color: rgb(27, 143, 27);
+  border-radius: 1.4em;
+  animation-name: banner;
+  animation-duration: 4s;
+  width: 100%;
+}
+
+@keyframes banner {
+  from {
+    width: 0em;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+main {
+  animation-name: fadein;
   animation-duration: 4s;
 }
 
@@ -57,46 +80,21 @@ main{
   color: rgb(107, 69, 12);
   text-decoration: none;
 }
-h1 {
-  font-size: 5em;
-  font-family: "Bungee Inline", cursive, sans-serif;
-  background-color: rgb(27, 143, 27);
-  border-radius: 1.4em;
-  width: 7em;
-  animation-name: banner;
-  animation-duration: 4s;
-}
-@keyframes banner {
-  from {
-    width: 0rem;
-  }
-  to {
-    width: 7em;
-  }
-}
 
 h1 i {
   color: rgb(107, 69, 12);
-  /* animation-name: expand;
-  animation-duration: 4s; */
 }
 
-/* @keyframes expand {
-  from {font-size: 0em}
-  to {font-size: 2em}
-} */
-
-.trophy{
-    position: relative;
-    font-size: 8rem;
-    color: gold;
-    visibility: hidden;
+.trophy {
+  position: relative;
+  font-size: 8rem;
+  color: gold;
+  visibility: hidden;
 }
 
 .menu {
   font-family: "Bungee Inline", cursive, sans-serif;
   text-align: right;
-  display: none;
   animation-name: fadein;
   animation-duration: 4s;
 }
@@ -111,29 +109,30 @@ h1 i {
 
 .menu ul {
   list-style-type: none;
+  line-height: 2;
 }
 
 .menu li {
   position: relative;
   right: 3em;
-  font-size: 2em;
   font-weight: 200;
   cursor: pointer;
+  font-size: 2em;
 }
-.howTo:hover{
-    cursor: help;
+.howTo:hover {
+  cursor: help;
 }
 
 .menu li a {
   color: rgb(59, 59, 59);
 }
 
-.menu li a:hover{
-    background-color: rgb(27, 143, 27);
-    color: rgb(255, 255, 255);
+.menu li a:hover {
+  background-color: rgb(27, 143, 27);
+  color: rgb(255, 255, 255);
 }
 
-
+/*---------STATUS BAR INFO ----------*/
 
 #status {
   padding: 0.5em;
@@ -141,32 +140,52 @@ h1 i {
   font-size: 1.4em;
 }
 
-#difficulty{
-    width: 100%;
-    overflow: hidden;
-    font-size: 2em;
+#status p {
+  font-family: "Bungee Inline", cursive, sans-serif;
+}
+
+#difficulty {
+  width: 100%;
+  overflow: hidden;
+  font-size: 2em;
 }
 
 #status i {
   color: rgb(194, 0, 0);
 }
+
+#points {
+  animation-name: grow;
+  animation-duration: 4s;
+}
+@keyframes grow {
+  from {
+    font-size: 1em;
+  }
+  to {
+    font-size: 4em;
+  }
+}
 /*---------------------MAIN----------------------*/
 .game {
   width: 100%;
   background-color: rgb(27, 143, 27);
-  height: auto;
+  height: 50vh;
   padding-bottom: 2em;
 }
 .card {
-  width: 20%;
+  width: 24%;
   height: 10rem;
-  margin: auto 1rem;
+  margin: auto .3rem;
   box-shadow: 0px 0px 1px rgb(150, 149, 149);
   border-radius: 1.4em;
 }
 
 .card-row {
-  margin: auto 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding-bottom: 40px;
 }
 
 .flash {
@@ -197,28 +216,37 @@ h1 i {
 
 /*---------------------IMAGES----------------------*/
 .card img {
-  height: 100%;
-  width: 100%;
   overflow: hidden;
   border-radius: 1.4em;
 }
 
-.winning {
-  position: absolute;
+.popup{
+    position: fixed;
+    z-index: 300;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    visibility: hidden;
+}
+/* .winning {
+  position: fixed;
   z-index: 300;
   bottom: 0px;
   right: 240px;
   visibility: hidden;
 }
-.losing {
-  position: absolute;
+
+.losing{
+    position: fixed;
   z-index: 300;
   bottom: 0px;
-  right: 300px;
-  visibility: hidden;
-}
+  right: 320px;
+  visibility: hidden; */
+
+/* } */
 .touchdown {
-  position: absolute;
+  position: fixed;
   z-index: 300;
   bottom: 0px;
   margin: auto 0;
@@ -227,7 +255,8 @@ h1 i {
 
 /*---------------------BUTTONS----------------------*/
 #menu-btn {
-    font-size: 7rem;
+  font-size: 7em;
+  width: 100%;
 }
 
 .buttons {
@@ -245,6 +274,16 @@ h1 i {
   background-color: rgb(148, 110, 14);
   color: rgb(247, 245, 245);
 }
+
+#send-btn {
+  color: rgb(148, 110, 14);
+  border: solid 2px rgb(148, 110, 14);
+}
+
+.sent {
+  background-color: rgb(27, 143, 27);
+  border: solid 2px white;
+}
 /*-------Container Image--------*/
 main .wing {
   height: auto;
@@ -260,10 +299,13 @@ main .wing {
   position: relative;
 }
 
+.no-gutters {
+  padding: 0;
+}
 /*--------Modals------------*/
 
 .modal-content {
-    background: url(../images/grass.jpg) no-repeat bottom right fixed;
+  background: url(../images/grass.jpg) no-repeat bottom right fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -275,24 +317,134 @@ main .wing {
   height: auto;
 }
 
-.modal-header{
-    font-family: "Bungee Inline", cursive, sans-serif;
-    color: white;
-    font-size: 5rem;
-}
-.modal-body{
-    font-family: "Montserrat", cursive, sans-serif;
-    color: white;
-    font-weight: 600;
-    text-align: left;
-    background-color: rgba(2, 141, 2, 0.76);
+#selectDifficulty .modal-content {
+  width: max-content;
 }
 
-.modal-body li{
-    
-    text-align: left;
+.modal-header {
+  font-family: "Bungee Inline", cursive, sans-serif;
+  color: white;
+  font-size: 5rem;
+}
+.modal-body {
+  font-family: "Montserrat", cursive, sans-serif;
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  background-color: rgba(2, 141, 2, 0.76);
 }
 
-.email{
-    width: 100%;
+.modal-content .difficulty {
+  background: url(../images/ball.jpg) no-repeat bottom right fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#difficulty p {
+  font-family: "Bungee Inline", cursive, sans-serif;
+}
+
+.modal-body li {
+  text-align: left;
+}
+
+.form-check-input {
+  width: 30px;
+}
+
+.email {
+  width: 100%;
+}
+
+/*--------------Media Queries for Responsive Design------------*/
+@media only screen and (max-width: 607px) {
+  #title h1 {
+    font-size: 3em;
+  }
+  .game{
+      height: auto;
+  }
+  .card {
+    width: 25%;
+    margin: 5px;
+    height: 8rem;
+  }
+  #status p {
+    font-size: 1em;
+  }
+  .menu {
+    text-align: center;
+  }
+  .menu ul {
+    padding: 0;
+    padding-left: 7em;
+    text-align: center;
+    margin: auto 0;
+  }
+  .menu li {
+    font-size: 1.3em;
+  }
+  #title {
+    pointer-events: auto;
+  }
+ 
+  #selectDifficulty .modal-content{
+      width: auto;
+  }
+}
+
+@media only screen and (max-width: 921px) {
+  #title h1 {
+    font-size: 3em;
+  }
+
+  .game{
+      height: 40vh;
+  }
+  .card {
+    width: 25%;
+    margin: 5px;
+    height: 8rem;
+  }
+  #status p {
+    font-size: 1em;
+  }
+  .menu {
+    text-align: center;
+  }
+  .menu ul {
+    padding: 0;
+    padding-left: 7em;
+    text-align: center;
+    margin: auto 0;
+  }
+  .menu li {
+    font-size: 1.3em;
+  }
+  #title {
+    pointer-events: auto;
+  }
+ 
+  #selectDifficulty .modal-content{
+      width: auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    /* .card{
+        width: 25%;
+        margin: auto 5em;
+        height:14em;
+    } */
+
+    .buttons{
+        width: 100%;
+    }
 }
