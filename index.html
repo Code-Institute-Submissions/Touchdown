@@ -93,7 +93,8 @@
               id="restart-btn"
               class="btn btn-sm btn-danger"
             >
-              Restart <i class="far fa-arrow-alt-circle-left"></i>
+              <i class="far fa-arrow-alt-circle-left"></i>
+              Restart
             </button>
             <span></span>
             <button id="startGame" onclick="startGame()" class="btn btn-lg">
@@ -173,7 +174,30 @@
     </main>
 
     <footer>
-      <div class="container-fluid"></div>
+      <div class="footer row container-fluid">
+        <div class="col-4">
+          <a class="rate" data-toggle="modal" data-target="#contactUs"
+            >RATE THIS GAME <i class="far fa-star"></i
+          ></a>
+        </div>
+        <div class="links col-4">
+          <span class="social"
+            ><a href="https://github.com/DanielBradford"
+              ><i class="fab fa-github-square"></i></a
+          ></span>
+          <span
+            ><a href="#"
+              ><i class="social fas fa-laptop"></i></a
+          ></span>
+          <span
+            ><a href="https://www.linkedin.com/in/daniel-bradford-12492946/"
+              ><i class="fab fa-linkedin"></i></a
+          ></span>
+        </div>
+        <div class="col-4">
+          Created by Daniel Bradford &copy 2020
+        </div>
+      </div>
     </footer>
 
     <div
@@ -199,29 +223,40 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body how">
             <ol>
-              <li>Click on Start Game</li>
               <li>
-                The cards labelled RUN, RUSH, KICK and PASS will flash in a
-                random order
+                Select you level difficulty. (Rookie is the default setting)
               </li>
+              <br />
               <li>
-                For each round 1 card will flash. You MUST remember the order in
-                which they flash.
+                Click on Start Game. The cards labelled RUN, RUSH, KICK and PASS
+                will flash in a random order.
               </li>
+              <br />
+              <li>
+                For each round, 1 card will flash. You MUST remember the order
+                in which they flash.
+              </li>
+              <br />
               <li>
                 When the sequence has finished you MUST select the cards in the
                 order they appeared.
               </li>
+              <br />
               <li>
-                If you are correct, you will progress to the next round. If you
-                are incorrect you will lose 1 life.
+                If you are correct, you will gain 3 points per card and progress
+                to the next round. If you are incorrect you will lose 1 life and
+                start from round 1.
               </li>
+              <br />
               <li>
-                If you make it to the 10th round you will gain a Touchdown and
-                complete the game. If you lose all 3 lives it will be GAME OVER.
+                If you make it to the 10th round you will complete Touchdown and
+                finish the game. YOUR TOTAL POINTS will be calculated by POINTS
+                GAINED X LIVES LEFT. If you lose all 3 lives it will be GAME
+                OVER.
               </li>
+              <br />
               <li>GOOD LUCK AND HAVE FUN :)</li>
             </ol>
           </div>
@@ -295,9 +330,14 @@
                 />
                 <br />
                 <div class="stars">
-                <p>Rate this game:</p><span><i class="star fas fa-star"></i><i class="star fas fa-star"></i
-                  ><i class="star fas fa-star"></i><i class="star fas fa-star"></i
-                  ><i class="star fas fa-star"></i></span>
+                  <p>Rate this game:</p>
+                  <span
+                    ><i class="star fas fa-star"></i
+                    ><i class="star fas fa-star"></i
+                    ><i class="star fas fa-star"></i
+                    ><i class="star fas fa-star"></i
+                    ><i class="star fas fa-star"></i
+                  ></span>
                 </div>
                 <label class="uppercase" for="enquiry">Feedback:</label>
                 <textarea
@@ -355,7 +395,7 @@
           </div>
           <div class="modal-body">
             <div id="difficulty">
-              <div class="form-check form-check-inline">
+              <div class="rookie form-check form-check-inline">
                 <input
                   class="form-check-input"
                   type="radio"
@@ -368,7 +408,7 @@
                   ><p>Rookie</p></label
                 >
               </div>
-              <div class="form-check form-check-inline">
+              <div class="veteran form-check form-check-inline">
                 <input
                   class="form-check-input"
                   type="radio"
@@ -380,7 +420,7 @@
                   ><p>Veteran</p></label
                 >
               </div>
-              <div class="form-check form-check-inline">
+              <div class="mvp form-check form-check-inline">
                 <input
                   class="form-check-input"
                   type="radio"
@@ -390,6 +430,11 @@
                 />
                 <label class="form-check-label" for="mvp"><p>MVP</p></label>
               </div>
+            </div>
+            <div class="level-explained">
+              <p>Rookie = Easier and slower (DEFAULT)</p>
+              <p>Veteran = Average with medium Speed</p>
+              <p>MVP = Hard and fast</p>
             </div>
           </div>
           <div class="modal-footer">
