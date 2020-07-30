@@ -50,6 +50,7 @@ var playTypeId;
 var playTypeObject;
 var randomOrder = [];
 var playType;
+var starCount = 0;
 
 console.log("ready");
 
@@ -342,21 +343,32 @@ const replay = () => {
   }
 };
 
+//------FEEDBACK STAR FUNCTION-------//
+$(".star").click(function(){
+    $(this).addClass("star-picked");
+    starCount +=1;
+
+});
+
 //------SEND EMAIL FUNCTION using EmailJS API -------//
 const sendEmail = () => {
   $("#startGame").css("pointer-events", "none"); //------Disables User Clicking or hovering
   let full_name = $("#fname").val() + " " + $("#lname").val();
   let emailAdress = $("#email").val();
+  let rating = `${starCount} / 5 (STARS)`
   let enquiry = $("#enquiry").val();
   emailjs.init("user_rsvmwq5KBsvLqIljtmzs3");
   emailjs
     .send("gmail", "touchdown_user", {
       from_name: full_name,
-      enquiry: enquiry,
+      rating: rating,
+      enquiry: enquiry, 
       from_email: emailAdress,
     })
     .then(
       function (response) {
+          $(".star").removeClass("star-picked");
+          starCount = 0;
         $("#send-btn")
           .removeClass("send-btn")
           .removeClass("btn-light")
@@ -374,3 +386,5 @@ const sendEmail = () => {
       }
     );
 };
+
+
