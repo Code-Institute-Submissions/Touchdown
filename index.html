@@ -33,7 +33,7 @@
   </audio>
 
   <body>
-    <header >
+    <header>
       <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-12" id="title">
           <h1>
@@ -47,21 +47,25 @@
                 class="current"
                 data-toggle="modal"
                 data-target="#selectDifficulty"
-                >Difficulty</a
-              >
+                >Difficulty <i class="fas fa-sliders-h"></i
+              ></a>
             </li>
             <li>
               <a class="howTo" data-toggle="modal" data-target="#howToPlayModal"
-                >How to Play?
+                >How to Play? <i class="far fa-question-circle"></i>
               </a>
             </li>
             <li>
-              <a data-toggle="modal" data-target="#contactUs">Contact Us</a>
+              <a data-toggle="modal" data-target="#contactUs"
+                >Contact Us <i class="far fa-envelope-open"></i
+              ></a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="col-12 d-none d-sm-none"><i id="menu-btn" class="d-sm-block fas fa-bars"></i></div>
+      <div class="col-12 d-none d-sm-none">
+        <i id="menu-btn" class="d-sm-block fas fa-bars"></i>
+      </div>
 
       <img
         class="popup winning"
@@ -89,18 +93,18 @@
               id="restart-btn"
               class="btn btn-sm btn-danger"
             >
-              Restart
+              Restart <i class="far fa-arrow-alt-circle-left"></i>
             </button>
             <span></span>
             <button id="startGame" onclick="startGame()" class="btn btn-lg">
-              Start Game
+              Start Game<br /><i class="fas fa-football-ball"></i>
             </button>
             <button
               onclick="replay()"
               id="replay-btn"
               class="btn btn-sm btn-success"
             >
-              Replay
+              Replay <i class="far fa-play-circle"></i>
             </button>
             <br />
             <br />
@@ -183,7 +187,9 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="howToPlay">How to Play</h5>
+            <h5 class="modal-title" id="howToPlay">
+              How to Play <i class="fas fa-question-circle"></i>
+            </h5>
             <button
               type="button"
               class="close"
@@ -206,8 +212,7 @@
               </li>
               <li>
                 When the sequence has finished you MUST select the cards in the
-                order they
-                 appeared.
+                order they appeared.
               </li>
               <li>
                 If you are correct, you will progress to the next round. If you
@@ -246,7 +251,9 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="contact">Contact Us</h5>
+            <h5 class="modal-title" id="contact">
+              Contact Us <i class="far fa-envelope-open"></i>
+            </h5>
             <button
               type="button"
               class="close"
@@ -287,8 +294,12 @@
                   required
                 />
                 <br />
-                <br />
-                <label class="uppercase" for="enquiry">YOUR ENQUIRY:</label>
+                <div class="stars">
+                <p>Rate this game:</p><span><i class="star fas fa-star"></i><i class="star fas fa-star"></i
+                  ><i class="star fas fa-star"></i><i class="star fas fa-star"></i
+                  ><i class="star fas fa-star"></i></span>
+                </div>
+                <label class="uppercase" for="enquiry">Feedback:</label>
                 <textarea
                   name="enquiry"
                   class="form-control textarea"
@@ -330,7 +341,9 @@
       <div class="modal-dialog .modal-dialog-centered" role="document">
         <div class="modal-content difficulty">
           <div class="modal-header">
-            <h5 class="modal-title" id="setDifficulty">Select Difficulty</h5>
+            <h5 class="modal-title" id="setDifficulty">
+              Select Difficulty <i class="fas fa-sliders-h"></i>
+            </h5>
             <button
               type="button"
               class="close"
