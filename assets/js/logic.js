@@ -76,7 +76,10 @@ let checkDifficulty = () => {
     if ($(this).is(":checked")) {
       // Checkbox is checked..
       difficulty = rookie;
-      difficultyPicked = true;
+    $(".rookie #difficulty p").addClass("selected");
+      $(".veteran #difficulty p").removeClass("selected");
+      $(".mvp #difficulty p").remove("selected");
+
       console.log("rookie is checked");
     } else {
       // Checkbox is not checked..
@@ -87,7 +90,11 @@ let checkDifficulty = () => {
     if ($(this).is(":checked")) {
       // Checkbox is checked..
       difficulty = veteran;
-      difficultyPicked = true;
+      $(".veteran #difficulty p").addClass("selected");
+      $(".rookie #difficulty p").removeClass("selected");
+      $(".mvp #difficulty p").removeClass("selected");
+
+  
       console.log("veteran is checked");
     } else {
       // Checkbox is not checked..
@@ -98,7 +105,10 @@ let checkDifficulty = () => {
     if ($(this).is(":checked")) {
       // Checkbox is checked..
       difficulty = mvp;
-      difficultyPicked = true;
+      $(".veteran #difficulty p").addClass("selected");
+      $(".rookie #difficulty p").removeClass("selected");
+      $(".mvp #difficulty p").addClass("selected");
+
       console.log("mvp is checked");
     } else {
       // Checkbox is not checked..
@@ -172,7 +182,7 @@ const updateProgress = () => {
 
 //-------- CORRECT FUNCTION------//
 const correct = () => {
-  const roundLimit = 10;
+  const roundLimit = 2;
   if (round === 5) {
     alert("Youre halfway up the field. Keep going!!!");
     $(".winning").css("visibility", "visible");
@@ -186,7 +196,7 @@ const correct = () => {
     setTimeout(function () {
       location.reload();
       return false;
-    }, 4000);
+    }, 3000);
   } else {
     $(".winning").css("visibility", "visible");
     setTimeout(function () {
@@ -213,7 +223,7 @@ const gameWon = () => {
   }, 3000);
   setTimeout(function () {
     alert(
-      `TOUCHDOWN YOU WIN! \n YOU SCORED ${points} points. \n YOU HAD ${lives} LIVES LEFT. \n TOTAL SCORE = POINTS X LIVES LEFT \n YOUR TOTAL SCORE IS SCORED ${totalPoints} POINTS! \n `
+      `TOUCHDOWN YOU WIN! \n YOU SCORED ${points} points. \n YOU HAD ${lives} LIVES LEFT. \n TOTAL SCORE = POINTS X LIVES LEFT \n YOUR TOTAL SCORE IS ${totalPoints} POINTS! \n `
     );
   }, 3000);
   return false;
@@ -345,7 +355,7 @@ const replay = () => {
 
 //------FEEDBACK STAR FUNCTION-------//
 $(".star").click(function(){
-    $(this).addClass("star-picked");
+    $(this).toggleClass("star-picked");
     starCount +=1;
 
 });
@@ -367,7 +377,7 @@ const sendEmail = () => {
     })
     .then(
       function (response) {
-          $(".star").removeClass("star-picked");
+          $(".star").toggleClass("star-picked");
           starCount = 0;
         $("#send-btn")
           .removeClass("send-btn")
