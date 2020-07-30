@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Montserrat+Alternates:wght@500&display=swap");
+
 /*------------------GENERAL----------------------*/
 
 body {
@@ -173,10 +175,10 @@ h1 i {
   height: auto;
 }
 .card {
-    font-family: "Bungee Inline", cursive, sans-serif;
+  font-family: "Bungee Inline", cursive, sans-serif;
   width: 24%;
   height: auto;
-  margin: auto .1rem;
+  margin: auto 0.1rem;
   box-shadow: 0px 0px 1px rgb(150, 149, 149);
   border-radius: 1.4em;
 }
@@ -214,22 +216,47 @@ h1 i {
   z-index: 100;
 }
 /*---------------------FOOTER----------------------*/
+.footer {
+  padding-top: 1em;
+}
 
+.rate i {
+  color: rgb(146, 110, 19);
+}
+.footer .social {
+  margin: 10px;
+}
+
+.footer .links {
+  text-align: center;
+}
+
+.footer .links i {
+  color: rgb(146, 110, 19);
+  font-size: 2em;
+}
+
+.footer .rate:hover {
+  text-decoration: underline;
+  color: rgb(90, 68, 11);
+  cursor: pointer;
+  font-weight: 600;
+}
 /*---------------------IMAGES----------------------*/
 .card img {
-    height: 10em;
+  height: 10em;
   overflow: hidden;
   border-radius: 1.4em;
 }
 
-.popup{
-    position: fixed;
-    z-index: 300;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    visibility: hidden;
+.popup {
+  position: fixed;
+  z-index: 300;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  visibility: hidden;
 }
 /* .winning {
   position: fixed;
@@ -266,8 +293,8 @@ h1 i {
   font-family: "Bungee Inline", cursive, sans-serif;
 }
 
-#restart-btn{
-    font-family: "Bungee Inline", cursive, sans-serif;
+#restart-btn {
+  font-family: "Bungee Inline", cursive, sans-serif;
 }
 
 #startGame {
@@ -331,6 +358,7 @@ main .wing {
 .modal-header {
   font-family: "Bungee Inline", cursive, sans-serif;
   color: white;
+  background-color: rgba(0, 0, 0, 0.534);
   font-size: 5rem;
 }
 .modal-body {
@@ -341,7 +369,11 @@ main .wing {
   background-color: rgba(2, 141, 2, 0.76);
 }
 
-.modal-content #difficulty {
+.how {
+  text-align: center;
+}
+
+/* .modal-content #difficulty {
   background: url(../images/ball.jpg) no-repeat bottom right fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -351,8 +383,11 @@ main .wing {
   align-items: center;
   justify-content: center;
   position: relative;
-}
+} */
 
+.level-explained {
+  text-align: center;
+}
 #difficulty p {
   font-family: "Bungee Inline", cursive, sans-serif;
 }
@@ -365,14 +400,14 @@ main .wing {
   width: 30px;
 }
 
-.star{
-    margin: 2px;
-    font-size: 3em;
-    border: solid 1px rgb(212, 199, 16);;
+.star {
+  margin: 2px;
+  font-size: 3em;
+  border: solid 1px rgb(212, 199, 16);
 }
 
-.star-picked{
-    color: rgb(212, 199, 16);
+.star-picked {
+  color: rgb(212, 199, 16);
 }
 
 .email {
@@ -384,8 +419,8 @@ main .wing {
   #title h1 {
     font-size: 3em;
   }
-  .game{
-      height: auto;
+  .game {
+    height: auto;
   }
   .card {
     width: 25%;
@@ -410,9 +445,13 @@ main .wing {
   #title {
     pointer-events: auto;
   }
- 
-  #selectDifficulty .modal-content{
-      width: auto;
+
+  .selected {
+    color: rgb(148, 110, 14);
+  }
+
+  #selectDifficulty .modal-content {
+    width: auto;
   }
 }
 
@@ -421,8 +460,8 @@ main .wing {
     font-size: 3em;
   }
 
-  .game{
-      height: 40vh;
+  .game {
+    height: auto;
   }
   .card {
     width: 25%;
@@ -447,21 +486,20 @@ main .wing {
   #title {
     pointer-events: auto;
   }
- 
-  #selectDifficulty .modal-content{
-      width: auto;
+
+  #selectDifficulty .modal-content {
+    width: auto;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-
-    /* .card{
+  /* .card{
         width: 25%;
         margin: auto 5em;
         height:14em;
     } */
 
-    .buttons{
-        width: 100%;
-    }
+  .buttons {
+    width: 100%;
+  }
 }
