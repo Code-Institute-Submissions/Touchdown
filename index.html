@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="author" content="Daniel Bradford">
+        <meta name="description" content="Memory Game made with HTML, CSS, JAVASCRIPT and JQUERY">
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -69,17 +71,17 @@
 
       <img
         class="popup winning"
-        src="assets/images/winning.png"
+        src="assets/images/winning.webp"
         alt="Cartoon Football Player"
       />
       <img
         class="popup touchdown"
-        src="assets/images/touchdown.png"
+        src="assets/images/touchdown.webp"
         alt="Touchdown"
       />
       <img
         class="popup losing"
-        src="assets/images/losing.png"
+        src="assets/images/losing.webp"
         alt="Incorrect Cross"
       />
     </header>
@@ -103,7 +105,7 @@
             <button
               onclick="replay()"
               id="replay-btn"
-              class="btn btn-sm btn-success"
+              class="btn btn-sm btn-warning"
             >
               Replay <i class="far fa-play-circle"></i>
             </button>
@@ -126,28 +128,28 @@
               data-id="kick"
               class="card kick"
             >
-              Kick <img src="assets/images/kick.jpg" />
+              Kick <img src="assets/images/kick.webp" alt="Kicking ball" />
             </div>
             <div
               onclick="cardClick(event.currentTarget)"
               data-id="pass"
               class="card pass"
             >
-              Pass<img src="assets/images/pass.jpg" />
+              Pass<img src="assets/images/pass.webp" alt="Throwing ball"/>
             </div>
             <div
               onclick="cardClick(event.currentTarget)"
               data-id="rush"
               class="card rush"
             >
-              Rush <img src="assets/images/rush.jpg" />
+              Rush <img src="assets/images/rush.webp" alt="Rushing with ball"/>
             </div>
             <div
               onclick="cardClick(event.currentTarget)"
               data-id="run"
               class="card run"
             >
-              Run <img src="assets/images/run.jpg" />
+              Run <img src="assets/images/run.webp" alt="Running with ball"/>
             </div>
           </div>
         </div>
@@ -175,26 +177,26 @@
 
     <footer>
       <div class="footer row container-fluid">
-        <div class="col-4">
+        <div class="col-4 d-none d-sm-block">
           <a class="rate" data-toggle="modal" data-target="#contactUs"
             >RATE THIS GAME <i class="far fa-star"></i
           ></a>
         </div>
-        <div class="links col-4">
+        <div class="links col-lg-4 col-md-4 col-sm-4 col-xs-12">
           <span class="social"
-            ><a href="https://github.com/DanielBradford"
+            ><a aria-label="Github" href="https://github.com/DanielBradford"
               ><i class="fab fa-github-square"></i></a
           ></span>
           <span class="social"
-            ><a href="#"
+            ><a aria-label="Website" href="#"
               ><i class="social fas fa-laptop"></i></a
           ></span>
           <span class="social"
-            ><a href="https://www.linkedin.com/in/daniel-bradford-12492946/"
+            ><a aria-label="LinkedIn" href="https://www.linkedin.com/in/daniel-bradford-12492946/"
               ><i class="fab fa-linkedin"></i></a
           ></span>
         </div>
-        <div class="col-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 d-none d-sm-block">
           Created by Daniel Bradford &copy 2020
         </div>
       </div>
