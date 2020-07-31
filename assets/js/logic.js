@@ -182,7 +182,7 @@ const updateProgress = () => {
 
 //-------- CORRECT FUNCTION------//
 const correct = () => {
-  const roundLimit = 2;
+  const roundLimit = 10;
   if (round === 5) {
     alert("Youre halfway up the field. Keep going!!!");
     $(".winning").css("visibility", "visible");
