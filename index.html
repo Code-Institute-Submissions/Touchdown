@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="author" content="Daniel Bradford">
-        <meta name="description" content="Memory Game made with HTML, CSS, JAVASCRIPT and JQUERY">
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.js"
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous"
-    ></script>
+    <meta name="theme-color" content="#228B22" />
+    <meta name="author" content="Daniel Bradford" />
+    <meta
+      name="description"
+      content="Memory Game made with HTML, CSS, JAVASCRIPT and JQUERY"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Montserrat&display=swap"
       rel="stylesheet"
@@ -24,17 +23,12 @@
     />
 
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <title>Touchdown</title>
   </head>
-  <audio src="assets/audio/intro.mp3" autoplay>
-    Your browser does not support the audio element.
-  </audio>
 
   <body>
+    <audio src="assets/audio/intro.mp3" autoplay></audio>
     <header>
       <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-12" id="title">
@@ -135,21 +129,21 @@
               data-id="pass"
               class="card pass"
             >
-              Pass<img src="assets/images/pass.webp" alt="Throwing ball"/>
+              Pass<img src="assets/images/pass.webp" alt="Throwing ball" />
             </div>
             <div
               onclick="cardClick(event.currentTarget)"
               data-id="rush"
               class="card rush"
             >
-              Rush <img src="assets/images/rush.webp" alt="Rushing with ball"/>
+              Rush <img src="assets/images/rush.webp" alt="Rushing with ball" />
             </div>
             <div
               onclick="cardClick(event.currentTarget)"
               data-id="run"
               class="card run"
             >
-              Run <img src="assets/images/run.webp" alt="Running with ball"/>
+              Run <img src="assets/images/run.webp" alt="Running with ball" />
             </div>
           </div>
         </div>
@@ -192,12 +186,14 @@
               ><i class="social fas fa-laptop"></i></a
           ></span>
           <span class="social"
-            ><a aria-label="LinkedIn" href="https://www.linkedin.com/in/daniel-bradford-12492946/"
+            ><a
+              aria-label="LinkedIn"
+              href="https://www.linkedin.com/in/daniel-bradford-12492946/"
               ><i class="fab fa-linkedin"></i></a
           ></span>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 d-none d-sm-block">
-          Created by Daniel Bradford &copy 2020
+          Created by Daniel Bradford &COPY; 2020
         </div>
       </div>
     </footer>
@@ -228,37 +224,32 @@
           <div class="modal-body how">
             <ol>
               <li>
-                Select you level difficulty. (Rookie is the default setting)
+                Select your preferred difficulty. (Rookie is the default
+                setting)
               </li>
-              <br />
               <li>
                 Click on Start Game. The cards labelled RUN, RUSH, KICK and PASS
                 will flash in a random order.
               </li>
-              <br />
               <li>
                 For each round, 1 card will flash. You MUST remember the order
                 in which they flash.
               </li>
-              <br />
               <li>
                 When the sequence has finished you MUST select the cards in the
                 order they appeared.
               </li>
-              <br />
               <li>
                 If you are correct, you will gain 3 points per card and progress
                 to the next round. If you are incorrect you will lose 1 life and
                 start from round 1.
               </li>
-              <br />
               <li>
                 If you make it to the 10th round you will complete Touchdown and
                 finish the game. YOUR TOTAL POINTS will be calculated by POINTS
                 GAINED X LIVES LEFT. If you lose all 3 lives it will be GAME
                 OVER.
               </li>
-              <br />
               <li>GOOD LUCK AND HAVE FUN :)</li>
             </ol>
           </div>
@@ -304,7 +295,7 @@
             <section class="form-section">
               <form class="form-group">
                 <br />
-                <label for="fname">FIRST NAME *: </label>
+                <label for="fname">FIRST NAME *:</label>
                 <input
                   class="text-input"
                   type="text"
@@ -313,7 +304,7 @@
                   required
                 /><br />
                 <br />
-                <label for="lname">LAST NAME *: </label>
+                <label for="lname">LAST NAME *:</label>
                 <input
                   class="text-input"
                   type="text"
@@ -322,7 +313,7 @@
                   required
                 /><br />
                 <br />
-                <label for="email">EMAIL *: </label>
+                <label for="email">EMAIL *:</label>
                 <input
                   class="email text-input"
                   type="email"
@@ -332,7 +323,7 @@
                 />
                 <br />
                 <div class="stars">
-                  <p>Rate this game:</p>
+                  <h4>Rate this game:</h4>
                   <span
                     ><i class="star fas fa-star"></i
                     ><i class="star fas fa-star"></i
@@ -341,7 +332,7 @@
                     ><i class="star fas fa-star"></i
                   ></span>
                 </div>
-                <label class="uppercase" for="enquiry">Feedback:</label>
+                <label class="uppercase" for="enquiry">Feedback: </label>
                 <textarea
                   name="enquiry"
                   class="form-control textarea"
@@ -377,7 +368,7 @@
       id="selectDifficulty"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="setDifficulty"
       aria-hidden="true"
     >
       <div class="modal-dialog .modal-dialog-centered" role="document">
@@ -406,9 +397,7 @@
                   value="rookie"
                   checked
                 />
-                <label class="form-check-label" for="rookie"
-                  ><p>Rookie</p></label
-                >
+                <label class="form-check-label" for="rookie">Rookie</label>
               </div>
               <div class="veteran form-check form-check-inline">
                 <input
@@ -418,9 +407,7 @@
                   id="veteran"
                   value="veteran"
                 />
-                <label class="form-check-label" for="veteran"
-                  ><p>Veteran</p></label
-                >
+                <label class="form-check-label" for="veteran">Veteran</label>
               </div>
               <div class="mvp form-check form-check-inline">
                 <input
@@ -430,7 +417,7 @@
                   id="mvp"
                   value="mvp"
                 />
-                <label class="form-check-label" for="mvp"><p>MVP</p></label>
+                <label class="form-check-label" for="mvp">MVP</label>
               </div>
             </div>
             <div class="level-explained">
@@ -459,12 +446,17 @@
         </div>
       </div>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/logic.js"></script>
   </body>
-
-  <script src="assets/js/logic.js"></script>
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"
-  ></script>
+  
 </html>
