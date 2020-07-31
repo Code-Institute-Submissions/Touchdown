@@ -191,7 +191,7 @@ h1 i {
 }
 
 .flash {
-  border: solid rgb(209, 178, 4) 6px;
+  box-shadow:0 0 0 6px rgb(209, 178, 4);
   color: rgb(209, 178, 4);
 }
 
