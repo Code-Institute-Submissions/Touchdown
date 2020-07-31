@@ -84,7 +84,7 @@ main {
 }
 
 h1 i {
-  color: rgb(107, 69, 12);
+  color: #6f5306;
 }
 
 .trophy {
@@ -192,7 +192,7 @@ h1 i {
 
 .flash {
   border: solid rgb(209, 178, 4) 6px;
-  color: rgb(209, 178, 4) 6px;
+  color: rgb(209, 178, 4);
 }
 
 .card:hover {
@@ -207,14 +207,6 @@ h1 i {
   padding: 2em;
 }
 
-.count {
-  float: center;
-  position: relative;
-  background: transparent;
-  font-size: 4em;
-  font-style: inherit;
-  z-index: 100;
-}
 /*---------------------FOOTER----------------------*/
 .footer {
   padding-top: 1em;
@@ -225,6 +217,7 @@ h1 i {
 }
 .footer .social {
   margin: 10px;
+  display: inline;
 }
 
 .footer .links {
@@ -258,29 +251,6 @@ h1 i {
   width: 50%;
   visibility: hidden;
 }
-/* .winning {
-  position: fixed;
-  z-index: 300;
-  bottom: 0px;
-  right: 240px;
-  visibility: hidden;
-}
-
-.losing{
-    position: fixed;
-  z-index: 300;
-  bottom: 0px;
-  right: 320px;
-  visibility: hidden; */
-
-/* } */
-.touchdown {
-  position: fixed;
-  z-index: 300;
-  bottom: 0px;
-  margin: auto 0;
-  visibility: hidden;
-}
 
 /*---------------------BUTTONS----------------------*/
 #menu-btn {
@@ -298,15 +268,14 @@ h1 i {
 }
 
 #startGame {
+  border: solid 2px rgb(247, 245, 245);
+  background-color: #6f5306;
+  color: rgb(247, 245, 245);
+}
+#startGame:hover {
   border: solid 2px rgb(148, 110, 14);
   background-color: rgb(247, 245, 245);
   color: rgb(148, 110, 14);
-}
-
-#startGame:hover {
-  border: solid 2px rgb(247, 245, 245);
-  background-color: rgb(148, 110, 14);
-  color: rgb(247, 245, 245);
 }
 
 #send-btn {
@@ -322,7 +291,7 @@ h1 i {
 main .wing {
   height: auto;
   width: 100%;
-  background: url(../images/field.jpg) no-repeat bottom right fixed;
+  background: url(../images/field.webp) no-repeat bottom right fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -339,7 +308,7 @@ main .wing {
 /*--------Modals------------*/
 
 .modal-content {
-  background: url(../images/grass.jpg) no-repeat bottom right fixed;
+  background: url(../images/grass.webp) no-repeat bottom right fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -373,23 +342,18 @@ main .wing {
   text-align: center;
 }
 
-/* .modal-content #difficulty {
-  background: url(../images/ball.jpg) no-repeat bottom right fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-} */
-
 .level-explained {
   text-align: center;
 }
-#difficulty p {
+#difficulty {
   font-family: "Bungee Inline", cursive, sans-serif;
+  color: rgb(204, 153, 23);
+}
+
+.how li {
+  text-transform: uppercase;
+  line-height: 2em;
+  text-align: center;
 }
 
 .modal-body li {
