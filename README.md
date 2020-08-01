@@ -40,50 +40,52 @@ DLPNG for png files (https://dlpng.com/)
 **Website on GitHub Pages:** https://danielbradford.github.io/Touchdown/
 
 ### _A user-friendly, fun and interactive memory game called 'Touchdown'. The game encourages the user to memorise a sequence of flashing plays, and then click on the corresponding sequence. The game maintains a strong theme of American Football.
-### **BUSINESS GOALS OF WEBSITE**
+
+
+### **Creation and Design**
+### **UX - STRATEGY:**
+The strategy of Touchdown as a game is to provide a fun and interactive game for the user to enjoy. 
+The strategy can be can be outlined in more detail by looking at the goals of the user and the provider which in this project are very similar.
+
+***BUSINESS GOALS OF WEBSITE***
 *  To provide a fun, interactive and enjoyable game to the user
 *  To encourage the user and be open to feedback about the game and how it can be improved.
-### **USER GOALS OF WEBSITE**
-* To play the game of Touchdown
-    * To have fun
-    * To interact with the game
-    * To challenge themselves
-    * To enjoy their time playing the game
-    * To be updated on their progress
-    * To give feedback about the game and their experience
 
-### **Who is the website for?**
-The ideal user for Touchdown:
-* Aged 4 + 
-* Wants to play a fun gam
-* Enjoys Memory Games
-* Likes American Football
-* Wants to improve their memory
-* Likes giving feedback
+***USER GOALS OF WEBSITE***
+* To play the game of Touchdown:
+* To have fun
+* To interact with the game
+* To challenge themselves
+* To enjoy their time playing the game
+* To be updated on their progress
+* To give feedback about the game and their experience
 
+***WHO IS THE USER?***
+* The ideal user for Touchdown:
+    * Aged 4 + 
+    * Wants to play a fun gam
+    * Enjoys Memory Games
+    * Likes American Football
+    * Wants to improve their memory
+    * Likes giving feedback
 
-### **What do the NEW users want?**
-New users of Touchdown want to know what the game is and how to play it. They want to have fun and interact with a game that will test their memory and update them on their progress and a fun and enjoyable way.
+### **UX - SCOPE:** 
+After establishing the strategy for the website/game, the next thing to consider were the boundaries.
+Staying within the realms of scope allowed a more realistic approach whilst incorporating targets and time pressures.
 
-### **What do the RETURNING users want?**
-Returning users may want to play the game but at a harder difficulty setting.
+**What do the NEW users want?**
 
-### **What does the website do?**
-*   The website/game objective is to provide a fun and interactive gaming experience. 
-    * The game will flash/highlight one of four cards in a sequence. 
-    * After the sequence has been displayed the user must select the sequence in that exact order. 
-    * If the user is correct, a success image and sound effect will play, the progress bar will update and they will proceed to the next round whilst gaining 3 points.
-    * If the user is wrong, an incorrect image and sound effect will play and they will lose 1 of 3 lives, lose 5 points and start again at round 1.
-    * If they reach round 10, a Touchdown image and sound effect will play and they will have completed the game and achieved 'TOUCHDOWN'. An alert box will then present them with their total points score. This is the points gained multiplied by number of lives remaining.
-## **SCOPE**
-The game meets the needs of clients looking for a enjoyable interactive gaming experience. This project has the potential to develop into a larger game with deeper complexity.
+* New users of Touchdown want to know what the game is and how to play it. 
+* They want to have fun and interact with a game that will test their memory and update them on their progress in a fun and enjoyable way.
 
-## **Structure**
-### The structural sitemap is as follows:
-<a  href="https://github.com/DanielBradford/Touchdown/blob/701a6d73c3e9e8e02a7deb3246667f04d6e02e18/assets/documents/wireframes/TOUCHDOWN%20SITEMAP.pdf" target="_blank">SITEMAP</a>
+**What do the RETURNING users want?**
 
-### **USER STORIES**
+* Returning users may want to play the game but at a harder difficulty setting.
 
+* The game meets the needs of clients looking for an enjoyable interactive gaming experience. This project has the potential to develop into a larger game with deeper complexity.
+For Example, Multi - Player (vs. Mode, Score/Leader board)
+
+**USER STORIES**
 1. As a new user of Touchdown, I want to easily navigate the site, so I can can understand how to play the game.
 1. As a new user of Touchdown, I want to easily navigate the site, so I can can select my preferred difficulty level.
 1. As a new user of Touchdown, I want to easily navigate the site, so I can give feedback to the creator and rate the game.
@@ -96,22 +98,53 @@ The game meets the needs of clients looking for a enjoyable interactive gaming e
 1. As a user of Touchdown, I want to know if i have completed the game.
 1. As a user of Touchdown, I want to know if i have lost the game.
 
+### **UX - STRUCTURE:** 
+The next plane to approach was Structure. What the game will do and and the external factors that might affect it. 
+This allowed an insight into the user experience and how a visitor gets from the start of the game to the end.
 
+**Here is the link to the structural sitemap:**
+    <a  href="https://github.com/DanielBradford/Touchdown/blob/701a6d73c3e9e8e02a7deb3246667f04d6e02e18/assets/documents/wireframes/TOUCHDOWN%20SITEMAP.pdf" target="_blank">SITEMAP</a>
+
+**What does the website do?**
+* The user will be presented with buttons to start, restart or replay the game.
+* The game will flash/highlight one of four cards in a sequence. 
+* After the sequence has been displayed, the user must select the sequence in that exact order. 
+* If the user is correct, a success image and sound effect will play, the progress bar will update and they will proceed to the next round whilst gaining 3 points.
+* If the user is wrong, an incorrect image and sound effect will play and they will lose 1 of 3 lives, lose 5 points and start again at round 1.
+* If they reach round 10, a Touchdown image and sound effect will play and they will have completed the game and achieved 'TOUCHDOWN'. An alert box will then present them with their total points score. This is the points gained multiplied by number of lives remaining.
+
+
+### **UX - SKELETON:** 
+The skeleton of this project was desgined and established using Lucid Chart (https://www.lucidchart.com/).
+* Although the mobile first method is recommended and heavily supported by bootstrap, i went via the desktop first approach to fully realise the initial game idea. 
+* In future, the mobile first method may be more suitable due to societies increase in mobile gaming activity.
 ## **Wireframe Designs**
-### **Desktop** - (All wireframes have annotated descriptions)
+### **Desktop**
 * <a href="https://github.com/DanielBradford/Touchdown/blob/701a6d73c3e9e8e02a7deb3246667f04d6e02e18/assets/documents/wireframes/TOUCHDOWN%20-%20MAIN%20PAGE.pdf" target="_blank">Home / Landing Page</a>
 * <a href="https://github.com/DanielBradford/Touchdown/blob/701a6d73c3e9e8e02a7deb3246667f04d6e02e18/assets/documents/wireframes/SELECT%20DIFFICULTY%20MODAL.pdf" target="_blank">Select Difficulty Modal</a>
 * <a href="https://github.com/DanielBradford/Touchdown/blob/701a6d73c3e9e8e02a7deb3246667f04d6e02e18/assets/documents/wireframes/HOW%20TO%20PLAY%20MODAL.pdf" target="_blank">How to Play Modal</a>
 * <a href="https://github.com/DanielBradford/Touchdown/blob/701a6d73c3e9e8e02a7deb3246667f04d6e02e18/assets/documents/wireframes/CONTACT%20US%20MODAL.pdf" target="_blank">Contact Us Modal</a>
+
+### **UX - 5. Surface** 
+The final element to consider was the surface plane of UX design. This is the look and feel of the website. 
+Below are some screen shots of the website:
+<img src="" alt="screenshot"><img src="" alt="screenshot"><img src="" alt="screenshot"><img src="" alt="screenshot">
+
+
+
+
+
+
+
+
+
+
+
+
 ### **Mobile** - (All wireframes have annotated descriptions)
 * <a href="" target="_blank">Mobile Wireframes</a>
 
-## **Design**
-### **UX** 
-    * 5 Planes of UX
-* Although the mobile first method is recommended and heavily supported by bootstrap, i went via the desktop first approach to fully realise the initial design idea. 
-* The idea behind this is assuming more users would be accessing the website from a Desktop therefore it seemed to be the correct approach for this project in particular. 
-* In future, the mobile first method may be more suitable due to societies increase in mobile web activity.
+
 ## **Style / Theme**
 * As the gym is called Bamboo Fitness and has a strong connection to the environment and ecology, i decided to use the following themes:
     * Natural Colour Scheme: green(#008300), brown(#4a3700) an gold(#a87b00)
