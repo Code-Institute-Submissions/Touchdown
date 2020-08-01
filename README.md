@@ -219,17 +219,22 @@ This is an ordered list of game instructions and rules. It explains how the game
 
 **Data Entry Form** - This invites the user to enter their information and give feedback about the game.
 
-  - First Name - This field is validated to ensure an entry is made
-  - Last Name - This field is validated to ensure an entry is made
-  - Email - This field is validated to ensure an entry is made and a valid email address is entered)
-  - Star Rating - 5 stars can be selected to rate the game out of 5.
+  - First Name - This field is validated to ensure an entry is made.
+  - Last Name - This field is validated to ensure an entry is made.
+  - Email - This field is validated to ensure an entry is made and a valid email address is entered.
+  - Star Rating - 5 stars can be selected to rate the game out of 5. (commit 35f956045f07541b8154fb4a6e01c196c59d62dc)
   - Text Area - For the user to write a brief feedback message about the game.
 
   **Close Button** - This button dismisses the modal.
 
   **Send Button** - This button holds an onclick function that enables the EmailJS API. This collects all of the inputted data and sends via email to the owner/creator. The completion and sending of this form gives the owner/creator user feedback on the game.
 
+BELOW IS THE COMMIT RECORD WHEN THIS WAS ADDED: 
 
+    commit 309f14518fcf47b6e3267aef3f7ba596c91e45ae
+    Author: Daniel Bradford <danielbradford@hotmail.co.uk>
+    Date:   Wed Jul 29 12:49:51 2020 +0000
+    "Send Email function added to use EmailJS API and include form input data"
 
 
 ## **Future Features**
