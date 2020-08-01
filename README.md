@@ -1,21 +1,12 @@
-TOUCHDOWN
+# TOUCHDOWN <i class="fa fa-football-ball"></i>
+## Touchdown is a fun, user-friendly and interactive memory game. 
+## The game encourages the user to memorise a sequence of flashing plays, and then click on the corresponding sequence. The game maintains a strong theme of American Football.
 
-Welcome to Touchdown!
+## As they progress they will gain points and attempt to complete all 10 rounds. The difficulty can be changed which will alter the speed in which the play-cards are shown.
 
-Aim of the game is to have fun!
+### **Website on GitHub Pages:** https://danielbradford.github.io/Touchdown/
 
-Summary
-Touchdown is an American Football themed memory game.
-in which the player must remember the order of the random sequences displayed by the computer.
-As they progress they will gain points and attempt to complete all 10 rounds.
-The difficulty can be changed which will alter the speed in which the play-cards are shown.
-
-User cannot click on cards while flashing sequence is running
-
-**Website on GitHub Pages:** https://danielbradford.github.io/Touchdown/
-
-### \_A user-friendly, fun and interactive memory game called 'Touchdown'. The game encourages the user to memorise a sequence of flashing plays, and then click on the corresponding sequence. The game maintains a strong theme of American Football.
-
+### 
 ### **Creation and Design**
 
 ### **UX - STRATEGY:**
@@ -23,12 +14,12 @@ User cannot click on cards while flashing sequence is running
 The strategy of Touchdown as a game is to provide a fun and interactive game for the user to enjoy.
 The strategy can be can be outlined in more detail by looking at the goals of the user and the provider which in this project are very similar.
 
-**_BUSINESS GOALS OF WEBSITE_**
+**_BUSINESS GOALS OF GAME_**
 
 - To provide a fun, interactive and enjoyable game to the user
 - To encourage the user and be open to feedback about the game and how it can be improved.
 
-**_USER GOALS OF WEBSITE_**
+**_USER GOALS OF GAME_**
 
 - To play the game of Touchdown:
 - To have fun
@@ -87,7 +78,7 @@ This allowed an insight into the user experience and how a visitor gets from the
 **Here is the link to the structural sitemap:**
 <a  href="https://github.com/DanielBradford/Touchdown/blob/701a6d73c3e9e8e02a7deb3246667f04d6e02e18/assets/documents/wireframes/TOUCHDOWN%20SITEMAP.pdf" target="_blank">SITEMAP</a>
 
-**What does the website do?**
+**What does the game do/ How does it work?**
 
 - The user will be presented with buttons to start, restart or replay the game.
 - There will be a grid of cards titled as 'play types' including Run, Rush, Kick and Pass.
@@ -123,22 +114,33 @@ The final element to consider was the surface plane of UX design. This is the lo
 Below are some screen shots of the website:
 
 **Main Page:**
-This is the main page the user sees when the screen has loaded.
+This is the main page the user sees when the screen has loaded. An intro sound plays on loading (intro.mp3).
 
-<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotMain.png" alt="screenshot">
+<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotMain.png" alt="screenshot of landing page">
 
 **In Game Play (Card flashing):** When the Start Game button is clicked, the cards flash in a random sequences which progresses each round. 
-When the card 'flashes' its border changes to a gold color and then stops.
+When the card 'flashes' its border changes to a gold color and then stops. A sound effect is also played. (ping.mp3)
 
 <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotFlash.png" alt="screenshot of in game play">
 
-**In Game Play (Correct Answer):** If the user answers correctly this image is displayed:
+**In Game Play (Correct Answer):** If the user answers correctly a positive sound effect (woo.mp3) is played and a cartoon image is displayed on the screen (winning.webp). 
+This is the screenshot of when the user answers correctly:
 
-<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotCorrect.png" alt="screenshot of correct annswer">
+<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotCorrect.png" alt="screenshot of correct answer">
 
-**In Game Play (Wrong Answer):** If the user answers incorrectly this image is displayed:
+**In Game Play (Wrong Answer):** If the user answers incorrectly a negative sound effect (boo.mp3) is played and a cartoon cross is displayed on the screen (losing.webp). 
+This is the screenshot of when the user answers incorrectly:
 
 <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotWrong.png" alt="screenshot of wrong answer">
+
+**In Game Play (TOUCHDOWN):** If the user completes all 10 rounds, a positive sound effect (touchdown.mp3) is played and a cartoon image is displayed on the screen (touchdown.webp). 
+This is the screenshot of when the user completes the game:
+
+<img src="https://github.com/DanielBradford/Touchdown/blob/b3999ea0f692f53cec9c7077e450bdc0d4568388/assets/images/screenshots/ScreenshotTouchdown.png" alt="screenshot of touchdown">
+
+**In Game Play (GAME OVER):** If the user fails to win, a negative sound effect (gameOver.mp3) is played and a cartoon image is displayed on the screen. 
+This is the screenshot of when the user fails to win:
+<img src="https://github.com/DanielBradford/Touchdown/blob/b3999ea0f692f53cec9c7077e450bdc0d4568388/assets/images/screenshots/ScreenshotGameOver.png" alt="screenshot of gameover">
 
 ## **Style / Theme**
 
@@ -150,6 +152,11 @@ When the card 'flashes' its border changes to a gold color and then stops.
   - The 2 fonts used were: Bungee Inline and Montserrat.
   - Bungee Inline gave a retro gaming style to the project and Montserrat complimented this in a more subtle style.
     All images and icons used are Amercian Football related and were sourced free and legally.
+- Sound Effects and Audio clips used are all sports related and have been utilised to enhance the gaming experience for the user.
+- They also convey auditory feedback of progress to the user.
+
+## **Main Page**
+<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotMain.png" alt="screenshot of landing page">
 
 ## **Features**
 
@@ -183,14 +190,6 @@ When the card 'flashes' its border changes to a gold color and then stops.
 - **Social Media Icons:** These icons when clicked take the user (on a new page) to the corresponding website for that social media
 - **Rate this game link:** This opens the contact us modal where the user can rate the game
 
-### **How To Play Modal**
-
-<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotHowToPlay.png" alt="screenshot of how to play modal">
-
-**List of Instructions and Rules**
-
-This is an ordered list of game instructions and rules. It explains how the game is played and what happens in each stage of the game.
-
 ### **Select Difficulty Modal**
 
 <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotSelectDifficulty.png" alt="screenshot of difficulty modal">
@@ -206,10 +205,17 @@ The difficulty corresponds to the speed in which the cards are flashed.
 
 Underneath is a breif explanation of the difficulty levels.
 
+### **How To Play Modal**
+<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotHowToPlay.png" alt="screenshot of how to play modal">
 
+
+**List of Instructions and Rules**
+
+This is an ordered list of game instructions and rules. It explains how the game is played and what happens in each stage of the game.
+
+### **Contact Us Modal**
 
 <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotContactUs.png" alt="screenshot of Contact Us modal">
-
 
 **Data Entry Form** - This invites the user to enter their information and give feedback about the game.
 
