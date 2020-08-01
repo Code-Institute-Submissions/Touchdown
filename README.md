@@ -122,16 +122,22 @@ The skeleton of this project was desgined and established using Lucid Chart (htt
 The final element to consider was the surface plane of UX design. This is the look and feel of the website.
 Below are some screen shots of the website:
 
-Main Page:
+**Main Page:**
+This is the main page the user sees when the screen has loaded.
+
 <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotMain.png" alt="screenshot">
 
-In Game Play (Card flashing):
+**In Game Play (Card flashing):** When the Start Game button is clicked, the cards flash in a random sequences which progresses each round. 
+When the card 'flashes' its border changes to a gold color and then stops.
+
 <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotFlash.png" alt="screenshot of in game play">
 
-In Game Play (Correct Answer):
+**In Game Play (Correct Answer):** If the user answers correctly this image is displayed:
+
 <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotCorrect.png" alt="screenshot of correct annswer">
 
-In Game Play (Wrong Answer):
+**In Game Play (Wrong Answer):** If the user answers incorrectly this image is displayed:
+
 <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotWrong.png" alt="screenshot of wrong answer">
 
 ## **Style / Theme**
@@ -141,8 +147,7 @@ In Game Play (Wrong Answer):
   - Stadium Color Scheme: rgb(27, 143, 27), white and gold(#6f5306)
   - For the interactive elements i used brighter colours e.g. Buttons and flash/highlight function. This enhances the user experience and presents a more playful environment.
     Some colours were altered throughout during Accessibiltiy testing as some colours were not suitable in contrast to others.
-  - The 2 fonts used were:
-  - Bungee Inline and Montserrat.
+  - The 2 fonts used were: Bungee Inline and Montserrat.
   - Bungee Inline gave a retro gaming style to the project and Montserrat complimented this in a more subtle style.
     All images and icons used are Amercian Football related and were sourced free and legally.
 
@@ -301,7 +306,6 @@ To clone this project from GitHub:
 - ZAPSPLAT for Audio Effects (https://www.zapsplat.com/)
 - DLPNG for png files (https://dlpng.com/)
 
-### \* Inspiration and Structural guidance for the README.md file was taken from:
-
-- https://github.com/AJGreaves/portrait-artist/blob/master/README.md
-- https://github.com/Code-Institute-Solutions/StudentExampleProjectGradeFive/blob/master/README.md
+- Inspiration and Structural guidance for the README.md file was taken from:
+    * https://github.com/AJGreaves/portrait-artist/blob/master/README.md
+    * https://github.com/Code-Institute-Solutions/StudentExampleProjectGradeFive/blob/master/README.md
