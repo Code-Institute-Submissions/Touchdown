@@ -76,7 +76,7 @@ let checkDifficulty = () => {
     if ($(this).is(":checked")) {
       // Checkbox is checked..
       difficulty = rookie;
-    $(".rookie #difficulty p").addClass("selected");
+      $(".rookie #difficulty p").addClass("selected");
       $(".veteran #difficulty p").removeClass("selected");
       $(".mvp #difficulty p").remove("selected");
 
@@ -94,7 +94,6 @@ let checkDifficulty = () => {
       $(".rookie #difficulty p").removeClass("selected");
       $(".mvp #difficulty p").removeClass("selected");
 
-  
       console.log("veteran is checked");
     } else {
       // Checkbox is not checked..
@@ -267,6 +266,7 @@ const showPoints = () => {
 //--------- START GAME FUNCTION ----- makes user select difficulty----
 const startGame = () => {
   $("#letsPlay").click(function () {});
+  window.location = "https://danielbradford.github.io/Touchdown/#mainBlock";
   $(".card").css("pointer-events", "none"); //------Prevents User Clicking or hovering
   $("#startGame").css("pointer-events", "none"); //------Prevents User Clicking or hovering
   $("#status").show("slow");
@@ -354,10 +354,9 @@ const replay = () => {
 };
 
 //------FEEDBACK STAR FUNCTION-------//
-$(".star").click(function(){
-    $(this).toggleClass("star-picked");
-    starCount +=1;
-
+$(".star").click(function () {
+  $(this).toggleClass("star-picked");
+  starCount += 1;
 });
 
 //------SEND EMAIL FUNCTION using EmailJS API -------//
@@ -365,20 +364,20 @@ const sendEmail = () => {
   $("#startGame").css("pointer-events", "none"); //------Disables User Clicking or hovering
   let full_name = $("#fname").val() + " " + $("#lname").val();
   let emailAdress = $("#email").val();
-  let rating = `${starCount} / 5 (STARS)`
+  let rating = `${starCount} / 5 (STARS)`;
   let enquiry = $("#enquiry").val();
   emailjs.init("user_rsvmwq5KBsvLqIljtmzs3");
   emailjs
     .send("gmail", "touchdown_user", {
       from_name: full_name,
       rating: rating,
-      enquiry: enquiry, 
+      enquiry: enquiry,
       from_email: emailAdress,
     })
     .then(
       function (response) {
-          $(".star").toggleClass("star-picked");
-          starCount = 0;
+        $(".star").toggleClass("star-picked");
+        starCount = 0;
         $("#send-btn")
           .removeClass("send-btn")
           .removeClass("btn-light")
@@ -396,5 +395,3 @@ const sendEmail = () => {
       }
     );
 };
-
-
