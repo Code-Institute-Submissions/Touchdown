@@ -44,7 +44,7 @@ body {
   -o-animation: rotating 2s linear infinite;
   animation: rotating 2s linear infinite;
 }
-/*---------------------------------------------------*/
+/*--------------------------*/
 
 header {
   padding: 1em;
@@ -191,12 +191,12 @@ h1 i {
 }
 
 .flash {
-  box-shadow: 0 0 0 6px rgb(209, 178, 4);
+  box-shadow: 0 0 0 0.5em rgb(209, 178, 4);
   color: rgb(209, 178, 4);
 }
 
 .card:hover {
-  border: solid rgb(209, 178, 4) 4px;
+  box-shadow: 0 0 0 0.3em rgb(209, 178, 4);
   cursor: pointer;
 }
 
@@ -258,7 +258,7 @@ footer {
 
 /*---------------------BUTTONS----------------------*/
 #menu-btn {
-  font-size: 7em;
+  font-size: 2em;
   width: 100%;
 }
 
@@ -268,28 +268,39 @@ footer {
 }
 
 #restart-btn {
+  border: solid 1px rgb(247, 245, 245);
   font-family: "Bungee Inline", cursive, sans-serif;
   width: 30%;
 }
 
+#restart-btn:hover {
+  border: solid 1px rgb(201, 27, 27);
+  background-color: rgb(247, 245, 245);
+  color: rgb(201, 27, 27);
+}
+
 #startGame {
-  border: solid 2px rgb(247, 245, 245);
+  border: solid 1px rgb(247, 245, 245);
   background-color: #6f5306;
   color: rgb(247, 245, 245);
-  width:30%;
+  width: 30%;
   height: 4em;
   text-align: center;
 }
 #startGame:hover {
-  border: solid 2px rgb(148, 110, 14);
+  border: solid 1px rgb(148, 110, 14);
   background-color: rgb(247, 245, 245);
   color: rgb(148, 110, 14);
 }
 
-#replay-btn{
-    width: 30%;
+#replay-btn {
+  width: 30%;
+  border: solid 1px rgb(247, 245, 245);
 }
-
+#replay-btn:hover {
+  border: solid 1px rgb(199, 181, 23);
+  background-color: rgb(247, 245, 245);
+}
 #send-btn {
   color: rgb(148, 110, 14);
   border: solid 2px rgb(148, 110, 14);
@@ -354,6 +365,10 @@ main .wing {
   text-align: center;
 }
 
+.how .golden {
+  color: rgb(255, 212, 22);
+}
+
 .level-explained {
   text-align: center;
 }
@@ -363,7 +378,7 @@ main .wing {
 }
 
 .how li {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   line-height: 2em;
   text-align: center;
 }
@@ -412,6 +427,7 @@ main .wing {
   }
   .menu {
     text-align: center;
+    display: none;
   }
   .menu ul {
     padding: 0;
@@ -437,7 +453,7 @@ main .wing {
     font-size: 2.4em;
   }
   h4 {
-      font-size: 1.2em;
+    font-size: 1.2em;
     text-transform: uppercase;
   }
 }
