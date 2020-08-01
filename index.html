@@ -59,8 +59,8 @@
           </ul>
         </div>
       </div>
-      <div class="col-12 d-none d-sm-none">
-        <i id="menu-btn" class="d-sm-block fas fa-bars"></i>
+      <div>
+        <i id="menu-btn" class="d-block d-sm-none fas fa-bars"></i>
       </div>
 
       <img
@@ -116,7 +116,7 @@
             </div>
             <br />
           </div>
-          <div class="card-row">
+          <div id="gameView" class="card-row">
             <div
               onclick="cardClick(event.currentTarget)"
               data-id="kick"
@@ -206,7 +206,7 @@
       aria-labelledby="howToPlay"
       aria-hidden="true"
     >
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="howToPlay">
@@ -224,33 +224,33 @@
           <div class="modal-body how">
             <ol>
               <li>
-                Select your preferred difficulty. (Rookie is the default
+                <span class="golden">Select</span> your preferred <span class="golden">difficulty</span>. (Rookie is the default
                 setting)
               </li>
               <li>
-                Click on Start Game. The cards labelled RUN, RUSH, KICK and PASS
+                Click on Start Game. The cards labelled <span class="golden">RUN, RUSH, KICK and PASS</span>
                 will flash in a random order.
               </li>
               <li>
-                For each round, 1 card will flash. You MUST remember the order
+                For each round, 1 card will flash. You MUST <span class="golden">remember the order</span>
                 in which they flash.
               </li>
               <li>
-                When the sequence has finished you MUST select the cards in the
+                When the sequence has finished you MUST <span class="golden">select the card</span> in the
                 order they appeared.
               </li>
               <li>
-                If you are correct, you will gain 3 points per card and progress
-                to the next round. If you are incorrect you will lose 1 life and
-                start from round 1.
+                If you are <span class="golden">correct</span>, you will <span class="golden">gain 3 points</span> per card and progress
+                to the next round. If you are <span class="golden">incorrect</span> you will lose 1 life, 5 points and
+                <span class="golden">start from round 1</span>.
               </li>
               <li>
-                If you make it to the 10th round you will complete Touchdown and
+                If you make it to the <span class="golden">10th round you will complete Touchdown</span> and
                 finish the game. YOUR TOTAL POINTS will be calculated by POINTS
                 GAINED X LIVES LEFT. If you lose all 3 lives it will be GAME
                 OVER.
               </li>
-              <li>GOOD LUCK AND HAVE FUN :)</li>
+              <li><span class="golden">GOOD LUCK AND HAVE FUN :)</span></li>
             </ol>
           </div>
           <div class="modal-footer">
