@@ -266,7 +266,6 @@ const showPoints = () => {
 //--------- START GAME FUNCTION ----- makes user select difficulty----
 const startGame = () => {
   $("#letsPlay").click(function () {});
-  window.location = "https://danielbradford.github.io/Touchdown/#mainBlock";
   $(".card").css("pointer-events", "none"); //------Prevents User Clicking or hovering
   $("#startGame").css("pointer-events", "none"); //------Prevents User Clicking or hovering
   $("#status").show("slow");
