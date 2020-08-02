@@ -12,7 +12,7 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
 
 ### **Client Story Testing:**
 1. As a new user of Touchdown, I want to easily navigate the site:
-    * The navigation menu in displayed in the topr right corner of the screen allows the user to navigate throught the site.
+    * The navigation menu, displayed in the top-right corner of the screen, allows the user to navigate throughout the site.
 
     <img src="https://github.com/DanielBradford/Touchdown/blob/b46fa48f7d303a42bab270d5c04126052526b47d/assets/images/screenshots/ScreenshotMenu.png" alt="screenshot of navigation menu">
 
@@ -33,6 +33,11 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
 
 1. As a new user of Touchdown, I want to have fun with an interactive game.
 
+    **In Game Play (Card flashing):** When the Start Game button is clicked, the cards flash in a random sequences which progresses each round. 
+    When the card 'flashes' its border changes to a gold color and then stops. A sound effect is also played. (ping.mp3)
+
+    <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotFlash.png" alt="screenshot of in game play">
+
     This was tested personally and professionally. 
     I played the game and found it personally enjoyable. I also introduced the game to family and friends to gain feedback on the game.
     Below are some quotes on the game feedback:
@@ -45,13 +50,10 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
 
 1. As a user of Touchdown, I want to be updated on my progress in the game. 
     
-    **In Game Play (Progress Status):** The users game progress is displayed using a progress bar (Bootstrap) and round counter. As they progress the bar fills up in yellow and the rround count increases. (Correct answer = 10% progression)
+    **In Game Play (Progress Status):** The users game progress is displayed using a progress bar (Bootstrap) and round counter. As they progress the bar fills up in yellow and the round count increases. (Correct answer = 10% progression)
     This is the screenshot of the progress bar:
-
     <img src="https://github.com/DanielBradford/Touchdown/blob/97cbac45363df0b1bd73f32c25363abbfa6004bc/assets/images/screenshots/ScreenshotProgressBar.png" alt="screenshot of progress bar">
-
     This is the screenshot of the Round Count display:
-    
     <img src="https://github.com/DanielBradford/Touchdown/blob/97cbac45363df0b1bd73f32c25363abbfa6004bc/assets/images/screenshots/ScreenshotRoundStatus.png" alt="screenshot of round count">
 
 
@@ -95,16 +97,6 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
     This is the screenshot of when the user fails to win:
 
     <img src="https://github.com/DanielBradford/Touchdown/blob/122f20513a4b31a5538974972bde423468500f47/assets/images/screenshots/ScreenshotGameOver.png" alt="screenshot of gameover">
-
-
-
-
-**In Game Play (Card flashing):** When the Start Game button is clicked, the cards flash in a random sequences which progresses each round. 
-When the card 'flashes' its border changes to a gold color and then stops. A sound effect is also played. (ping.mp3)
-
-<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotFlash.png" alt="screenshot of in game play">
-
-
 
 ## Logical Testing (MANUAL) of all functions and elements:
 
@@ -158,7 +150,15 @@ This is the main page the user sees when the screen has loaded. An intro sound p
 
 
 ## EmailJS API Testing:
+Using the EmailJS API allowed me to provide a link of communication between the user and the creator. This channel allows for rating and feedback for the game which is detremental to future improvements and developments.
+Here is a screenshot of the template created and utilised within the API:
+<img src="https://github.com/DanielBradford/Touchdown/blob/d6edf4d6cb51f0949ef0f8914bc849cb3b1a76f5/assets/images/screenshots/ScreenshotEmailTemplate.png" alt="screenshot of EmailJS template">
 
+Here is a screenshot of the method to test this template and funcionality of the API:
+<img src="https://github.com/DanielBradford/Touchdown/blob/d6edf4d6cb51f0949ef0f8914bc849cb3b1a76f5/assets/images/screenshots/ScreenshotEmailTest.png" alt="screenshot of EmailJS test email">
+
+Here is a screenshot of an examplary email recieved:
+<im src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotEmailRecieved.png" alt="screenshot of email recieved through EmailJS API">
 
 
 ## Jasmine Testing (AUTOMATED) of Javascript Functions:
