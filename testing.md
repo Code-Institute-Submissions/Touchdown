@@ -40,11 +40,11 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
     **In Game Play (Progress Status):** The users game progress is displayed using a progress bar (Bootstrap) and round counter. As they progress the bar fills up in yellow and the rround count increases. (Correct answer = 10% progression)
     This is the screenshot of the progress bar:
 
-    <img src="https://github.com/DanielBradford/Touchdown/blob/cad6a59fa8f7758afc118d86fef30f715bbdc6e4/assets/images/screenshots/ScreenshotProgressBar.png" alt="screenshot of progress bar">
+    <img src="https://github.com/DanielBradford/Touchdown/blob/97cbac45363df0b1bd73f32c25363abbfa6004bc/assets/images/screenshots/ScreenshotProgressBar.png" alt="screenshot of progress bar">
 
     This is the screenshot of the Round Count display:
     
-    <img src="https://github.com/DanielBradford/Touchdown/blob/cad6a59fa8f7758afc118d86fef30f715bbdc6e4/assets/images/screenshots/ScreenshotRoundStatus.png" alt="screenshot of round count">
+    <img src="https://github.com/DanielBradford/Touchdown/blob/97cbac45363df0b1bd73f32c25363abbfa6004bc/assets/images/screenshots/ScreenshotRoundStatus.png" alt="screenshot of round count">
 
 
 1. As a user of Touchdown, I want to know if am losing.
@@ -89,10 +89,7 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
     <img src="https://github.com/DanielBradford/Touchdown/blob/122f20513a4b31a5538974972bde423468500f47/assets/images/screenshots/ScreenshotGameOver.png" alt="screenshot of gameover">
 
 
-**Main Page:**
-This is the main page the user sees when the screen has loaded. An intro sound plays on loading (intro.mp3).
 
-<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotMain.png" alt="screenshot of landing page">
 
 **In Game Play (Card flashing):** When the Start Game button is clicked, the cards flash in a random sequences which progresses each round. 
 When the card 'flashes' its border changes to a gold color and then stops. A sound effect is also played. (ping.mp3)
@@ -104,6 +101,11 @@ When the card 'flashes' its border changes to a gold color and then stops. A sou
 ## Logical Testing (MANUAL) of all functions and elements:
 
 ### **MAIN GAME PAGE**
+
+**Main Page:**
+This is the main page the user sees when the screen has loaded. An intro sound plays on loading (intro.mp3).
+
+<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotMain.png" alt="screenshot of landing page">
 
   - **TITLE and ICON**
     1. Verify the sizing of the box adjusts from desktop > tablet > mobile and that no over flow distorts the layout:
