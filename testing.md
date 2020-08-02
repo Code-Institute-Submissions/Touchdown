@@ -1,4 +1,4 @@
-# **<p style="text-align: center;"> Testing <i class="fas fa-cogs"></i></p>**
+# **<p style="text-align: center;"> Testing <i class="fa fa-cogs"></i></p>**
 
 HTML VALIDATION - https://validator.w3.org/
 
@@ -61,42 +61,42 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
    This is the screenshot of the Round Count display:
    <img src="https://github.com/DanielBradford/Touchdown/blob/97cbac45363df0b1bd73f32c25363abbfa6004bc/assets/images/screenshots/ScreenshotRoundStatus.png" alt="screenshot of round count">
 
-1) As a user of Touchdown, I want to know if am losing.
+1. As a user of Touchdown, I want to know if am losing.
 
    **In Game Play (Wrong Answer):** If the user answers incorrectly a negative sound effect (boo.mp3) is played and a cartoon cross is displayed on the screen (losing.webp).
    This is the screenshot of when the user answers incorrectly:
 
    <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotWrong.png" alt="screenshot of wrong answer">
 
-1) As a user of Touchdown, I want to know if am winning.
+1. As a user of Touchdown, I want to know if am winning.
 
    **In Game Play (Correct Answer):** If the user answers correctly a positive sound effect (woo.mp3) is played and a cartoon image is displayed on the screen (winning.webp).
    This is the screenshot of when the user answers correctly:
 
    <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotCorrect.png" alt="screenshot of correct answer">
 
-1) As a user of Touchdown, I want to know how many lives i have left.
+1. As a user of Touchdown, I want to know how many lives i have left.
 
    **In Game Play (Lives Status):** During the game the number of lives is clearly displayed below the game play area.
    The lives are symbolised with red hearts. 1 heart = 1 life. This is the screenshot of full lives:
 
    <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotLivesStatus.png" alt="screenshot of lives status">
 
-1) As a user of Touchdown, I want to know how many points i have scored.
+1. As a user of Touchdown, I want to know how many points i have scored.
 
    **In Game Play (Points Status):** During the game the current points count is clearly displayed below the game play area (lower right corner).
    The points increase by 3 per round and decrease by 5 when the user answers incorrectly. This is the screenshot of the points display:
      
    <img src="https://github.com/DanielBradford/Touchdown/blob/97cbac45363df0b1bd73f32c25363abbfa6004bc/assets/images/screenshots/ScreenshotPointsStatus.png" alt="screenshot of points status">
 
-1) As a user of Touchdown, I want to know if i have completed the game.
+1. As a user of Touchdown, I want to know if i have completed the game.
 
    **In Game Play (TOUCHDOWN):** If the user completes all 10 rounds, a positive sound effect (touchdown.mp3) is played and a cartoon image is displayed on the screen (touchdown.webp).
    This is the screenshot of when the user completes the game:
 
    <img src="https://github.com/DanielBradford/Touchdown/blob/122f20513a4b31a5538974972bde423468500f47/assets/images/screenshots/ScreenshotTouchdown.png" alt="screenshot of touchdown">
 
-1) As a user of Touchdown, I want to know if i have lost the game.
+1. As a user of Touchdown, I want to know if i have lost the game.
 **In Game Play (GAME OVER):** If the user fails to win, a negative sound effect (gameOver.mp3) is played and an alert box is displayed on the screen.
 This is the screenshot of when the user fails to win:
 
@@ -105,23 +105,27 @@ This is the screenshot of when the user fails to win:
 ## Logical Testing (MANUAL) of all functions and elements:
 
 ### **MAIN GAME PAGE**
-
-**Main Page:**
-This is the main page the user sees when the screen has loaded. An intro sound plays on loading (intro.mp3).
+This is the main landing page the user sees when the screen has loaded. An intro sound plays on loading (intro.mp3).
 
 <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotMain.png" alt="screenshot of main page">
 
 - **TITLE and ICON**
   1. Verify the sizing of the box adjusts from desktop > tablet > mobile and that no over flow distorts the layout:
+    * Through testing the bootstrap settings and media queries were modified to improve this.
+    EXPECTATION:
+    - CSS Key Frames Animation should initiates
+    RESULT:
+    - CSS Key Frames Animation initiates
      - Ball Icon in title should continue rotating until game is started.
+     
 - **MENU / Navigation Bar**
 
   1. Verify that the sizing of the navigation bar adjusts with screen size changes:
-     - I made the navaigation menu condense for both tablet and mobile screen sizes.\*
+     - I made the navaigation menu condense for both tablet and mobile screen sizes.
   2. Verify that the menu drops down and that the menu text is clear and visible.
      - I had difficulties during accessbility testing but found a color to make this work\_
   3. Hover over the navigation links and verify the CSS styling changes
-     - Some styling choices were changed during testing due to accessbility/contrast issues\*
+     - Some styling choices were changed during testing due to accessbility/contrast issues
   4. Click on each of the navigation links and verify that it opens the corresponding modals
      - During testing i found all links to modals worked correctly.
   5. Repeat verification of functionality and responsiveness on my mobile phone and tablet.
@@ -145,13 +149,19 @@ This is the main page the user sees when the screen has loaded. An intro sound p
 1. Hover on button to verify CSS styling causes color change to allow user to see selection before clicking
 1. Click button to verify the restart check is initiated.
    - A confirmation box should be displayed to confirm the user wants to restart and reminds them all progress will be reset.
-   - RESULT:
+
+   RESULT:
      <img src="https://github.com/DanielBradford/Touchdown/blob/d71fa5712e62d9da2bad03a39e57a57d1c4c1d63/assets/images/screenshots/ScreenshotRestart.png" alt="screenshot of restart check">
-1. Click the confirm button to verify the game is restarted:
-   - Round should = 0
-   - Lives should = 3
-   - Points should = 0
+1. Click the ok button to verify the game is restarted:
+    EXPECTATION:
+    - status displays should reset and update
+    - Restart sound should play
+    - Arrays/Sequences should reset
+    - Ball Icon should continue rotating
+
+    RESULT: 
    - All status displays are reset and updated.
+   - Restart sound is played (restart.mp3)
    - All game sequences/arrays are reset
    - Ball Icon in title continues rotating
 
@@ -255,7 +265,7 @@ By analysing these rerports i was able to make alterations in both the HTML and 
 **Best Practices**
 
 - In initial reports the website had an average Best Practices Score of **88**
-- I added meta tags, alt a and aria labels (commit c8e0752bba88a3db1f15b682f667785c412515bb)
+- I added meta tags, alt tags, and aria labels (commit c8e0752bba88a3db1f15b682f667785c412515bb)
 - By making these changes the current Best Practices rating is now (on average)**100**
 
 **Search Engine Optimisation**
