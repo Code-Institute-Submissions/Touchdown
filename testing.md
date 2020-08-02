@@ -12,19 +12,23 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
 
 ### **Client Story Testing:**
 1. As a new user of Touchdown, I want to easily navigate the site:
+    * The navigation menu in displayed in the topr right corner of the screen allows the user to navigate throught the site.
 
-    <img src="https://github.com/DanielBradford/Touchdown/blob/4b471bb6336080fdb39f57b6156d10d8f5b14e30/assets/images/screenshots/ScreenshotMenu.png" alt="screenshot of navigation menu">
+    <img src="https://github.com/DanielBradford/Touchdown/blob/b46fa48f7d303a42bab270d5c04126052526b47d/assets/images/screenshots/ScreenshotMenu.png" alt="screenshot of navigation menu">
 
-1. As a new user of Touchdown, I want to easily navigate the site, so I can can understand how to play the game.
-
+1. As a new user of Touchdown, I want to understand how to play the game.
+    * When "How to Play" is selected, the user is presented with a modal containing a list of instructions and rules for the game:
+    
     <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotHowToPlay.png" alt="screenshot of Contact Us modal">
 
-1. As a new user of Touchdown, I want to easily navigate the site, so I can can select my preferred difficulty level.
-   
+1. As a new user of Touchdown, I want to select my preferred difficulty level.
+   * When "Difficulty" is selected, the user is presented with a modal containing 3 options to be selected. Each one corresponding to an increasing difficulty:
+    
     <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotSelectDifficulty.png" alt="screenshot of difficulty modal">
 
 1. As a new user of Touchdown, I want to easily navigate the site, so I can give feedback to the creator and rate the game.
-
+    * When "Contact Us" is selected, the user is presented with a modal containing a data submission form. They can use this to rate the game and give feedback via an EmailJS API.
+    
     <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotContactUs.png" alt="screenshot of Contact Us modal">
 
 1. As a new user of Touchdown, I want to have fun with an interactive game.
@@ -151,6 +155,11 @@ This is the main page the user sees when the screen has loaded. An intro sound p
     4. Hover over each social media icon and confirm colour and size transitions expected.
     5. Click "Return to Top" link to verify the user is returned to top of current page.
     6. Reduce and expand width of window to verify that the footer is responsive and looks good on all device widths.
+
+
+## EmailJS API Testing:
+
+
 
 ## Jasmine Testing (AUTOMATED) of Javascript Functions:
 
