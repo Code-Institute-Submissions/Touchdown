@@ -1,4 +1,4 @@
-# TOUCHDOWN <i class="fa fa-football-ball"></i>
+# **<p style="text-align: center;">TOUCHDOWN</p>** <img style="text-align: center" src="assets/images/winning.webp" alt="running cartoon">
 ## Touchdown is a fun, user-friendly and interactive memory game. 
 ## The game encourages the user to memorise a sequence of flashing plays, and then click on the corresponding sequence. The game maintains a strong theme of American Football.
 
@@ -245,7 +245,7 @@ BELOW IS THE COMMIT RECORD WHEN THIS WAS ADDED:
 
 ## **Deployment**
 
-This project was **developed** using a <a href="https://gitpod.io/">GITPOD IDE</a>, committed to git and pushed to <a href"https://github.com/">GitHub</a> using the built in terminal feature.
+This project was **developed** using a <a href="https://gitpod.io/" target="_blank">GITPOD IDE</a>, committed to git and pushed to <a href="https://github.com/" target="_blank">GitHub</a> using the built in terminal feature.
 
 - To add:
   - git add "filename"
@@ -271,7 +271,7 @@ To deploy this page to GitHub Pages from its GitHub repository, the following st
 
 To clone this project from GitHub:
 
-1. Follow this link to the <a href="https://github.com/DanielBradford/Touchdown">Project GitHub repository</a>.
+1. Follow this link to the <a href="https://github.com/DanielBradford/Touchdown" target="_blank">Project GitHub repository</a>.
 1. Under the repository name, click **"Clone or download"**.
 1. In the Clone with HTTPs section, copy the clone URL for the repository.
 1. In your local IDE open Terminal/Git Bash.
@@ -281,7 +281,7 @@ To clone this project from GitHub:
 1. Press _**Enter**_. Your local clone will be created.
 1. To cut ties with this GitHub repository, type git remote rm origin into the terminal.
 
-**Further reading and troubleshooting on <a href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository">cloning a repository from GitHub here.</a>**
+**Further reading and troubleshooting on <a href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository" target="_blank">cloning a repository from GitHub here.</a>**
 
 ## **Credits**
 
