@@ -58,9 +58,10 @@ Staying within the realms of scope allowed a more realistic approach whilst inco
 
 **USER STORIES**
 
-1. As a new user of Touchdown, I want to easily navigate the site, so I can can understand how to play the game.
-1. As a new user of Touchdown, I want to easily navigate the site, so I can can select my preferred difficulty level.
-1. As a new user of Touchdown, I want to easily navigate the site, so I can give feedback to the creator and rate the game.
+1. As a new user of Touchdown, I want to easily navigate the site:
+1. As a new user of Touchdown, I want to understand how to play the game.
+1. As a new user of Touchdown, I want to select my preferred difficulty level.
+1. As a new user of Touchdown, I want to give feedback to the creator and rate the game.
 1. As a new user of Touchdown, I want to have fun with an interactive game.
 1. As a user of Touchdown, I want to be updated on my progress in the game.
 1. As a user of Touchdown, I want to know if am losing.
@@ -112,35 +113,6 @@ The skeleton of this project was desgined and established using Lucid Chart (htt
 
 The final element to consider was the surface plane of UX design. This is the look and feel of the website.
 Below are some screen shots of the website:
-
-**Main Page:**
-This is the main page the user sees when the screen has loaded. An intro sound plays on loading (intro.mp3).
-
-<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotMain.png" alt="screenshot of landing page">
-
-**In Game Play (Card flashing):** When the Start Game button is clicked, the cards flash in a random sequences which progresses each round. 
-When the card 'flashes' its border changes to a gold color and then stops. A sound effect is also played. (ping.mp3)
-
-<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotFlash.png" alt="screenshot of in game play">
-
-**In Game Play (Correct Answer):** If the user answers correctly a positive sound effect (woo.mp3) is played and a cartoon image is displayed on the screen (winning.webp). 
-This is the screenshot of when the user answers correctly:
-
-<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotCorrect.png" alt="screenshot of correct answer">
-
-**In Game Play (Wrong Answer):** If the user answers incorrectly a negative sound effect (boo.mp3) is played and a cartoon cross is displayed on the screen (losing.webp). 
-This is the screenshot of when the user answers incorrectly:
-
-<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotWrong.png" alt="screenshot of wrong answer">
-
-**In Game Play (TOUCHDOWN):** If the user completes all 10 rounds, a positive sound effect (touchdown.mp3) is played and a cartoon image is displayed on the screen (touchdown.webp). 
-This is the screenshot of when the user completes the game:
-
-<img src="https://github.com/DanielBradford/Touchdown/blob/122f20513a4b31a5538974972bde423468500f47/assets/images/screenshots/ScreenshotTouchdown.png" alt="screenshot of touchdown">
-
-**In Game Play (GAME OVER):** If the user fails to win, a negative sound effect (gameOver.mp3) is played and an alert box is displayed on the screen. 
-This is the screenshot of when the user fails to win:
-<img src="https://github.com/DanielBradford/Touchdown/blob/122f20513a4b31a5538974972bde423468500f47/assets/images/screenshots/ScreenshotGameOver.png" alt="screenshot of gameover">
 
 ## **Style / Theme**
 
