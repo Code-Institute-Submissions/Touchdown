@@ -88,12 +88,18 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
 
     Selection/answer comparisson bug fixed. Full restart to the begining prevents issues with selection matching answer.
 
-## Responsive Design
+## RESPONSIVE DESIGN
     commit 715d250faa712b8b097e42bdb1cecf2542b2a080
     Author: Daniel Bradford <danielbradford@hotmail.co.uk>
     Date:   Wed Jul 29 18:42:43 2020 +0000
 
     Stylistic changes to layout, font and image sizes matching responsive design needs
+
+## ACCIDENTAL FOLDER DELETION
+During the development the screenshots folder in images was accidentally deleted. 
+This was then recovered using GIT CHECKOUT (commit number) -- (path):
+
+<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotGitCheckout.png" alt="Git Checkout Screenshot">
 
 
 ## **Development Tools Testing**
