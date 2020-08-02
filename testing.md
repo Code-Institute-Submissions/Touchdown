@@ -11,6 +11,9 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
   <img src="https://github.com/DanielBradford/bamboo-fitness/blob/master/assets/images/TESTING%20SCREENSHOTS/CSS%20-%20Validation.png" alt="CSS Validation">
 
 ### **Client Story Testing:**
+1. As a new user of Touchdown, I want to easily navigate the site:
+
+    <img src="https://github.com/DanielBradford/Touchdown/blob/4b471bb6336080fdb39f57b6156d10d8f5b14e30/assets/images/screenshots/ScreenshotMenu.png" alt="screenshot of navigation menu">
 
 1. As a new user of Touchdown, I want to easily navigate the site, so I can can understand how to play the game.
 
@@ -19,6 +22,7 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
 1. As a new user of Touchdown, I want to easily navigate the site, so I can can select my preferred difficulty level.
    
     <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotSelectDifficulty.png" alt="screenshot of difficulty modal">
+
 1. As a new user of Touchdown, I want to easily navigate the site, so I can give feedback to the creator and rate the game.
 
     <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotContactUs.png" alt="screenshot of Contact Us modal">
@@ -70,10 +74,10 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
 
 1. As a user of Touchdown, I want to know how many points i have scored.
     
-    **In Game Play (Points Status):** During the game the number of lives is clearly displayed below the game play area.
-    The lives are symbolised with red hearts. 1 heart = 1 life. This is the screenshot of full lives:
+    **In Game Play (Points Status):** During the game the current points count is clearly displayed below the game play area (lower right corner).
+    The points increase by 3 per round and decrease by 5 when the user answers incorrectly. This is the screenshot of the points display:
         
-    <img src="https://github.com/DanielBradford/Touchdown/blob/cad6a59fa8f7758afc118d86fef30f715bbdc6e4/assets/images/screenshots/ScreenshotLivesStatus.png" alt="screenshot of lives status">
+    <img src="https://github.com/DanielBradford/Touchdown/blob/97cbac45363df0b1bd73f32c25363abbfa6004bc/assets/images/screenshots/ScreenshotPointsStatus.png" alt="screenshot of points status">
 
 1. As a user of Touchdown, I want to know if i have completed the game.
     
@@ -105,7 +109,7 @@ When the card 'flashes' its border changes to a gold color and then stops. A sou
 **Main Page:**
 This is the main page the user sees when the screen has loaded. An intro sound plays on loading (intro.mp3).
 
-<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotMain.png" alt="screenshot of landing page">
+<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotMain.png" alt="screenshot of main page">
 
   - **TITLE and ICON**
     1. Verify the sizing of the box adjusts from desktop > tablet > mobile and that no over flow distorts the layout:
@@ -217,7 +221,7 @@ By analysing these rerports i was able to make alterations in both the HTML and 
 **DESKTOP REPORT SCREENSHOTS**
 Lighthouse Desktop Reports:
 
-- Home/Landing Page:
+- Home/Main Game Page:
   <img src="https://github.com/DanielBradford/Touchdown/blob/122f20513a4b31a5538974972bde423468500f47/assets/images/screenshots/LighthouseScreenshot.png" alt="MAIN GAME Page - LIGHTHOUSE REPORT">
 
 ## Further Testing
