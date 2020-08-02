@@ -1,4 +1,4 @@
-## **Testing**
+# **Testing**
 
 HTML VALIDATION - https://validator.w3.org/
 
@@ -11,92 +11,96 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
   <img src="https://github.com/DanielBradford/bamboo-fitness/blob/master/assets/images/TESTING%20SCREENSHOTS/CSS%20-%20Validation.png" alt="CSS Validation">
 
 ### **Client Story Testing:**
-1. As a new user of Touchdown, I want to easily navigate the site:
-    * The navigation menu, displayed in the top-right corner of the screen, allows the user to navigate throughout the site.
 
-    <img src="https://github.com/DanielBradford/Touchdown/blob/b46fa48f7d303a42bab270d5c04126052526b47d/assets/images/screenshots/ScreenshotMenu.png" alt="screenshot of navigation menu">
+1. As a new user of Touchdown, I want to easily navigate the site:
+
+   - The navigation menu, displayed in the top-right corner of the screen, allows the user to navigate throughout the site.
+
+   <img src="https://github.com/DanielBradford/Touchdown/blob/b46fa48f7d303a42bab270d5c04126052526b47d/assets/images/screenshots/ScreenshotMenu.png" alt="screenshot of navigation menu">
 
 1. As a new user of Touchdown, I want to understand how to play the game.
-    * When "How to Play" is selected, the user is presented with a modal containing a list of instructions and rules for the game:
-    
-    <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotHowToPlay.png" alt="screenshot of Contact Us modal">
+
+   - When "How to Play" is selected, the user is presented with a modal containing a list of instructions and rules for the game:
+
+   <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotHowToPlay.png" alt="screenshot of Contact Us modal">
 
 1. As a new user of Touchdown, I want to select my preferred difficulty level.
-   * When "Difficulty" is selected, the user is presented with a modal containing 3 options to be selected. Each one corresponding to an increasing difficulty:
-    
+
+   - When "Difficulty" is selected, the user is presented with a modal containing 3 options to be selected. Each one corresponding to an increasing difficulty:
+
     <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotSelectDifficulty.png" alt="screenshot of difficulty modal">
 
 1. As a new user of Touchdown, I want to easily navigate the site, so I can give feedback to the creator and rate the game.
-    * When "Contact Us" is selected, the user is presented with a modal containing a data submission form. They can use this to rate the game and give feedback via an EmailJS API.
-    
-    <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotContactUs.png" alt="screenshot of Contact Us modal">
+
+   - When "Contact Us" is selected, the user is presented with a modal containing a data submission form. They can use this to rate the game and give feedback via an EmailJS API.
+
+   <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotContactUs.png" alt="screenshot of Contact Us modal">
 
 1. As a new user of Touchdown, I want to have fun with an interactive game.
 
-    **In Game Play (Card flashing):** When the Start Game button is clicked, the cards flash in a random sequences which progresses each round. 
-    When the card 'flashes' its border changes to a gold color and then stops. A sound effect is also played. (ping.mp3)
+   **In Game Play (Card flashing):** When the Start Game button is clicked, the cards flash in a random sequences which progresses each round.
+   When the card 'flashes' its border changes to a gold color and then stops. A sound effect is also played. (ping.mp3)
 
-    <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotFlash.png" alt="screenshot of in game play">
+   <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotFlash.png" alt="screenshot of in game play">
 
-    This was tested personally and professionally. 
-    I played the game and found it personally enjoyable. I also introduced the game to family and friends to gain feedback on the game.
-    Below are some quotes on the game feedback:
-    
-    "_Fun and playful_" - anon (**4/5 stars**)
-    
-    "_Happy and light but challenging on faster difficulty setting_" - anon (**4/5 stars**)
-    
-    "_Easy but fun_" - anon (**3/5 stars**)
+   This was tested personally and professionally.
+   I played the game and found it personally enjoyable. I also introduced the game to family and friends to gain feedback on the game.
+   Below are some quotes on the game feedback:
 
-1. As a user of Touchdown, I want to be updated on my progress in the game. 
-    
-    **In Game Play (Progress Status):** The users game progress is displayed using a progress bar (Bootstrap) and round counter. As they progress the bar fills up in yellow and the round count increases. (Correct answer = 10% progression)
-    This is the screenshot of the progress bar:
-    <img src="https://github.com/DanielBradford/Touchdown/blob/97cbac45363df0b1bd73f32c25363abbfa6004bc/assets/images/screenshots/ScreenshotProgressBar.png" alt="screenshot of progress bar">
-    This is the screenshot of the Round Count display:
-    <img src="https://github.com/DanielBradford/Touchdown/blob/97cbac45363df0b1bd73f32c25363abbfa6004bc/assets/images/screenshots/ScreenshotRoundStatus.png" alt="screenshot of round count">
+   "_Fun and playful_" - anon (**4/5 stars**)
 
+   "_Happy and light but challenging on faster difficulty setting_" - anon (**4/5 stars**)
 
-1. As a user of Touchdown, I want to know if am losing.
+   "_Easy but fun_" - anon (**3/5 stars**)
 
-    **In Game Play (Wrong Answer):** If the user answers incorrectly a negative sound effect (boo.mp3) is played and a cartoon cross is displayed on the screen (losing.webp). 
-    This is the screenshot of when the user answers incorrectly:
+1. As a user of Touchdown, I want to be updated on my progress in the game.
 
-    <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotWrong.png" alt="screenshot of wrong answer">
+   **In Game Play (Progress Status):** The users game progress is displayed using a progress bar (Bootstrap) and round counter. As they progress the bar fills up in yellow and the round count increases. (Correct answer = 10% progression)
+   This is the screenshot of the progress bar:
+   <img src="https://github.com/DanielBradford/Touchdown/blob/97cbac45363df0b1bd73f32c25363abbfa6004bc/assets/images/screenshots/ScreenshotProgressBar.png" alt="screenshot of progress bar">
+   This is the screenshot of the Round Count display:
+   <img src="https://github.com/DanielBradford/Touchdown/blob/97cbac45363df0b1bd73f32c25363abbfa6004bc/assets/images/screenshots/ScreenshotRoundStatus.png" alt="screenshot of round count">
 
-1. As a user of Touchdown, I want to know if am winning.
+1) As a user of Touchdown, I want to know if am losing.
 
-    **In Game Play (Correct Answer):** If the user answers correctly a positive sound effect (woo.mp3) is played and a cartoon image is displayed on the screen (winning.webp). 
-    This is the screenshot of when the user answers correctly:
+   **In Game Play (Wrong Answer):** If the user answers incorrectly a negative sound effect (boo.mp3) is played and a cartoon cross is displayed on the screen (losing.webp).
+   This is the screenshot of when the user answers incorrectly:
 
-    <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotCorrect.png" alt="screenshot of correct answer">
+   <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotWrong.png" alt="screenshot of wrong answer">
 
-1. As a user of Touchdown, I want to know how many lives i have left.
-    
-    **In Game Play (Lives Status):** During the game the number of lives is clearly displayed below the game play area.
-    The lives are symbolised with red hearts. 1 heart = 1 life. This is the screenshot of full lives:
-    
-    <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotLivesStatus.png" alt="screenshot of lives status">
+1) As a user of Touchdown, I want to know if am winning.
 
-1. As a user of Touchdown, I want to know how many points i have scored.
-    
-    **In Game Play (Points Status):** During the game the current points count is clearly displayed below the game play area (lower right corner).
-    The points increase by 3 per round and decrease by 5 when the user answers incorrectly. This is the screenshot of the points display:
-        
-    <img src="https://github.com/DanielBradford/Touchdown/blob/97cbac45363df0b1bd73f32c25363abbfa6004bc/assets/images/screenshots/ScreenshotPointsStatus.png" alt="screenshot of points status">
+   **In Game Play (Correct Answer):** If the user answers correctly a positive sound effect (woo.mp3) is played and a cartoon image is displayed on the screen (winning.webp).
+   This is the screenshot of when the user answers correctly:
 
-1. As a user of Touchdown, I want to know if i have completed the game.
-    
-    **In Game Play (TOUCHDOWN):** If the user completes all 10 rounds, a positive sound effect (touchdown.mp3) is played and a cartoon image is displayed on the screen (touchdown.webp). 
-    This is the screenshot of when the user completes the game:
+   <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotCorrect.png" alt="screenshot of correct answer">
 
-    <img src="https://github.com/DanielBradford/Touchdown/blob/122f20513a4b31a5538974972bde423468500f47/assets/images/screenshots/ScreenshotTouchdown.png" alt="screenshot of touchdown">
+1) As a user of Touchdown, I want to know how many lives i have left.
 
-1. As a user of Touchdown, I want to know if i have lost the game.
-    **In Game Play (GAME OVER):** If the user fails to win, a negative sound effect (gameOver.mp3) is played and an alert box is displayed on the screen. 
-    This is the screenshot of when the user fails to win:
+   **In Game Play (Lives Status):** During the game the number of lives is clearly displayed below the game play area.
+   The lives are symbolised with red hearts. 1 heart = 1 life. This is the screenshot of full lives:
 
-    <img src="https://github.com/DanielBradford/Touchdown/blob/122f20513a4b31a5538974972bde423468500f47/assets/images/screenshots/ScreenshotGameOver.png" alt="screenshot of gameover">
+   <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotLivesStatus.png" alt="screenshot of lives status">
+
+1) As a user of Touchdown, I want to know how many points i have scored.
+
+   **In Game Play (Points Status):** During the game the current points count is clearly displayed below the game play area (lower right corner).
+   The points increase by 3 per round and decrease by 5 when the user answers incorrectly. This is the screenshot of the points display:
+     
+   <img src="https://github.com/DanielBradford/Touchdown/blob/97cbac45363df0b1bd73f32c25363abbfa6004bc/assets/images/screenshots/ScreenshotPointsStatus.png" alt="screenshot of points status">
+
+1) As a user of Touchdown, I want to know if i have completed the game.
+
+   **In Game Play (TOUCHDOWN):** If the user completes all 10 rounds, a positive sound effect (touchdown.mp3) is played and a cartoon image is displayed on the screen (touchdown.webp).
+   This is the screenshot of when the user completes the game:
+
+   <img src="https://github.com/DanielBradford/Touchdown/blob/122f20513a4b31a5538974972bde423468500f47/assets/images/screenshots/ScreenshotTouchdown.png" alt="screenshot of touchdown">
+
+1) As a user of Touchdown, I want to know if i have lost the game.
+**In Game Play (GAME OVER):** If the user fails to win, a negative sound effect (gameOver.mp3) is played and an alert box is displayed on the screen.
+This is the screenshot of when the user fails to win:
+
+<img src="https://github.com/DanielBradford/Touchdown/blob/122f20513a4b31a5538974972bde423468500f47/assets/images/screenshots/ScreenshotGameOver.png" alt="screenshot of gameover">
 
 ## Logical Testing (MANUAL) of all functions and elements:
 
@@ -107,65 +111,86 @@ This is the main page the user sees when the screen has loaded. An intro sound p
 
 <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotMain.png" alt="screenshot of main page">
 
-  - **TITLE and ICON**
-    1. Verify the sizing of the box adjusts from desktop > tablet > mobile and that no over flow distorts the layout:
-       - _During testing i decided to remove the wing (stadium) images from mobile to allow more space.
-  - **MENU / Navigation Bar** 
-    1. Verify that the sizing of the navigation bar adjusts with screen size changes:
-        
-        * I made the navaigation menu condense for both tablet and mobile screen sizes.* 
-    2. Verify that the menu drops down and that the menu text is clear and visible.
+- **TITLE and ICON**
+  1. Verify the sizing of the box adjusts from desktop > tablet > mobile and that no over flow distorts the layout:
+     - Ball Icon in title should continue rotating until game is started.
+- **MENU / Navigation Bar**
+
+  1. Verify that the sizing of the navigation bar adjusts with screen size changes:
+     - I made the navaigation menu condense for both tablet and mobile screen sizes.\*
+  2. Verify that the menu drops down and that the menu text is clear and visible.
+     - I had difficulties during accessbility testing but found a color to make this work\_
+  3. Hover over the navigation links and verify the CSS styling changes
+     - Some styling choices were changed during testing due to accessbility/contrast issues\*
+  4. Click on each of the navigation links and verify that it opens the corresponding modals
+     - During testing i found all links to modals worked correctly.
+  5. Repeat verification of functionality and responsiveness on my mobile phone and tablet.
+
+  - **Contact Us / Feedback Form** 
+  1. Click "Send" with empty input fields to verify the form will NOT submit and reminds the user the inputs need to be made 2. Purposely enter an INVALID email address in email input to verify the form validation reminds user to enter VALID email address. 3. Click Send with VALID inputs to verify the form window closes at completion. 4. Click Close button to verify the pop-up window closes correctly. 5. Verify the form is visible and functional in tablet and mobile. ## EmailJS API Testing:
     
-        * I had difficulties during testing but found a method to make this work_ 3. Hover over the navigation links and verify the CSS styling changes
-        * Some styling choices were changed during testing due to accessbility/contrast issues* 4. Click on each of the navigation links and verify that it takes the user to the corresponding pages
-        * During testing i found the home button did not function. This issue was corrected_ 5. Repeat verification of functionality and responsiveness on my mobile phone and tablet.
+    Using the EmailJS API allowed me to provide a link of communication between the user and the creator. This channel allows for rating and feedback for the game which is detremental to future improvements and developments to the game and the site.
+    Here is a screenshot of the template created and utilised within the API:
+    <img src="https://github.com/DanielBradford/Touchdown/blob/d6edf4d6cb51f0949ef0f8914bc849cb3b1a76f5/assets/images/screenshots/ScreenshotEmailTemplate.png" alt="screenshot of EmailJS template">
 
-  - **"Restart" Button**
-  1. Hover on button to verify CSS styling causes color change to allow user to see selection before clicking 
-  1. Click button to verify the enquiry form is displayed via a modal.
+    Here is a screenshot of the method to test this template and funcionality of the API:
+    <img src="https://github.com/DanielBradford/Touchdown/blob/d6edf4d6cb51f0949ef0f8914bc849cb3b1a76f5/assets/images/screenshots/ScreenshotEmailTest.png" alt="screenshot of EmailJS test email">
 
-  - **"Start Game" Button**
-  1. Hover on button to verify CSS styling causes color change to allow user to see selection before clicking 
-  1. Click button to verify the enquiry form is displayed via a modal.
-
-  - **"Replay" Button**
-
-  1. Hover on button to verify CSS styling causes color change to allow user to see selection before clicking 
-  1. Click button to verify the enquiry form is displayed via a modal.
-
-  - **Enquiry Form**
-    1. Click "Send" with empty input fields to verify the form will NOT submit and reminds the user the inputs need to be made
-    2. Purposely enter an INVALID email address in email input to verify the form validation reminds user to enter VALID email address.
-    3. Click Send with VALID inputs to verify the form window closes at completion.
-    4. Click Close button to verify the pop-up window closes correctly.
-    5. Verify the form is visible and functional in tablet and mobile.
-  - **Footer**
-    1. Hover over the icons to verify the hover color change is applied
-    2. Click each of the Social Media Icons and verify the user is taken to the corresponding websites.
-    3. Verfiy the icons are visible
-       - During testing i altered the color of the icons to give a higher contrast rating to make them more visible
-    4. Hover over each social media icon and confirm colour and size transitions expected.
-    5. Click "Return to Top" link to verify the user is returned to top of current page.
-    6. Reduce and expand width of window to verify that the footer is responsive and looks good on all device widths.
+    Here is a screenshot of an examplary email recieved:
+    <im src="https://github.com/DanielBradford/Touchdown/blob/12bb437a1a9056353f53a23729e9ae428a7c84ea/assets/images/screenshots/ScreenshotEmailRecieved.png" alt="screenshot of email recieved through EmailJS API">
 
 
-## EmailJS API Testing:
-Using the EmailJS API allowed me to provide a link of communication between the user and the creator. This channel allows for rating and feedback for the game which is detremental to future improvements and developments.
-Here is a screenshot of the template created and utilised within the API:
-<img src="https://github.com/DanielBradford/Touchdown/blob/d6edf4d6cb51f0949ef0f8914bc849cb3b1a76f5/assets/images/screenshots/ScreenshotEmailTemplate.png" alt="screenshot of EmailJS template">
+- **"Restart" Button**
 
-Here is a screenshot of the method to test this template and funcionality of the API:
-<img src="https://github.com/DanielBradford/Touchdown/blob/d6edf4d6cb51f0949ef0f8914bc849cb3b1a76f5/assets/images/screenshots/ScreenshotEmailTest.png" alt="screenshot of EmailJS test email">
+1. Hover on button to verify CSS styling causes color change to allow user to see selection before clicking
+1. Click button to verify the restart check is initiated.
+   - A confirmation box should be displayed to confirm the user wants to restart and reminds them all progress will be reset.
+   - RESULT:
+     <img src="https://github.com/DanielBradford/Touchdown/blob/d71fa5712e62d9da2bad03a39e57a57d1c4c1d63/assets/images/screenshots/ScreenshotRestart.png" alt="screenshot of restart check">
+1. Click the confirm button to verify the game is restarted:
+   - Round should = 0
+   - Lives should = 3
+   - Points should = 0
+   - All status displays are reset and updated.
+   - All game sequences/arrays are reset
+   - Ball Icon in title continues rotating
 
-Here is a screenshot of an examplary email recieved:
-<im src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotEmailRecieved.png" alt="screenshot of email recieved through EmailJS API">
+- **"Start Game" Button**
 
+1. Hover on button to verify CSS styling causes color change to allow user to see selection before clicking
+   - All styles are correct and corresponding with the CSS styles set
+1. Click button to verify the game starts.
+   - The game starts on the click of this button and all pointer actions are stopped and started in the correct places.
+   - The cards individually flash for the user to remember.
+   - RESULT:
+     <img src="https://github.com/DanielBradford/Touchdown/blob/d71fa5712e62d9da2bad03a39e57a57d1c4c1d63/assets/images/screenshots/ScreenshotFlash.png" alt="screenshot of card flashing">
+
+- **"Replay" Button**
+
+1. Hover on button to verify CSS styling causes color change to allow user to see selection before clicking
+1. Click Replay button to verify the replay confirmation box is presented to the user.
+   * RESULT:
+   <img src="https://github.com/DanielBradford/Touchdown/blob/d71fa5712e62d9da2bad03a39e57a57d1c4c1d63/assets/images/screenshots/ScreenshotReplay.png" alt="screenshot of replay confirmation">
+1. Click confirm button to verify the current game sequence is replayed.
+
+
+- **Footer**
+  1. Hover over the icons to verify the hover color change is applied
+  2. Click each of the Social Media Icons and verify the user is taken to the corresponding websites.
+  3. Verfiy the icons are visible
+     - During testing i altered the color of the icons to give a higher contrast rating to make them more visible
+  4. Hover over each social media icon and confirm colour and size transitions expected.
+  5. Click "Return to Top" link to verify the user is returned to top of current page.
+  6. Reduce and expand width of window to verify that the footer is responsive and looks good on all device widths.
 
 ## Jasmine Testing (AUTOMATED) of Javascript Functions:
 
-## Development Issues:
+## Development Bugs/Issues:
 
 ### POINTER EVENT CONTROL (during gameplay)
+
+During the development of the game it was evident the user could still select cards, and click on buttons during the game.
+This created bugs in the gameplay. This was resolved by controlling the pointer events during gameplay. Git commit record below:
 
     commit 255cbc605fe96a4320d8d8084ce720001d1d239b
     Author: Daniel Bradford <danielbradford@hotmail.co.uk>
@@ -174,6 +199,14 @@ Here is a screenshot of an examplary email recieved:
     User pointer events blocked while main function is called. prevents cheating or confusion.
 
 ## LOGIC ISSUES WITH JAVASCRIPT:
+
+During the development of the logic.js file, there were bugs/issues with the logic of the game.
+The initial plan was to start with 3 lives. If the user answered incorrectly they would remain on the same round but lose one life.
+This concept of remaining on the same round had issues within the game logic.
+After re-analysing the game design and user stories i simplified the logic and introduced a points system.
+If the player was incorrect, they would lose a life, start at round one and lose 5 points.
+This concept eliminated the issue and resolved the bug. Git commit record below:
+
     commit 2a0035f71ad0828a2789474837eea568c3756962
     Author: Daniel Bradford <danielbradford@hotmail.co.uk>
     Date:   Tue Jul 28 15:42:37 2020 +0000
@@ -181,6 +214,11 @@ Here is a screenshot of an examplary email recieved:
     Selection/answer comparisson bug fixed. Full restart to the begining prevents issues with selection matching answer.
 
 ## RESPONSIVE DESIGN
+
+As in any project, responsive design is an extremely important factor.
+I used a combination of Bootstrap features and Media Queries to ensure the game is responsive on all screen-sizes.
+Git commit below:
+
     commit 715d250faa712b8b097e42bdb1cecf2542b2a080
     Author: Daniel Bradford <danielbradford@hotmail.co.uk>
     Date:   Wed Jul 29 18:42:43 2020 +0000
@@ -188,11 +226,11 @@ Here is a screenshot of an examplary email recieved:
     Stylistic changes to layout, font and image sizes matching responsive design needs
 
 ## ACCIDENTAL FOLDER DELETION
-During the development the screenshots folder in images was accidentally deleted. 
+
+During the development of the game, the screenshots folder in images was accidentally deleted.
 This was then recovered using GIT CHECKOUT (commit number) -- (path):
 
 <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotGitCheckout.png" alt="Git Checkout Screenshot">
-
 
 ## **Development Tools Testing**
 
@@ -204,10 +242,9 @@ By analysing these rerports i was able to make alterations in both the HTML and 
 - In initial reports the website had an average Performance rating of **74**.
 - I changed changed the appropriate .jpg & .png files into webp format to minimise memory usage and speed up loading and rendering times.
 - I streamlined the style.css file to lessen the data being loaded. (commit 988437bcb814fe1235dfb5ecc33d9eae2832bae2)
-- By making these changes the current Performance rating is now (on average) **89**
+- By making these changes the current Performance rating is now (on average) **91**
 
 **Accessibility**
-
 
 - In initial reports the website had an average Accessibility rating of **84**
 - I altered color schemes of text vs. background to maximise the contrast score allowing information to be more visible to a wider group of users with accessiblity issues.
@@ -227,11 +264,8 @@ By analysing these rerports i was able to make alterations in both the HTML and 
 - I added in some META tags to give more information about the websites content and creator.
 - By making these changes the current SEO rating is now **100**
 
-**DESKTOP REPORT SCREENSHOTS**
-Lighthouse Desktop Reports:
-
-- Home/Main Game Page:
-  <img src="https://github.com/DanielBradford/Touchdown/blob/122f20513a4b31a5538974972bde423468500f47/assets/images/screenshots/LighthouseScreenshot.png" alt="MAIN GAME Page - LIGHTHOUSE REPORT">
+**Lighthouse Desktop Report:**
+<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/LighthouseScreenshot.png" alt="MAIN GAME Page - LIGHTHOUSE REPORT">
 
 ## Further Testing
 
