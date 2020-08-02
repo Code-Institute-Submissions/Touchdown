@@ -37,7 +37,7 @@ const gameAudio = {
   gameOver: new Audio("assets/audio/gameOver.mp3"),
   touchdown: new Audio("assets/audio/touchdown.mp3"),
 };
-const playOrder = [kick, pass, run, rush];
+const playOrder = [kick, pass, run, rush]; 
 
 var difficultyPicked = false;
 var difficulty = rookie;
@@ -64,6 +64,10 @@ const restartCheck = () => {
     return false; //----On cancel user returns to current game------//
   }
 };
+
+$("#menu-btn").click(function(){
+$(".menu").toggle();
+});
 
 //-------MENU TOGGLE FUNCTION-------//
 $("#title").click(function () {
@@ -265,9 +269,8 @@ const showPoints = () => {
 
 //--------- START GAME FUNCTION ----- makes user select difficulty----
 const startGame = () => {
-  $("#letsPlay").click(function () {});
-  $(".card").css("pointer-events", "none"); //------Prevents User Clicking or hovering
-  $("#startGame").css("pointer-events", "none"); //------Prevents User Clicking or hovering
+  $(".card").css("pointer-events", "none"); //------Prevents User Clicking or hovering on cards
+  $("#startGame").css("pointer-events", "none"); //------Prevents User Clicking or hovering on button
   $("#status").show("slow");
   gameAudio.whistle.play();
   makeGameSequence();

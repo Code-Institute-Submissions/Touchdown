@@ -136,11 +136,11 @@ This is the screenshot of when the user answers incorrectly:
 **In Game Play (TOUCHDOWN):** If the user completes all 10 rounds, a positive sound effect (touchdown.mp3) is played and a cartoon image is displayed on the screen (touchdown.webp). 
 This is the screenshot of when the user completes the game:
 
-<img src="https://github.com/DanielBradford/Touchdown/blob/b3999ea0f692f53cec9c7077e450bdc0d4568388/assets/images/screenshots/ScreenshotTouchdown.png" alt="screenshot of touchdown">
+<img src="https://github.com/DanielBradford/Touchdown/blob/122f20513a4b31a5538974972bde423468500f47/assets/images/screenshots/ScreenshotTouchdown.png" alt="screenshot of touchdown">
 
-**In Game Play (GAME OVER):** If the user fails to win, a negative sound effect (gameOver.mp3) is played and a cartoon image is displayed on the screen. 
+**In Game Play (GAME OVER):** If the user fails to win, a negative sound effect (gameOver.mp3) is played and an alert box is displayed on the screen. 
 This is the screenshot of when the user fails to win:
-<img src="https://github.com/DanielBradford/Touchdown/blob/b3999ea0f692f53cec9c7077e450bdc0d4568388/assets/images/screenshots/ScreenshotGameOver.png" alt="screenshot of gameover">
+<img src="https://github.com/DanielBradford/Touchdown/blob/122f20513a4b31a5538974972bde423468500f47/assets/images/screenshots/ScreenshotGameOver.png" alt="screenshot of gameover">
 
 ## **Style / Theme**
 
