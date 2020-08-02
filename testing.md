@@ -28,18 +28,23 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
     This was tested personally and professionally. 
     I played the game and found it personally enjoyable. I also introduced the game to family and friends to gain feedback on the game.
     Below are some quotes on the game feedback:
-    "Fun and playful" - anon (4/5 stars)
-    "Happy and light but challenging on faster difficulty setting" - anon (4/5 stars)
-    "Easy but fun" - anon (3/5 stars)
+    
+    "_Fun and playful_" - anon (**4/5 stars**)
+    
+    "_Happy and light but challenging on faster difficulty setting_" - anon (**4/5 stars**)
+    
+    "_Easy but fun_" - anon (**3/5 stars**)
 
 1. As a user of Touchdown, I want to be updated on my progress in the game. 
     
     **In Game Play (Progress Status):** The users game progress is displayed using a progress bar (Bootstrap) and round counter. As they progress the bar fills up in yellow and the rround count increases. (Correct answer = 10% progression)
     This is the screenshot of the progress bar:
 
-    <img src="https://github.com/DanielBradford/Touchdown/blob/cad6a59fa8f7758afc118d86fef30f715bbdc6e4/assets/images/screenshots/ScreenshotProgressBar.pdf" alt="screenshot of gameover">
+    <img src="https://github.com/DanielBradford/Touchdown/blob/cad6a59fa8f7758afc118d86fef30f715bbdc6e4/assets/images/screenshots/ScreenshotProgressBar.png" alt="screenshot of progress bar">
 
     This is the screenshot of the Round Count display:
+    
+    <img src="https://github.com/DanielBradford/Touchdown/blob/cad6a59fa8f7758afc118d86fef30f715bbdc6e4/assets/images/screenshots/ScreenshotRoundStatus.png" alt="screenshot of round count">
 
 
 1. As a user of Touchdown, I want to know if am losing.
@@ -48,7 +53,7 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
     This is the screenshot of when the user answers incorrectly:
 
     <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotWrong.png" alt="screenshot of wrong answer">
-    <img src="https://github.com/DanielBradford/Touchdown/blob/cad6a59fa8f7758afc118d86fef30f715bbdc6e4/assets/images/screenshots/ScreenshotRoundStatus.pdf" alt="screenshot of round status">
+
 1. As a user of Touchdown, I want to know if am winning.
 
     **In Game Play (Correct Answer):** If the user answers correctly a positive sound effect (woo.mp3) is played and a cartoon image is displayed on the screen (winning.webp). 
@@ -61,14 +66,14 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
     **In Game Play (Lives Status):** During the game the number of lives is clearly displayed below the game play area.
     The lives are symbolised with red hearts. 1 heart = 1 life. This is the screenshot of full lives:
     
-    <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotLivesStatus.pdf" alt="screenshot of lives status">
+    <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotLivesStatus.png" alt="screenshot of lives status">
 
 1. As a user of Touchdown, I want to know how many points i have scored.
     
     **In Game Play (Points Status):** During the game the number of lives is clearly displayed below the game play area.
     The lives are symbolised with red hearts. 1 heart = 1 life. This is the screenshot of full lives:
         
-    <img src="https://github.com/DanielBradford/Touchdown/blob/cad6a59fa8f7758afc118d86fef30f715bbdc6e4/assets/images/screenshots/ScreenshotLivesStatus.pdf" alt="screenshot of lives status">
+    <img src="https://github.com/DanielBradford/Touchdown/blob/cad6a59fa8f7758afc118d86fef30f715bbdc6e4/assets/images/screenshots/ScreenshotLivesStatus.png" alt="screenshot of lives status">
 
 1. As a user of Touchdown, I want to know if i have completed the game.
     
