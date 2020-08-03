@@ -137,7 +137,7 @@ Ball Icon in title should continue rotating until game is started.
    - **Result:** During testing i found all links to modals worked correctly.
 1. **Test:** Repeat verification of functionality and responsiveness on my mobile phone and tablet.
 
-   **Result:** During testing some changes were made to the navbar to inmprove the responsive design.
+   **Result:** During testing some changes were made to the menu/navbar to improve the responsive design.
 
    commit 8f139368683b05d85efbb992543b67ebacf1e5a2
    Author: Daniel Bradford <danielbradford@hotmail.co.uk>
@@ -149,11 +149,11 @@ Ball Icon in title should continue rotating until game is started.
 
 1. **Test:** Click "Send" with empty input fields to verify the form will NOT submit and reminds the user the inputs need to be made
 
-   **Result:**
+   **Result:** Currently a work in progress
 
 1. **Test:** Purposely enter an INVALID email address in email input to verify the form validation reminds user to enter VALID email address.
 
-   **Result:**
+   **Result:** Currently a work in progress. (current onclick combats bootstrap settings)
 
 1. **Test:** Click Send with VALID inputs to verify the form is sent via EmailJS API and closes at completion.
 
@@ -229,6 +229,23 @@ Ball Icon in title should continue rotating until game is started.
 
    **Result:** On every test, the current round is replayed succesfully.
 
+
+
+### **GAME PLAY CARDS**
+
+1. **Test:** Verfiy the cards operate consistantly on all devices and screen sizes.
+
+    **Result:** During testing the cards remained hightlighted on touchscreen devices which added confusion to the game play. 
+    This was corrected by only applying the hover class on larger screens using a mouse interaction (over 1200px).
+
+1. **Test:** Verfiy the cards can be clicked and the function operates correctly
+
+    **Result:** Cards can be clicked and the onclick function operates correctly.
+1. **Test:** (On Desktop) Verify the cards 'highlight' when hovered over
+
+    **Result:** All cards take on the highlight class when hovered over. (Only on larger screens)
+
+
 ## **Status Bar**
 
 ### **Round Counter**
@@ -256,7 +273,9 @@ Ball Icon in title should continue rotating until game is started.
     **Result:** All styles are correct and corresponding with the CSS styles set.
 
 1. **Test:** Click each of the Social Media Icons and verify the user is taken to the corresponding websites.
-
+    
+    (During testing one link lead to a 404 error. This was then rectified. Git commit: b17465a7c52e8e537a710a4ea7977bc7bbc029c6)
+    
     **Result:** All icons take the user to corresponding website.
 
 1. **Test:** Verfiy the icons are visible
