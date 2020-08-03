@@ -1,4 +1,4 @@
-# **<p style="text-align: center;">TOUCHDOWN</p>** <img height="100px" style="text-align: center" src="assets/images/winning.webp" alt="running cartoon">
+# **<span><p style="text-align: center;">TOUCHDOWN</p></span>** <span><img height="100px" style="text-align: center" src="assets/images/winning.webp" alt="running cartoon"></span>
 ## Touchdown is a fun, user-friendly and interactive memory game created using HTML, CSS and Javascript. 
 ## The game encourages the user to memorise a sequence of flashing plays, and then click on the corresponding sequence. The game maintains a strong theme of American Football.
 
@@ -117,7 +117,7 @@ Below are some screen shots of the website:
   - Stadium Color Scheme: rgb(27, 143, 27), white and gold(#6f5306)
   - For the interactive elements i used brighter colours e.g. Buttons and flash/highlight function. This enhances the user experience and presents a more playful environment.
     Some colours were altered throughout during Accessibiltiy testing as some colours were not suitable in contrast to others.
-  - The 2 fonts used were: Bungee Inline and Montserrat.(https://fonts.google.com/specimen/Montserrat?query=mon&sidebar.open=true&selection.family=Bungee+Inline|Montserrat)
+  - The 2 fonts used were: Bungee Inline and Montserrat. <a href="https://fonts.google.com/specimen/Montserrat?query=mon&sidebar.open=true&selection.family=Bungee+Inline|Montserrat" target="_blank">MORE INFO HERE</a>
   - Bungee Inline gave a retro gaming style to the project and Montserrat complimented this in a more subtle style.
     All images and icons used are Amercian Football related and were sourced free and legally.
 - Sound Effects and Audio clips used are all sports related and have been utilised to enhance the gaming experience for the user.
@@ -256,7 +256,7 @@ Here is a screenshot of the method to test this template and funcionality of the
 
 ## **Testing**
 
-### Please refer to <a href="https://github.com/DanielBradford/Touchdown/blob/master/testing.md">TESTING.md</a> for a full testing breakdown
+### Please refer to <a href="https://github.com/DanielBradford/Touchdown/blob/master/testing.md" target="_blank">TESTING.md</a> for a full testing breakdown
 
 ## **Deployment**
 
@@ -303,7 +303,9 @@ To clone this project from GitHub:
 - Unsplash for Images
 - ZAPSPLAT for Audio Effects (https://www.zapsplat.com/)
 - DLPNG for png files (https://dlpng.com/)
-
+- Research for game logic in javascript:
+    * Web Dev Junkie (https://www.youtube.com/watch?v=W0MxUHlZo6U)
+    * Ania Kubow (https://www.youtube.com/watch?v=tjyDOHzKN0w)
 - Inspiration and Structural guidance for the README.md file was taken from:
     * https://github.com/AJGreaves/portrait-artist/blob/master/README.md
     * https://github.com/Code-Institute-Solutions/StudentExampleProjectGradeFive/blob/master/README.md
