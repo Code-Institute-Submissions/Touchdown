@@ -174,7 +174,7 @@ Ball Icon in title should continue rotating until game is started.
 
 1. **Test:** Click Send with VALID inputs to verify the form is sent via EmailJS API and closes at completion.
 
-    <img src="https://github.com/DanielBradford/Touchdown/blob/61f5a54e993c2b9a2a5851648223819981f3923e/assets/images/ScreenshotTestForm.png" alt="screenshot of test form">
+    <img src="https://github.com/DanielBradford/Touchdown/blob/faa77ad3a53784464ff60ea63a9f8e61b4686374/assets/images/ScreenshotTestForm.png" alt="screenshot of test form">
 
    **Result:** The form is sent via EmailJS and recieved with the correct form data.
    Here is a screenshot of an examplary email recieved:
@@ -312,6 +312,7 @@ Ball Icon in title should continue rotating until game is started.
     **Result:** Successful.
 
 ## Jasmine Testing (AUTOMATED) of Javascript Functions:
+Although i am familiar with the Jasmine testing suite it was not neccessary or applicable to automate testing for this project. This was also due to using the Behaviour Driven Development stategy vs TDD or ATDD.
 
 ## Development Issues / De-bugging:
 
