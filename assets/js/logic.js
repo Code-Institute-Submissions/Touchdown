@@ -13,53 +13,73 @@ When the user clicks start game:
 - If Incorrect start from begining and lose a life.
 */
 
-// $(document).ready(function () {
-//-------Cards to select from ---------
-const playAction = {
-  kick: document.querySelector(".kick"),
-  pass: document.querySelector(".pass"),
-  run: document.querySelector(".run"),
-  rush: document.querySelector(".rush"),
-};
-//---------Difficulty Levels----------
-const rookie = 1200;
-const veteran = 700;
-const mvp = 200;
-
-//---------Audio/Sound Effects----------
-
-const gameAudio = {
-  intro: new Audio("assets/audio/intro.mp3"),
-  woo: new Audio("assets/audio/woo.mp3"),
-  boo: new Audio("assets/audio/boo.mp3"),
-  whistle: new Audio("assets/audio/whistle.mp3"),
-  ping: new Audio("assets/audio/ping.mp3"),
-  restartSound: new Audio("assets/audio/restart.mp3"),
-  gameOver: new Audio("assets/audio/gameOver.mp3"),
-  touchdown: new Audio("assets/audio/touchdown.mp3"),
-};
-const playOrder = [
-  playAction.kick,
-  playAction.pass,
-  playAction.run,
-  playAction.rush,
-];
-
-var difficulty = rookie;
-var currentGame = [];
-var clicked = [];
-var round = 1;
-var lives = 3;
-var points = 0;
-var randomOrder = [];
-var starCount = 0;
-
-console.log("ready");
-
-//------ON LOADING THE STATUS BAR STAYS HIDDEN UNTIL GAME IS STARTED-------
-$("#status").hide();
-
+$(document).ready(function () {
+  console.log("ready!");
+  $("#status").hide(); //------ON LOADING THE STATUS BAR STAYS HIDDEN UNTIL GAME IS STARTED-------
+  $("#menu-btn").click(function () {
+    $(".menu").toggle();
+  });
+  //-------MENU TOGGLE FUNCTION-------// For mobile design to maximise screen real estate
+  $("#title").click(function () {
+    $(".menu").toggle();
+  });
+  currentGame = [];
+  randomOrder = [];
+  clicked = [];
+  round = 1;
+  lives = 3;
+  points = 0;
+  starCount = 0;
+  //---------Difficulty Levels----------
+  rookie = 1200;
+  veteran = 700;
+  mvp = 200;
+  difficulty = rookie; //-----DEFAULT DIFFICULTY
+  //-------Cards to select from ---------
+  playAction = {
+    kick: document.querySelector(".kick"),
+    pass: document.querySelector(".pass"),
+    run: document.querySelector(".run"),
+    rush: document.querySelector(".rush"),
+  };
+  playOrder = [
+    playAction.kick,
+    playAction.pass,
+    playAction.run,
+    playAction.rush,
+  ];
+  //---------Audio/Sound Effects----------
+  gameAudio = {
+    intro: new Audio("assets/audio/intro.mp3"),
+    woo: new Audio("assets/audio/woo.mp3"),
+    boo: new Audio("assets/audio/boo.mp3"),
+    whistle: new Audio("assets/audio/whistle.mp3"),
+    ping: new Audio("assets/audio/ping.mp3"),
+    restartSound: new Audio("assets/audio/restart.mp3"),
+    gameOver: new Audio("assets/audio/gameOver.mp3"),
+    touchdown: new Audio("assets/audio/touchdown.mp3"),
+  };
+});
 //------------------------------------------------FUNCTIONS------------------------------------------
+//---------Restart Function--- Resets the game to the begining------
+const restart = () => {
+  gameAudio.restartSound.play();
+  clicked = [];
+  round = 1;
+  lives = 3;
+  points = 0;
+  randomOrder = [];
+  currentGame = [];
+
+  $("#startGame").css("pointer-events", "auto"); //------Enables User Clicking or hovering
+
+  $(".progress-bar").css("width", "0%");
+  $("#round").text("");
+  resetLives(); //------This resets the 3 heart icons that represent the lives left
+  showPoints();
+  $("#startGame").text("Start Game");
+  $("#ball").addClass(" rotating ");
+};
 
 //------Restart Confirmation Function-----------// Checks if the user definitely wants to restart
 const restartCheck = () => {
@@ -71,15 +91,6 @@ const restartCheck = () => {
     return false; //----On cancel user returns to current game------//
   }
 };
-
-$("#menu-btn").click(function () {
-  $(".menu").toggle();
-});
-
-//-------MENU TOGGLE FUNCTION-------// For mobile design to maximise screen real estate
-$("#title").click(function () {
-  $(".menu").toggle();
-});
 
 //------- Check Difficulty Function ------------// Changes difficulty based on radio button input
 let checkDifficulty = () => {
@@ -119,27 +130,9 @@ let checkDifficulty = () => {
     }
   });
 };
+checkDifficulty();
 
-//---------Restart Function--- Resets the game to the begining------
-const restart = () => {
-  gameAudio.restartSound.play();
-  clicked = [];
-  round = 1;
-  lives = 3;
-  points = 0;
-  randomOrder = [];
-  currentGame = [];
-
-  $("#startGame").css("pointer-events", "auto"); //------Enables User Clicking or hovering
-
-  $(".progress-bar").css("width", "0%");
-  $("#round").text("");
-  resetLives(); //------This resets the 3 heart icons that represent the lives left
-  showPoints();
-  $("#startGame").text("Start Game");
-  $("#ball").addClass(" rotating ");
-};
-
+//------Lose life function------
 const loseLife = () => {
   clicked = [];
   $(".heart").last().remove();
@@ -305,12 +298,13 @@ const cardClick = (card) => {
     if (randomOrder.length === 0) {
       points += 3;
       showPoints();
+      updateProgress();
       round += 1;
       $("#round").text(round); //---------Increase Round and update round count to user-------
       clicked = []; //---------Reset Clicked Array--------------
       gameAudio.woo.play();
       correct();
-      updateProgress();
+      
 
       $("#startGame").text(`Round ${round}`);
       makeGameSequence(); //------Adds another random card to the sequence---------
@@ -339,10 +333,6 @@ const cardClick = (card) => {
       }, 3000); //------Plays Sequence of card flashes-------
     }
   }
-//   setTimeout(function(){
-//       $(".card").removeClass(":hover");
-
-//   });
 };
 
 //----------- REPLAY FUNCTION--------Repeats the sequence
@@ -358,16 +348,15 @@ const replay = () => {
 
 //----------CONTACT US MODAL WITH EMAILJS API--------------------//
 
-//------FEEDBACK STAR FUNCTION-------//
 $(".star").click(function () {
-  $(this).toggleClass("star-picked");
+  $(this).toggleClass("star-picked"); //------FEEDBACK STAR FUNCTION-------//
   starCount += 1;
 });
 
 //------SEND EMAIL FUNCTION using EmailJS API -------//
 const sendEmail = () => {
   let full_name = $("#fname").val() + " " + $("#lname").val();
-  let emailAdress = $("#email").val();
+  let email = $("#email").val();
   let rating = `${starCount} / 5 (STARS)`;
   let enquiry = $("#enquiry").val();
 
@@ -385,7 +374,7 @@ const sendEmail = () => {
       from_name: full_name,
       rating: rating,
       enquiry: enquiry,
-      from_email: emailAdress,
+      from_email: email,
     })
     .then(
       function (response) {
