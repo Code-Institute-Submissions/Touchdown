@@ -88,40 +88,30 @@ let checkDifficulty = () => {
     if ($(this).is(":checked")) {
       // Checkbox is checked..
       difficulty = rookie;
-      $(".rookie #difficulty p").addClass("selected");
-      $(".veteran #difficulty p").removeClass("selected");
-      $(".mvp #difficulty p").remove("selected");
-
       console.log("rookie is checked");
     } else {
       // Checkbox is not checked..
       console.log("rookie not checked");
     }
   });
+
   $("input[id=veteran]").change(function () {
     //--------VETERAN
     if ($(this).is(":checked")) {
       // Checkbox is checked..
       difficulty = veteran;
-      $(".veteran #difficulty p").addClass("selected");
-      $(".rookie #difficulty p").removeClass("selected");
-      $(".mvp #difficulty p").removeClass("selected");
-
       console.log("veteran is checked");
     } else {
       // Checkbox is not checked..
       console.log("veteran not checked");
     }
   });
+
   $("input[id=mvp]").change(function () {
     //----------MVP
     if ($(this).is(":checked")) {
       // Checkbox is checked..
       difficulty = mvp;
-      $(".veteran #difficulty p").addClass("selected");
-      $(".rookie #difficulty p").removeClass("selected");
-      $(".mvp #difficulty p").addClass("selected");
-
       console.log("mvp is checked");
     } else {
       // Checkbox is not checked..
@@ -129,7 +119,7 @@ let checkDifficulty = () => {
     }
   });
 };
-// checkDifficulty();
+
 //---------Restart Function--- Resets the game to the begining------
 const restart = () => {
   gameAudio.restartSound.play();
@@ -144,11 +134,10 @@ const restart = () => {
 
   $(".progress-bar").css("width", "0%");
   $("#round").text("");
-  resetLives();
+  resetLives(); //------This resets the 3 heart icons that represent the lives left
   showPoints();
   $("#startGame").text("Start Game");
   $("#ball").addClass(" rotating ");
-  //------This resets the 3 heart icons that represent the lives left
 };
 
 const loseLife = () => {
@@ -350,6 +339,10 @@ const cardClick = (card) => {
       }, 3000); //------Plays Sequence of card flashes-------
     }
   }
+//   setTimeout(function(){
+//       $(".card").removeClass(":hover");
+
+//   });
 };
 
 //----------- REPLAY FUNCTION--------Repeats the sequence
@@ -373,11 +366,19 @@ $(".star").click(function () {
 
 //------SEND EMAIL FUNCTION using EmailJS API -------//
 const sendEmail = () => {
-  $("#startGame").css("pointer-events", "none"); //------Disables User Clicking or hovering
   let full_name = $("#fname").val() + " " + $("#lname").val();
   let emailAdress = $("#email").val();
   let rating = `${starCount} / 5 (STARS)`;
   let enquiry = $("#enquiry").val();
+
+  if (full_name || emailAdress || enquiry == "") {
+    alert("Please complete all required fields");
+    return false;
+  }
+
+  //   else if (full_name && emailAdress && enquiry !== ""){
+  $("#startGame").css("pointer-events", "none"); //------Disables User Clicking or hovering
+
   emailjs.init("user_rsvmwq5KBsvLqIljtmzs3");
   emailjs
     .send("gmail", "touchdown_user", {
