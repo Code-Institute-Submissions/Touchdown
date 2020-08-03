@@ -1,4 +1,4 @@
-# **<span><p style="text-align: center;">TOUCHDOWN</p></span>** <span><img height="100px" style="text-align: center" src="assets/images/winning.webp" alt="running cartoon"></span>
+# **<span><p style="text-align: center;">TOUCHDOWN</p></span>** <span><img height="150px" style="text-align: center" src="assets/images/winning.webp" alt="running cartoon"></span>
 ## Touchdown is a fun, user-friendly and interactive memory game created using HTML, CSS and Javascript. 
 ## The game encourages the user to memorise a sequence of flashing plays, and then click on the corresponding sequence. The game maintains a strong theme of American Football.
 
@@ -6,8 +6,9 @@
 
 ### **Website/Game on GitHub Pages:** https://danielbradford.github.io/Touchdown/
 
-### **Website/Game via QR Code (Scan with device camera):
+### **Website/Game via QR Code** (Scan with device camera):
 <img src="assets/images/qrcode.png" alt="QR Code">
+
 ### **Creation and Design**
 
 ### **UX - STRATEGY:**
