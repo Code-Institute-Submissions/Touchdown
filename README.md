@@ -11,6 +11,23 @@
 
 ### **Creation and Design**
 
+### **Behaviour Driven Development vs Test Driven Development or Acceptance Test Driven Development**
+
+For the creation of Touchdown, it was imperitive to focus on the the style of development. 
+As the project is a game and it's success is highly dependant on the user experience it was evident that Behaviour Driven Development (**BDD**) was a priority.
+This is because it is highly interactive and has much more variance within the paramaters of the user experience.
+
+According to <a href="https://dzone.com/articles/a-few-benefits-you-get-by-doing-bdd" alt="link to zone">D-ZONE</a>,The benefits of using BDD are:
+
+* **High visibility** By using a language understood by all, everyone gets strong visibility into the project’s progression.
+* **High business value** BDD puts great importance on the business value and needs. By setting priorities with the client, based on the value it provides, developers are able to provide a better result because they have a strong understanding of how the client thinks. By focusing on the value, no useless features are built.
+* **The ubiquitous language**. As mentioned earlier, the ubiquitous language is understandable by all the members of the team, which reduces misconceptions and misunderstanding and makes it easier for new members to join the working process.
+* **Software development meets user need** By focusing on the business’s needs, you get satisfied users, and that implies a happy business, of course. With BDD, as its name says, you focus on the behavior, which has a stronger impact than the implementation itself. 
+* **More confidence from the developers' side** Teams using BDD are in general much more confident that they won’t break the code, and have better predictability when it comes to their work.
+* **Lower costs** By improving the quality of the code, you are basically reducing costs of maintenance and minimizing the project’s risks.
+
+Link:(https://dzone.com/articles/a-few-benefits-you-get-by-doing-bdd) 
+
 ### **UX - STRATEGY:**
 
 The strategy of Touchdown as a game is to provide a fun and interactive game for the user to enjoy.
