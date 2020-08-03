@@ -10,6 +10,17 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
 - All CSS written in this project has been submitted for validation via the above software.
   <img src="https://github.com/DanielBradford/bamboo-fitness/blob/master/assets/images/TESTING%20SCREENSHOTS/CSS%20-%20Validation.png" alt="CSS Validation">
 
+JAVASCRIPT VALIDATION - https://jshint.com/
+
+- ALL JS written in this project has been parsed through JSHint and no errors have been found.
+
+    Metrics:
+    
+    There are 41 functions in this file.
+    Function with the largest signature take 2 arguments, while the median is 0.
+    Largest function has 35 statements in it, while the median is 3.
+    The most complex function has a cyclomatic complexity value of 5 while the median is 1.
+
 ### **Behaviour Driven Development vs Test Driven Development or Acceptance Test Driven Development**
 
 For the creation of Touchdown, it was imperitive to focus on the the style of development. 
@@ -327,6 +338,8 @@ Ball Icon in title should continue rotating until game is started.
 
 ## Jasmine Testing (AUTOMATED) of Javascript Functions:
 Although i am familiar with the Jasmine testing suite it was not neccessary or applicable to automate testing for this project. This was also due to using the Behaviour Driven Development stategy vs TDD or ATDD.
+
+
 
 ## Development Issues / De-bugging:
 
