@@ -2,7 +2,7 @@
 ## Touchdown is a fun, user-friendly and interactive memory game created using HTML, CSS and Javascript. 
 ## The game encourages the user to memorise a sequence of flashing plays, and then click on the corresponding sequence. The game maintains a strong theme of American Football.
 
-## As they progress they will gain points and attempt to complete all 10 rounds. The difficulty can be changed which will alter the speed in which the play-cards are shown.
+## As the user progresses they will gain points and attempt to complete all 10 rounds. The difficulty can be changed which will alter the speed in which the play-cards are shown.
 
 ### **Website/Game on GitHub Pages:** https://danielbradford.github.io/Touchdown/
 
