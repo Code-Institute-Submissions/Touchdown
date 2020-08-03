@@ -195,11 +195,6 @@ h1 i {
   color: rgb(209, 178, 4);
 }
 
-.card:hover {
-  box-shadow: 0 0 0 0.3em rgb(209, 178, 4);
-  cursor: pointer;
-}
-
 .empty {
   width: 10rem;
   height: 10rem;
@@ -496,10 +491,7 @@ main .wing {
 }
 
 @media only screen and (min-width: 700px) {
-  /* .mainBlock {
-    height: 50vh;
-  } */
-
+  
   .card {
     margin: 10px;
   }
@@ -508,3 +500,9 @@ main .wing {
     width: 100%;
   }
 }
+
+@media only screen and (min-width: 1200px) {
+    .card:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 0.3em rgb(209, 178, 4);
+  }
