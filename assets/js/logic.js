@@ -13,6 +13,8 @@ When the user clicks start game:
 - If Incorrect start from begining and lose a life.
 */
 
+/*jshint esversion: 10 */
+
 $(document).ready(function () {
   console.log("ready!");
   $("#status").hide(); //------ON LOADING THE STATUS BAR STAYS HIDDEN UNTIL GAME IS STARTED-------
