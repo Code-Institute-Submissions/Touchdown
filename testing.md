@@ -156,11 +156,11 @@ Ball Icon in title should continue rotating until game is started.
 
    **Result:** During testing some changes were made to the menu/navbar to improve the responsive design.
 
-   commit 8f139368683b05d85efbb992543b67ebacf1e5a2
-   Author: Daniel Bradford <danielbradford@hotmail.co.uk>
-   Date: Sat Aug 1 16:12:33 2020 +0000
+    commit 8f139368683b05d85efbb992543b67ebacf1e5a2
+    Author: Daniel Bradford <danielbradford@hotmail.co.uk>
+    Date: Sat Aug 1 16:12:33 2020 +0000
 
-   Minor changes to nav menu for improved responsive design
+    Minor changes to nav menu for improved responsive design
 
 ### **Contact Us / Feedback Form**
 
@@ -310,6 +310,20 @@ Ball Icon in title should continue rotating until game is started.
 1. **Test:** Reduce and expand width of window to verify that the footer is responsive and looks good on all device widths.
 
     **Result:** Successful.
+
+## **Audio / Sound Effect Testing**
+**Test:** Verify all audio effects are clear and played at the correct time.
+
+**Result:**
+1. intro: new Audio("assets/audio/intro.mp3") **PLAYS ON PAGE LOAD**
+1. woo: new Audio("assets/audio/woo.mp3") **PLAYS WHEN CORRECT ANSWER GIVEN**
+1. boo: new Audio("assets/audio/boo.mp3") **PLAYS WHEN INCORRECT ANSWER GIVEN**
+1. whistle: new Audio("assets/audio/whistle.mp3") **PLAYS WHEN GAME IS STARTED**
+1. ping: new Audio("assets/audio/ping.mp3") **PLAYS WHEN CARD FLASHES / CLICKED BY USER**
+1. restartSound: new Audio("assets/audio/restart.mp3") **PLAYS WHEN GAME IS RESTARTED**
+1. gameOver: new Audio("assets/audio/gameOver.mp3") **PLAYS WHEN USER HAS LOST THE GAME**
+1. touchdown: new Audio("assets/audio/touchdown.mp3") **PLAYS WHEN USER COMPLETES THE GAME**
+ 
 
 ## Jasmine Testing (AUTOMATED) of Javascript Functions:
 Although i am familiar with the Jasmine testing suite it was not neccessary or applicable to automate testing for this project. This was also due to using the Behaviour Driven Development stategy vs TDD or ATDD.
