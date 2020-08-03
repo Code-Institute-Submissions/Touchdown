@@ -115,7 +115,7 @@ This is the main landing page the user sees when the screen has loaded. An intro
 Verify the sizing of the box adjusts from desktop > tablet > mobile and that no over flow distorts the layout:
     
 **Expectation**:
-CSS Key Frames Animation should initiates
+CSS Key Frames Animation should initiate. 
 Ball Icon in title should continue rotating until game is started.
 
 **RESULT**:    
@@ -125,35 +125,60 @@ Ball Icon in title should continue rotating until game is started.
 
 ### **MENU / NAVIGATION Bar**
 
-1. Verify that the sizing of the navigation bar adjusts with screen size changes:
-     - I made the navigation menu adapt to all screen sizes. For mobile a hamburger button is used. 
-1. Verify that the menu drops down and that the menu text is clear and visible.
-     - I had difficulties during accessbility testing but found a color to make this work.
-1. Hover over the navigation links and verify the CSS styling changes
-     - Some CSS styling choices were changed during testing due to accessbility/contrast issues
-1. Click on each of the navigation links and verify that it opens the corresponding modals
-     - During testing i found all links to modals worked correctly.
-1. Repeat verification of functionality and responsiveness on my mobile phone and tablet.
+1. **Test:** Verify that the sizing of the navigation bar adjusts with screen size changes:
+     - **Result:** I made the navigation menu adapt to all screen sizes. For mobile, a hamburger button is used. 
+1.  **Test:** Verify that the menu drops down and that the menu text is clear and visible.
+     - **Result:** I had difficulties during accessbility testing but found a color to make this work.
+1.  **Test:** Hover over the navigation links and verify the CSS styling changes
+     - **Result:** Some CSS styling choices were changed during testing due to accessbility/contrast issues
+1.  **Test:** Click on each of the navigation links and verify that it opens the corresponding modals
+     - **Result:** During testing i found all links to modals worked correctly.
+1.  **Test:** Repeat verification of functionality and responsiveness on my mobile phone and tablet.
+    **Result:** 
+    commit 8f139368683b05d85efbb992543b67ebacf1e5a2
+    Author: Daniel Bradford <danielbradford@hotmail.co.uk>
+    Date:   Sat Aug 1 16:12:33 2020 +0000
 
+    Minor changes to nav menu for improved responsive design
 ### **Contact Us / Feedback Form** 
-1. Click "Send" with empty input fields to verify the form will NOT submit and reminds the user the inputs need to be made 2. Purposely enter an INVALID email address in email input to verify the form validation reminds user to enter VALID email address. 3. Click Send with VALID inputs to verify the form window closes at completion. 4. Click Close button to verify the pop-up window closes correctly. 5. Verify the form is visible and functional in tablet and mobile. ## EmailJS API Testing:
+1. **Test:** Click "Send" with empty input fields to verify the form will NOT submit and reminds the user the inputs need to be made 
+    
+    **Result:**
+1. **Test:** Purposely enter an INVALID email address in email input to verify the form validation reminds user to enter VALID email address. 
+    
+    **Result:**
+1. **Test:** Click Send with VALID inputs to verify the form is sent via EmailJS API and closes at completion. 
+
+    **Result:** The form is sent via EmailJS and recieved with the correct form data. 
+    Here is a screenshot of an examplary email recieved:
+
+    <img src="https://github.com/DanielBradford/Touchdown/blob/12bb437a1a9056353f53a23729e9ae428a7c84ea/assets/images/screenshots/ScreenshotEmailRecieved.png" alt="screenshot of email recieved through EmailJS API">
+1. **Test:** Click Close button to verify the modal closes correctly. 
+
+    **Result:** The modal closes correctly.
+1. **Test:** Verify the form is visible and functional in tablet and mobile. 
+
+    **Result:** The form is fully visible on all devices.
     
 ### **"Restart" Button**
 
-1. Hover on button to verify CSS styling causes color change to allow user to see selection before clicking
-1. Click button to verify the restart check is initiated.
+1. **Test:** Hover on button to verify CSS styling causes color change to allow user to see selection before clicking.
+
+    **Result:** CSS stylings are fnctional and correct
+1. **Test:** Click button to verify the restart check is initiated.
    - A confirmation box should be displayed to confirm the user wants to restart and reminds them all progress will be reset.
 
-   RESULT:
-     <img src="https://github.com/DanielBradford/Touchdown/blob/d71fa5712e62d9da2bad03a39e57a57d1c4c1d63/assets/images/screenshots/ScreenshotRestart.png" alt="screenshot of restart check">
-1. Click the ok button to verify the game is restarted:
+   **Result:** A confirmation box is presented to confirm that the user wants to restart and reminds them all progress will be reset.
+
+    <img src="https://github.com/DanielBradford/Touchdown/blob/d71fa5712e62d9da2bad03a39e57a57d1c4c1d63/assets/images/screenshots/ScreenshotRestart.png" alt="screenshot of restart check">
+1. **Test:** Click the ok button to verify the game is restarted:
     EXPECTATION:
     - status displays should reset and update
     - Restart sound should play
     - Arrays/Sequences should reset
     - Ball Icon should continue rotating
 
-    RESULT: 
+    **Result:** 
    - All status displays are reset and updated.
    - Restart sound is played (restart.mp3)
    - All game sequences/arrays are reset
@@ -161,22 +186,51 @@ Ball Icon in title should continue rotating until game is started.
 
 ### **"Start Game" Button**
 
-1. Hover on button to verify CSS styling causes color change to allow user to see selection before clicking
-   - All styles are correct and corresponding with the CSS styles set
-1. Click button to verify the game starts.
-   - The game starts on the click of this button and all pointer actions are stopped and started in the correct places.
+1. **Test:** Hover on button to verify CSS styling causes color change to allow user to see selection before clicking
+  
+   **Result:** All styles are correct and corresponding with the CSS styles set.
+1. **Test:** Click button to verify the game starts.
+   
+   **Result:** The game starts on the click of this button and all pointer actions are stopped and started in the correct places.
    - The cards individually flash for the user to remember.
-   - RESULT:
+
      <img src="https://github.com/DanielBradford/Touchdown/blob/d71fa5712e62d9da2bad03a39e57a57d1c4c1d63/assets/images/screenshots/ScreenshotFlash.png" alt="screenshot of card flashing">
 
 ### **"Replay" Button**
 
-1. Hover on button to verify CSS styling causes color change to allow user to see selection before clicking
-1. Click Replay button to verify the replay confirmation box is presented to the user.
-   * RESULT:
-   <img src="https://github.com/DanielBradford/Touchdown/blob/d71fa5712e62d9da2bad03a39e57a57d1c4c1d63/assets/images/screenshots/ScreenshotReplay.png" alt="screenshot of replay confirmation">
-1. Click confirm button to verify the current game sequence is replayed.
+1. **Test** Hover on button to verify CSS styling causes color change to allow user to see selection before clicking
 
+    **Result:** All styles are correct and corresponding with the CSS styles set.
+1. **Test** Click Replay button to verify the replay confirmation box is presented to the user.
+   
+   **Result:** A confirmation box is presented to the user confirming they want to replay the current round at a cost of -5 points.
+   
+   <img src="https://github.com/DanielBradford/Touchdown/blob/d71fa5712e62d9da2bad03a39e57a57d1c4c1d63/assets/images/screenshots/ScreenshotReplay.png" alt="screenshot of replay confirmation">
+1. **Test:** Click confirm button to verify the current game sequence is replayed.
+
+    **Result:** On every test, the current round is replayed succesfully. 
+
+
+## **Status Bar**
+
+### **Round Counter**
+
+1. **Test:** Check the round number displayed is correct before, during and after the game. (Including restarts and replays)
+
+    **Result:** The round number is correct at all times.
+
+### **Lives Counter**
+
+1. **Test:** Verfiy the correct lives amount is displayed during the game. (Including restarts and replays)
+
+    **Result:** The life count is displayed correctly at all times and adjusts accordingly.
+### Points Counter**
+
+1. **Test:** Verify the correct points amount is displayed during the game. (Including restarts and replays)
+
+    **Result:** The points counter is correct at all times. 
+
+    (During testing this)
 
 ### **Footer**
   1. Hover over the icons to verify the hover color change is applied
@@ -192,6 +246,21 @@ Ball Icon in title should continue rotating until game is started.
 ## API Development, Implementation and Testing:
 Using the EmailJS API allowed me to provide a link of communication between the user and the creator. This channel allows for rating and feedback for the game which is detremental to future improvements and developments to the game and the site.
 
+Here are the commit records for the EmailJS Implementation:
+
+    commit 309f14518fcf47b6e3267aef3f7ba596c91e45ae
+    Author: Daniel Bradford <danielbradford@hotmail.co.uk>
+    Date:   Wed Jul 29 12:49:51 2020 +0000
+
+    Send Email function added to use EmailJS API and include form input data
+
+    commit afc1d56babffdb97b4a4189aeb4c39e7d7fc743a
+    Author: Daniel Bradford <danielbradford@hotmail.co.uk>
+    Date:   Wed Jul 29 12:48:19 2020 +0000
+
+    Script added to enable EmailJS API
+
+
 Here is a screenshot of the template created and utilised within the API:
 
 <img src="https://github.com/DanielBradford/Touchdown/blob/d6edf4d6cb51f0949ef0f8914bc849cb3b1a76f5/assets/images/screenshots/ScreenshotEmailTemplate.png" alt="screenshot of EmailJS template">
@@ -199,10 +268,6 @@ Here is a screenshot of the template created and utilised within the API:
 Here is a screenshot of the method to test this template and funcionality of the API:
 
 <img src="https://github.com/DanielBradford/Touchdown/blob/d6edf4d6cb51f0949ef0f8914bc849cb3b1a76f5/assets/images/screenshots/ScreenshotEmailTest.png" alt="screenshot of EmailJS test email">
-
-Here is a screenshot of an examplary email recieved:
-
-<im src="https://github.com/DanielBradford/Touchdown/blob/12bb437a1a9056353f53a23729e9ae428a7c84ea/assets/images/screenshots/ScreenshotEmailRecieved.png" alt="screenshot of email recieved through EmailJS API">
 
 
 ## Development Issues / De-bugging:
@@ -256,7 +321,7 @@ This was then recovered using GIT CHECKOUT (commit number) -- (path):
 ### **SELECT DIFFICULTY BUG**
 
 During the development of the select diffculty feature there were issues in getting the user selection to be applied to the game. This took a combination
-of modifying the logic.js file and the html elements in index.html.
+of modifying the logic.js file and the html elements in index.html. Git commit record below:
 
     commit b53f510d86955dd13dbf71073a55140c3edbddb5
     Author: Daniel Bradford <danielbradford@hotmail.co.uk>
