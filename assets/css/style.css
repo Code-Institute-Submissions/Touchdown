@@ -402,6 +402,12 @@ main .wing {
 
 /*--------------Media Queries for Responsive Design------------*/
 @media only screen and (max-width: 607px) {
+    html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
   #title h1 {
     font-size: 3em;
   }
@@ -491,7 +497,6 @@ main .wing {
 }
 
 @media only screen and (min-width: 700px) {
-  
   .card {
     margin: 10px;
   }
@@ -502,7 +507,8 @@ main .wing {
 }
 
 @media only screen and (min-width: 1200px) {
-    .card:hover {
+  .card:hover {
     cursor: pointer;
     box-shadow: 0 0 0 0.3em rgb(209, 178, 4);
   }
+}
