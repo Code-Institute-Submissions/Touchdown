@@ -10,11 +10,11 @@ CSS VALIDATION - https://jigsaw.w3.org/css-validator/
 - All CSS written in this project has been submitted for validation via the above software.
   <img src="https://github.com/DanielBradford/bamboo-fitness/blob/master/assets/images/TESTING%20SCREENSHOTS/CSS%20-%20Validation.png" alt="CSS Validation">
 
-
-### Behaviour Driven Development vs Test Driven Development vs Acceptance Test Driven Development
+q
+### **Behaviour Driven Development vs Test Driven Development or Acceptance Test Driven Development**
 
 For the creation of Touchdown, it was imperitive to focus on the the style of development. 
-As the project is a game and it's success is highly dependant on the user experience it was evident that Behaviour Driven Development was a priority.
+As the project is a game and it's success is highly dependant on the user experience it was evident that Behaviour Driven Development (**BDD**)was a priority.
 This is because it is highly interactive and has much more variance within the paramaters of the user experience.
 
 According to <a href="https://dzone.com/articles/a-few-benefits-you-get-by-doing-bdd" alt="link to zone">D-ZONE</a>,The benefits of using BDD are:
