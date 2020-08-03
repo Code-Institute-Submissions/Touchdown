@@ -292,10 +292,12 @@ const cardClick = (card) => {
   let expectedAnswer = randomOrder[0];
 
   if (playType === expectedAnswer) {
+    //----Correct Answer
     randomOrder.shift();
     console.log("correct");
 
     if (randomOrder.length === 0) {
+      //-------Round Complete
       points += 3;
       showPoints();
       updateProgress();
@@ -304,7 +306,6 @@ const cardClick = (card) => {
       clicked = []; //---------Reset Clicked Array--------------
       gameAudio.woo.play();
       correct();
-      
 
       $("#startGame").text(`Round ${round}`);
       makeGameSequence(); //------Adds another random card to the sequence---------
@@ -314,13 +315,16 @@ const cardClick = (card) => {
       }, 3000); //-----------Plays next sequence of card flashes--------
     }
   } else if (playType !== expectedAnswer) {
+    //----Wrong Answer
     lives -= 1;
     if (lives === 0) {
+      //------Game Over---
       gameAudio.gameOver.play();
       alert("GAME OVER");
       $("#startGame").text("Start Game");
       restart();
     } else {
+      //---Lose a life and lose 5 points
       points -= 5;
       showPoints();
       loseLife();
@@ -335,10 +339,10 @@ const cardClick = (card) => {
   }
 };
 
-//----------- REPLAY FUNCTION--------Repeats the sequence
+//----------- REPLAY FUNCTION-------
 const replay = () => {
   if (confirm("Are you sure you want to replay? You will lose 3 points!")) {
-    main();
+    main(); //-----------Repeats the current sequence
     points -= 3;
     showPoints();
   } else {
@@ -360,40 +364,40 @@ const sendEmail = () => {
   let rating = `${starCount} / 5 (STARS)`;
   let enquiry = $("#enquiry").val();
 
-  if (full_name || emailAdress || enquiry == "") {
+  if (full_name == "" || email == "" || enquiry == "") {
     alert("Please complete all required fields");
     return false;
+  } else {
+    $("#startGame").css("pointer-events", "none"); //------Disables User Clicking or hovering
+
+    emailjs.init("user_rsvmwq5KBsvLqIljtmzs3");
+    emailjs
+      .send("gmail", "touchdown_user", {
+        from_name: full_name,
+        rating: rating,
+        enquiry: enquiry,
+        from_email: email,
+      })
+      .then(
+        function (response) {
+          $(".star").toggleClass("star-picked");
+          starCount = 0;
+          $("#send-btn")
+            .removeClass("send-btn")
+            .removeClass("btn-light")
+            .addClass("sent");
+          $("#send-btn").text("EMAIL SENT");
+          $("#contactUs").modal("hide");
+          setTimeout(function () {
+            $("#contactUs").modal("hide"); //-----------Waits for confirmation email has been sent before closing modal
+          }, 8000);
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          $("#startGame").css("pointer-events", "auto"); //------Enables User Clicking or hovering
+          console.log("FAILED...", error);
+        }
+      );
   }
-
-  //   else if (full_name && emailAdress && enquiry !== ""){
-  $("#startGame").css("pointer-events", "none"); //------Disables User Clicking or hovering
-
-  emailjs.init("user_rsvmwq5KBsvLqIljtmzs3");
-  emailjs
-    .send("gmail", "touchdown_user", {
-      from_name: full_name,
-      rating: rating,
-      enquiry: enquiry,
-      from_email: email,
-    })
-    .then(
-      function (response) {
-        $(".star").toggleClass("star-picked");
-        starCount = 0;
-        $("#send-btn")
-          .removeClass("send-btn")
-          .removeClass("btn-light")
-          .addClass("sent");
-        $("#send-btn").text("EMAIL SENT");
-        $("#contactUs").modal("hide");
-        setTimeout(function () {
-          $("#contactUs").modal("hide"); //-----------Waits for confirmation email has been sent before closing modal
-        }, 8000);
-        console.log("SUCCESS!", response.status, response.text);
-      },
-      function (error) {
-        $("#startGame").css("pointer-events", "auto"); //------Enables User Clicking or hovering
-        console.log("FAILED...", error);
-      }
-    );
+  
 };
