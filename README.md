@@ -1,5 +1,5 @@
-# **<p style="text-align: center;">TOUCHDOWN</p>** <img style="text-align: center" src="assets/images/winning.webp" alt="running cartoon">
-## Touchdown is a fun, user-friendly and interactive memory game. 
+# **<p style="text-align: center;">TOUCHDOWN</p>** <img height="100px" style="text-align: center" src="assets/images/winning.webp" alt="running cartoon">
+## Touchdown is a fun, user-friendly and interactive memory game created using HTML, CSS and Javascript. 
 ## The game encourages the user to memorise a sequence of flashing plays, and then click on the corresponding sequence. The game maintains a strong theme of American Football.
 
 ## As they progress they will gain points and attempt to complete all 10 rounds. The difficulty can be changed which will alter the speed in which the play-cards are shown.
@@ -105,10 +105,6 @@ The skeleton of this project was desgined and established using Lucid Chart (htt
 - <a href="https://github.com/DanielBradford/Touchdown/blob/701a6d73c3e9e8e02a7deb3246667f04d6e02e18/assets/documents/wireframes/HOW%20TO%20PLAY%20MODAL.pdf" target="_blank">How to Play Modal</a>
 - <a href="https://github.com/DanielBradford/Touchdown/blob/701a6d73c3e9e8e02a7deb3246667f04d6e02e18/assets/documents/wireframes/CONTACT%20US%20MODAL.pdf" target="_blank">Contact Us Modal</a>
 
-#### **Mobile** - (All wireframes have annotated descriptions)
-
-- <a href="" target="_blank">Mobile Wireframes</a>
-
 ### **UX - SURFACE:**
 
 The final element to consider was the surface plane of UX design. This is the look and feel of the website.
@@ -121,7 +117,7 @@ Below are some screen shots of the website:
   - Stadium Color Scheme: rgb(27, 143, 27), white and gold(#6f5306)
   - For the interactive elements i used brighter colours e.g. Buttons and flash/highlight function. This enhances the user experience and presents a more playful environment.
     Some colours were altered throughout during Accessibiltiy testing as some colours were not suitable in contrast to others.
-  - The 2 fonts used were: Bungee Inline and Montserrat.
+  - The 2 fonts used were: Bungee Inline and Montserrat.(https://fonts.google.com/specimen/Montserrat?query=mon&sidebar.open=true&selection.family=Bungee+Inline|Montserrat)
   - Bungee Inline gave a retro gaming style to the project and Montserrat complimented this in a more subtle style.
     All images and icons used are Amercian Football related and were sourced free and legally.
 - Sound Effects and Audio clips used are all sports related and have been utilised to enhance the gaming experience for the user.
@@ -148,7 +144,7 @@ Below are some screen shots of the website:
 
 - **Reset Button:** Reloads the page (User is reminded via an alert that progress will be lost)
 - **Start Game Button:** starts the game
-- **Replay Button:** Replays the current sequence at a cost of 5 points.
+- **Replay Button:** Replays the current sequence (User is reminded via an alert that the replay will a cost -3 points.)
 - **Play Action Cards:** Each card represents a different play option in American Football; Kick, Pass, Run and Rush. The cards will flash in a randomised sequence. Starting at one and building up to 10.
 
 **Status information**
@@ -201,12 +197,31 @@ This is an ordered list of game instructions and rules. It explains how the game
 
   **Send Button** - This button holds an onclick function that enables the EmailJS API. This collects all of the inputted data and sends via email to the owner/creator. The completion and sending of this form gives the owner/creator user feedback on the game.
 
-BELOW IS THE COMMIT RECORD WHEN THIS WAS ADDED: 
+## API Development and Implementation:
+
+Using the EmailJS API allowed me to provide a link of communication between the user and the creator. This channel allows for rating and feedback for the game which is detremental to future improvements and developments to the game and the site.
+
+Here are the commit records for the EmailJS Implementation:
 
     commit 309f14518fcf47b6e3267aef3f7ba596c91e45ae
     Author: Daniel Bradford <danielbradford@hotmail.co.uk>
     Date:   Wed Jul 29 12:49:51 2020 +0000
-    "Send Email function added to use EmailJS API and include form input data"
+
+    Send Email function added to use EmailJS API and include form input data
+
+    commit afc1d56babffdb97b4a4189aeb4c39e7d7fc743a
+    Author: Daniel Bradford <danielbradford@hotmail.co.uk>
+    Date:   Wed Jul 29 12:48:19 2020 +0000
+
+    Script added to enable EmailJS API
+
+Here is a screenshot of the template created and utilised within the API:
+
+<img src="https://github.com/DanielBradford/Touchdown/blob/d6edf4d6cb51f0949ef0f8914bc849cb3b1a76f5/assets/images/screenshots/ScreenshotEmailTemplate.png" alt="screenshot of EmailJS template">
+
+Here is a screenshot of the method to test this template and funcionality of the API:
+
+<img src="https://github.com/DanielBradford/Touchdown/blob/d6edf4d6cb51f0949ef0f8914bc849cb3b1a76f5/assets/images/screenshots/ScreenshotEmailTest.png" alt="screenshot of EmailJS test email">
 
 
 ## **Future Features**
