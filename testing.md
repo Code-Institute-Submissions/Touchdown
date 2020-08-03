@@ -166,13 +166,15 @@ Ball Icon in title should continue rotating until game is started.
 
 1. **Test:** Click "Send" with empty input fields to verify the form will NOT submit and reminds the user the inputs need to be made
 
-   **Result:** Currently a work in progress
+   **Result:** Success. The user can only send the form when all input fields have been filled. (During testing this failed and the logic.js file was adapted to make this pass the test. Git commit 61f5a54e993c2b9a2a5851648223819981f3923e)
 
 1. **Test:** Purposely enter an INVALID email address in email input to verify the form validation reminds user to enter VALID email address.
 
    **Result:** Currently a work in progress. (current onclick combats bootstrap settings)
 
 1. **Test:** Click Send with VALID inputs to verify the form is sent via EmailJS API and closes at completion.
+
+    <img src="https://github.com/DanielBradford/Touchdown/blob/61f5a54e993c2b9a2a5851648223819981f3923e/assets/images/ScreenshotTestForm.png" alt="screenshot of test form">
 
    **Result:** The form is sent via EmailJS and recieved with the correct form data.
    Here is a screenshot of an examplary email recieved:
@@ -191,7 +193,7 @@ Ball Icon in title should continue rotating until game is started.
 
 1. **Test:** Hover on button to verify CSS styling causes color change to allow user to see selection before clicking.
 
-   **Result:** CSS stylings are fnctional and correct
+   **Result:** CSS stylings are functional and correct
 
 1. **Test:** Click button to verify the restart check is initiated.
 
