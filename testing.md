@@ -109,42 +109,36 @@ This is the main landing page the user sees when the screen has loaded. An intro
 
 <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotMain.png" alt="screenshot of main page">
 
-- **TITLE and ICON**
-  1. Verify the sizing of the box adjusts from desktop > tablet > mobile and that no over flow distorts the layout:
-    * Through testing the bootstrap settings and media queries were modified to improve this.
-    EXPECTATION:
-    - CSS Key Frames Animation should initiates
-    RESULT:
-    - CSS Key Frames Animation initiates
-     - Ball Icon in title should continue rotating until game is started.
-     
-- **MENU / Navigation Bar**
+### **TITLE & ICON**
 
-  1. Verify that the sizing of the navigation bar adjusts with screen size changes:
-     - I made the navaigation menu condense for both tablet and mobile screen sizes.
-  2. Verify that the menu drops down and that the menu text is clear and visible.
-     - I had difficulties during accessbility testing but found a color to make this work\_
-  3. Hover over the navigation links and verify the CSS styling changes
-     - Some styling choices were changed during testing due to accessbility/contrast issues
-  4. Click on each of the navigation links and verify that it opens the corresponding modals
-     - During testing i found all links to modals worked correctly.
-  5. Repeat verification of functionality and responsiveness on my mobile phone and tablet.
-
-  - **Contact Us / Feedback Form** 
-  1. Click "Send" with empty input fields to verify the form will NOT submit and reminds the user the inputs need to be made 2. Purposely enter an INVALID email address in email input to verify the form validation reminds user to enter VALID email address. 3. Click Send with VALID inputs to verify the form window closes at completion. 4. Click Close button to verify the pop-up window closes correctly. 5. Verify the form is visible and functional in tablet and mobile. ## EmailJS API Testing:
+**Test**: 
+Verify the sizing of the box adjusts from desktop > tablet > mobile and that no over flow distorts the layout:
     
-    Using the EmailJS API allowed me to provide a link of communication between the user and the creator. This channel allows for rating and feedback for the game which is detremental to future improvements and developments to the game and the site.
-    Here is a screenshot of the template created and utilised within the API:
-    <img src="https://github.com/DanielBradford/Touchdown/blob/d6edf4d6cb51f0949ef0f8914bc849cb3b1a76f5/assets/images/screenshots/ScreenshotEmailTemplate.png" alt="screenshot of EmailJS template">
+**Expectation**:
+CSS Key Frames Animation should initiates
+Ball Icon in title should continue rotating until game is started.
 
-    Here is a screenshot of the method to test this template and funcionality of the API:
-    <img src="https://github.com/DanielBradford/Touchdown/blob/d6edf4d6cb51f0949ef0f8914bc849cb3b1a76f5/assets/images/screenshots/ScreenshotEmailTest.png" alt="screenshot of EmailJS test email">
+**RESULT**:    
+* Through testing the bootstrap settings and media queries were modified to improve this.
+* CSS Key Frames Animation initiates
+* Ball Icon in title continues rotating until game is started.
 
-    Here is a screenshot of an examplary email recieved:
-    <im src="https://github.com/DanielBradford/Touchdown/blob/12bb437a1a9056353f53a23729e9ae428a7c84ea/assets/images/screenshots/ScreenshotEmailRecieved.png" alt="screenshot of email recieved through EmailJS API">
+### **MENU / NAVIGATION Bar**
 
+1. Verify that the sizing of the navigation bar adjusts with screen size changes:
+     - I made the navigation menu adapt to all screen sizes. For mobile a hamburger button is used. 
+1. Verify that the menu drops down and that the menu text is clear and visible.
+     - I had difficulties during accessbility testing but found a color to make this work.
+1. Hover over the navigation links and verify the CSS styling changes
+     - Some CSS styling choices were changed during testing due to accessbility/contrast issues
+1. Click on each of the navigation links and verify that it opens the corresponding modals
+     - During testing i found all links to modals worked correctly.
+1. Repeat verification of functionality and responsiveness on my mobile phone and tablet.
 
-- **"Restart" Button**
+### **Contact Us / Feedback Form** 
+1. Click "Send" with empty input fields to verify the form will NOT submit and reminds the user the inputs need to be made 2. Purposely enter an INVALID email address in email input to verify the form validation reminds user to enter VALID email address. 3. Click Send with VALID inputs to verify the form window closes at completion. 4. Click Close button to verify the pop-up window closes correctly. 5. Verify the form is visible and functional in tablet and mobile. ## EmailJS API Testing:
+    
+### **"Restart" Button**
 
 1. Hover on button to verify CSS styling causes color change to allow user to see selection before clicking
 1. Click button to verify the restart check is initiated.
@@ -165,7 +159,7 @@ This is the main landing page the user sees when the screen has loaded. An intro
    - All game sequences/arrays are reset
    - Ball Icon in title continues rotating
 
-- **"Start Game" Button**
+### **"Start Game" Button**
 
 1. Hover on button to verify CSS styling causes color change to allow user to see selection before clicking
    - All styles are correct and corresponding with the CSS styles set
@@ -175,7 +169,7 @@ This is the main landing page the user sees when the screen has loaded. An intro
    - RESULT:
      <img src="https://github.com/DanielBradford/Touchdown/blob/d71fa5712e62d9da2bad03a39e57a57d1c4c1d63/assets/images/screenshots/ScreenshotFlash.png" alt="screenshot of card flashing">
 
-- **"Replay" Button**
+### **"Replay" Button**
 
 1. Hover on button to verify CSS styling causes color change to allow user to see selection before clicking
 1. Click Replay button to verify the replay confirmation box is presented to the user.
@@ -184,7 +178,7 @@ This is the main landing page the user sees when the screen has loaded. An intro
 1. Click confirm button to verify the current game sequence is replayed.
 
 
-- **Footer**
+### **Footer**
   1. Hover over the icons to verify the hover color change is applied
   2. Click each of the Social Media Icons and verify the user is taken to the corresponding websites.
   3. Verfiy the icons are visible
@@ -195,9 +189,25 @@ This is the main landing page the user sees when the screen has loaded. An intro
 
 ## Jasmine Testing (AUTOMATED) of Javascript Functions:
 
-## Development Bugs/Issues:
+## API Development, Implementation and Testing:
+Using the EmailJS API allowed me to provide a link of communication between the user and the creator. This channel allows for rating and feedback for the game which is detremental to future improvements and developments to the game and the site.
 
-### POINTER EVENT CONTROL (during gameplay)
+Here is a screenshot of the template created and utilised within the API:
+
+<img src="https://github.com/DanielBradford/Touchdown/blob/d6edf4d6cb51f0949ef0f8914bc849cb3b1a76f5/assets/images/screenshots/ScreenshotEmailTemplate.png" alt="screenshot of EmailJS template">
+
+Here is a screenshot of the method to test this template and funcionality of the API:
+
+<img src="https://github.com/DanielBradford/Touchdown/blob/d6edf4d6cb51f0949ef0f8914bc849cb3b1a76f5/assets/images/screenshots/ScreenshotEmailTest.png" alt="screenshot of EmailJS test email">
+
+Here is a screenshot of an examplary email recieved:
+
+<im src="https://github.com/DanielBradford/Touchdown/blob/12bb437a1a9056353f53a23729e9ae428a7c84ea/assets/images/screenshots/ScreenshotEmailRecieved.png" alt="screenshot of email recieved through EmailJS API">
+
+
+## Development Issues / De-bugging:
+
+### **POINTER EVENT CONTROL** (during gameplay)
 
 During the development of the game it was evident the user could still select cards, and click on buttons during the game.
 This created bugs in the gameplay. This was resolved by controlling the pointer events during gameplay. Git commit record below:
@@ -208,7 +218,7 @@ This created bugs in the gameplay. This was resolved by controlling the pointer 
 
     User pointer events blocked while main function is called. prevents cheating or confusion.
 
-## LOGIC ISSUES WITH JAVASCRIPT:
+### **LOGIC ISSUES** (JAVASCRIPT)
 
 During the development of the logic.js file, there were bugs/issues with the logic of the game.
 The initial plan was to start with 3 lives. If the user answered incorrectly they would remain on the same round but lose one life.
@@ -223,7 +233,7 @@ This concept eliminated the issue and resolved the bug. Git commit record below:
 
     Selection/answer comparisson bug fixed. Full restart to the begining prevents issues with selection matching answer.
 
-## RESPONSIVE DESIGN
+### **RESPONSIVE DESIGN** (Bootstrap and Media Queries)
 
 As in any project, responsive design is an extremely important factor.
 I used a combination of Bootstrap features and Media Queries to ensure the game is responsive on all screen-sizes.
@@ -235,12 +245,25 @@ Git commit below:
 
     Stylistic changes to layout, font and image sizes matching responsive design needs
 
-## ACCIDENTAL FOLDER DELETION
+### **ACCIDENTAL FOLDER DELETION** (Git)
 
 During the development of the game, the screenshots folder in images was accidentally deleted.
 This was then recovered using GIT CHECKOUT (commit number) -- (path):
 
 <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotGitCheckout.png" alt="Git Checkout Screenshot">
+
+
+### **SELECT DIFFICULTY BUG**
+
+During the development of the select diffculty feature there were issues in getting the user selection to be applied to the game. This took a combination
+of modifying the logic.js file and the html elements in index.html.
+
+    commit b53f510d86955dd13dbf71073a55140c3edbddb5
+    Author: Daniel Bradford <danielbradford@hotmail.co.uk>
+    Date:   Wed Jul 29 11:39:43 2020 +0000
+
+    Fixed difficulty selection bug and added a modal to the menu options
+
 
 ## **Development Tools Testing**
 
