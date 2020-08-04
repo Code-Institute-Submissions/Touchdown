@@ -342,6 +342,12 @@ main .wing {
   width: max-content;
 }
 
+.stars h4 {
+    margin-top: 1em;
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+
 .modal-header {
   font-family: "Bungee Inline", cursive, sans-serif;
   color: white;
@@ -380,6 +386,16 @@ main .wing {
 
 .modal-body li {
   text-align: left;
+}
+.form-check-label{
+    padding: .3rem;
+}
+
+.form-check-label:hover{
+    color: rgb(214, 167, 36);
+    background-color: white;
+    border-radius: 1.2em;
+    padding: .3rem;
 }
 
 .form-check-input {
@@ -453,8 +469,9 @@ body {
   .star {
     font-size: 2.4em;
   }
-  h4 {
-    font-size: 1.2em;
+  .stars h4 {
+    margin-top: 1em;
+    font-size: 1em;
     text-transform: uppercase;
   }
 }
