@@ -1,4 +1,4 @@
-# **<p style="text-align: center;"> Testing <i class="fa fa-cogs"></i></p>**
+# **<p align="center"> Testing </p>**
 
 HTML VALIDATION - https://validator.w3.org/
 
