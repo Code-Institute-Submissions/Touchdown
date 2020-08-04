@@ -139,7 +139,7 @@ Ball Icon in title should continue rotating until game is started.
 ### **MENU / NAVIGATION Bar**
 
 1. **Test:** Verify that the sizing of the navigation bar adjusts with screen size changes:
-   - **Result:** I made the navigation menu adapt to all screen sizes. For mobile, a hamburger button is used.
+   - **Result:** I made the navigation menu adapt to all screen sizes. For mobile, a hamburger button is used. This maximises screen real estate for smaller devices.
 1. **Test:** Verify that the menu drops down and that the menu text is clear and visible.
    - **Result:** I had difficulties during accessbility testing but found a color to make this work.
 1. **Test:** Hover over the navigation links and verify the CSS styling changes
@@ -164,7 +164,7 @@ Ball Icon in title should continue rotating until game is started.
 
 1. **Test:** Purposely enter an INVALID email address in email input to verify the form validation reminds user to enter VALID email address.
 
-   **Result:** Currently a work in progress. (current onclick combats bootstrap settings)
+   **Result:** Currently a work in progress. (current onclick conflicts with bootstrap settings)
 
 1. **Test:** Click Send with VALID inputs to verify the form is sent via EmailJS API and closes at completion.
 
@@ -353,6 +353,8 @@ This concept eliminated the issue and resolved the bug. Git commit record below:
     Selection/answer comparisson bug fixed. Full restart to the begining prevents issues with selection matching answer.
 
 ### **RESPONSIVE DESIGN** (Bootstrap and Media Queries)
+
+<span><img height="200px" src="https://github.com/DanielBradford/Touchdown/blob/c0dca2d7451ea32a2316959e34469b8c16f78572/assets/images/screenshots/ScreenshotMobile.png" alt="Screnshot of Mobile"></span><span><img height="300px" src="https://github.com/DanielBradford/Touchdown/blob/c0dca2d7451ea32a2316959e34469b8c16f78572/assets/images/screenshots/ScreenshotTablet.png" alt="screenshot of tablet"></span>>
 
 As in any project, responsive design is an extremely important factor.
 I used a combination of Bootstrap features (index.html) and Media Queries (assets/css/style.css) to ensure the game is responsive on all screen-sizes.
