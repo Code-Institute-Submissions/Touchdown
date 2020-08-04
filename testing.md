@@ -384,6 +384,11 @@ of modifying the logic.js file and the html elements in index.html. Git commit r
 
     Fixed difficulty selection bug and added a modal to the menu options
 
+## **Future Issues to be fixed**
+Following testing there are two issues that still could be improved:
+* **Validation of email address input in the "Contact Us" modal**: Although the user is reminded to include a valid email address (via a hover message), they are not currently prevented from submitting an invalid address. This can be improved.
+* **Responsive design bug with menu toggle function**: The nav menu can potentially disappear when moving between landscape and portrait on a mobile device depending on the previous toggle selection. The menu can be recovered by tapping the game title but this can be improved.
+
 ## **Development Tools Testing**
 
 From using the technologies of Wave and Lighthouse i was able to check the performance and accessiblity of the website. By utilizing this in DevTools i was able to generate reports for both desktop and mobile.
