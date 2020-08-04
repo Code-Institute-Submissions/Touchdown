@@ -15,7 +15,7 @@
 
 For the creation of Touchdown, it was imperitive to focus on the the style of development. 
 As the project is a game and it's success is highly dependant on the user experience it was evident that Behaviour Driven Development (**BDD**) was a priority.
-This is because it is highly interactive and has much more variance within the paramaters of the user experience.
+This is because it is highly interactive and has much more variance within the parameters of the user experience.
 
 According to <a href="https://dzone.com/articles/a-few-benefits-you-get-by-doing-bdd" alt="link to zone">D-ZONE</a>,The benefits of using BDD are:
 
@@ -52,7 +52,7 @@ The strategy can be can be outlined in more detail by looking at the goals of th
 
 - The ideal user for Touchdown:
   - Aged 4 +
-  - Wants to play a fun gam
+  - Wants to play a fun game
   - Enjoys Memory Games
   - Likes American Football
   - Wants to improve their memory
@@ -83,8 +83,8 @@ Staying within the realms of scope allowed a more realistic approach whilst inco
 1. As a new user of Touchdown, I want to give feedback to the creator and rate the game.
 1. As a new user of Touchdown, I want to have fun with an interactive game.
 1. As a user of Touchdown, I want to be updated on my progress in the game.
-1. As a user of Touchdown, I want to know if am losing.
-1. As a user of Touchdown, I want to know if am winning.
+1. As a user of Touchdown, I want to know if i am losing.
+1. As a user of Touchdown, I want to know if i am winning.
 1. As a user of Touchdown, I want to know how many lives i have left.
 1. As a user of Touchdown, I want to know how many points i have scored.
 1. As a user of Touchdown, I want to know if i have completed the game.
@@ -110,7 +110,7 @@ This allowed an insight into the user experience and how a visitor gets from the
 
 ### **UX - SKELETON:**
 
-The skeleton of this project was desgined and established using Lucid Chart (https://www.lucidchart.com/).
+The skeleton of this project was designed and established using Lucid Chart (https://www.lucidchart.com/).
 
 - Although the mobile first method is recommended and heavily supported by bootstrap, i went via the desktop first approach to fully realise the initial game idea.
 - In future, the mobile first method may be more suitable due to societies increase in mobile gaming activity.
@@ -153,8 +153,8 @@ Below are some screen shots of the website:
 
 **Header**
 
-- **Title/Icon** is clearly displayed in a user-friendly and stylish format. On loading there is a short CSS animation. The football icon roates until the game is started.
-- **Menu/Navbar** is clear and accessible. When hovered over the links are highlighted in green and the cursor point changes accordingly. e.g. How to Play has a ? cursor pointer.
+- **Title/Icon** is clearly displayed in a user-friendly and stylish format. On loading there is a short CSS animation. The football icon rotates until the game is started.
+- **Menu/Navbar** is clear and accessible. When hovered over the links are highlighted in green and the cursor point changes accordingly. e.g. How to Play has a '?' cursor pointer.
   - Difficulty opens a modal that allows the difficulty level to be set.
   - How to Play? - Lists the rules and explaination of the game via a modal
   - Contact Us - Displays an email contact form (linked through Email.JS) for the user to submit.
@@ -169,7 +169,7 @@ Below are some screen shots of the website:
 **Status information**
 
 - **Round:** Displays the current round of the game
-- **Lives:** Displays the amount of lives left (Using red heart icons (FontAwesome: <i class="fa fa-heart"></i>)
+- **Lives:** Displays the amount of lives left using red heart icons (FontAwesome)
 - **Points:** Displays the current total of points gained/lost
 
 **Footer**
@@ -190,7 +190,7 @@ The difficulty corresponds to the speed in which the cards are flashed.
 
 **MVP Radio Button** - This is the hardest/fastest speed setting.
 
-Underneath is a breif explanation of the difficulty levels.
+Underneath is a brief explanation of the difficulty levels.
 
 ### **How To Play Modal**
 <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotHowToPlay.png" alt="screenshot of how to play modal">
