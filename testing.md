@@ -354,7 +354,7 @@ This concept eliminated the issue and resolved the bug. Git commit record below:
 
 ### **RESPONSIVE DESIGN** (Bootstrap and Media Queries)
 
-<span><img height="200px" src="https://github.com/DanielBradford/Touchdown/blob/c0dca2d7451ea32a2316959e34469b8c16f78572/assets/images/screenshots/ScreenshotMobile.png" alt="Screnshot of Mobile"></span><span><img height="300px" src="https://github.com/DanielBradford/Touchdown/blob/c0dca2d7451ea32a2316959e34469b8c16f78572/assets/images/screenshots/ScreenshotTablet.png" alt="screenshot of tablet"></span>>
+<span><img height="200px" src="https://github.com/DanielBradford/Touchdown/blob/c0dca2d7451ea32a2316959e34469b8c16f78572/assets/images/screenshots/ScreenshotMobile.png" alt="Screnshot of Mobile"></span><span><img height="300px" src="https://github.com/DanielBradford/Touchdown/blob/c0dca2d7451ea32a2316959e34469b8c16f78572/assets/images/screenshots/ScreenshotTablet.png" alt="screenshot of tablet"></span>
 
 As in any project, responsive design is an extremely important factor.
 I used a combination of Bootstrap features (index.html) and Media Queries (assets/css/style.css) to ensure the game is responsive on all screen-sizes.
