@@ -170,8 +170,8 @@ Ball Icon in title should continue rotating until game is started.
 
     <img src="https://github.com/DanielBradford/Touchdown/blob/faa77ad3a53784464ff60ea63a9f8e61b4686374/assets/images/ScreenshotTestForm.png" alt="screenshot of test form">
 
-   **Result:** The form is sent via EmailJS and recieved with the correct form data.
-   Here is a screenshot of an examplary email recieved:
+   **Result:** The form is sent via EmailJS and received with the correct form data.
+   Here is a screenshot of an examplary email received:
 
    <img src="https://github.com/DanielBradford/Touchdown/blob/12bb437a1a9056353f53a23729e9ae428a7c84ea/assets/images/screenshots/ScreenshotEmailRecieved.png" alt="screenshot of email recieved through EmailJS API">
 
@@ -320,7 +320,7 @@ Ball Icon in title should continue rotating until game is started.
  
 
 ## Jasmine Testing (AUTOMATED) of Javascript Functions:
-Although i am familiar with the Jasmine testing suite it was not neccessary or applicable to automate testing for this project. This was also due to using the Behaviour Driven Development stategy vs TDD or ATDD.
+Although i am familiar with the Jasmine testing suite it was not neccessary or applicable to automate testing for this project. This was also due to using the Behaviour Driven Development strategy vs TDD or ATDD.
 
 
 
@@ -342,7 +342,7 @@ This created bugs in the gameplay. This was resolved by controlling the pointer 
 During the development of the logic.js file, there were bugs/issues with the logic of the game.
 The initial plan was to start with 3 lives. If the user answered incorrectly they would remain on the same round but lose one life.
 This concept of remaining on the same round had issues within the game logic (assets/js/logic.js).
-After re-analysing the game design and user stories i simplified the logic and introduced a points system.
+After re-analysing the game design and user stories i simplified the logic and introduced a point system.
 If the player was incorrect, they would lose a life, start at round one and lose 5 points.
 This concept eliminated the issue and resolved the bug. Git commit record below:
 
