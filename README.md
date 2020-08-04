@@ -1,6 +1,8 @@
-# **<span><p style="text-align: center;">TOUCHDOWN</p></span>** <span><img height="150px" style="text-align: center" src="assets/images/winning.webp" alt="running cartoon"></span>
+# **<p align="center">TOUCHDOWN</p>** 
+<div align="center"><img height="150px"  src="assets/images/winning.webp" alt="running cartoon"></div>
+
 ## Touchdown is a fun, user-friendly and interactive memory game created using HTML, CSS and Javascript. 
-## The game encourages the user to memorise a sequence of flashing plays, and then click on the corresponding sequence. The game maintains a strong theme of American Football.
+## The game encourages the user to memorise an increasing sequence of flashing plays, and then click on the corresponding sequence. The game maintains a strong theme of American Football.
 
 ## As the user progresses they will gain points and attempt to complete all 10 rounds. The difficulty can be changed which will alter the speed in which the play-cards are shown.
 
