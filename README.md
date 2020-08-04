@@ -4,14 +4,14 @@
 ## Touchdown is a fun, user-friendly and interactive memory game created using HTML, CSS and Javascript. 
 ## The game encourages the user to memorise an increasing sequence of flashing plays, and then click on the corresponding sequence. The game maintains a strong theme of American Football.
 
+<div align="center"><img height="400px" src="https://github.com/DanielBradford/Touchdown/blob/ea686a31769fdbc5d8698f7aa422ea3b0901ba74/assets/images/screenshots/ScreenshotMain.png" alt="screenshot of desktop"></div>
+
 ## As the user progresses they will gain points and attempt to complete all 10 rounds. The difficulty can be changed which will alter the speed in which the play-cards are shown.
 
 ### **Website/Game on GitHub Pages:** https://danielbradford.github.io/Touchdown/
 
 ### **Website/Game via QR Code** (Scan with device camera):
-<span><img src="assets/images/qrcode.png" alt="QR Code"></span><span><img height="200px" src="https://github.com/DanielBradford/Touchdown/blob/c0dca2d7451ea32a2316959e34469b8c16f78572/assets/images/screenshots/ScreenshotMobile.png" alt="Screnshot of Mobile"></span><span><img height="300px" src="https://github.com/DanielBradford/Touchdown/blob/c0dca2d7451ea32a2316959e34469b8c16f78572/assets/images/screenshots/ScreenshotTablet.png" alt="screenshot of tablet"></span>
-
-<img height="400px" src="https://github.com/DanielBradford/Touchdown/blob/ea686a31769fdbc5d8698f7aa422ea3b0901ba74/assets/images/screenshots/ScreenshotMain.png" alt="screenshot of desktop">
+<div align="center"><span><img src="assets/images/qrcode.png" alt="QR Code"></span><span><img height="200px" src="https://github.com/DanielBradford/Touchdown/blob/c0dca2d7451ea32a2316959e34469b8c16f78572/assets/images/screenshots/ScreenshotMobile.png" alt="Screnshot of Mobile"></span><span><img height="300px" src="https://github.com/DanielBradford/Touchdown/blob/c0dca2d7451ea32a2316959e34469b8c16f78572/assets/images/screenshots/ScreenshotTablet.png" alt="screenshot of tablet"></span></div>
 
 ### **Creation and Design**
 
