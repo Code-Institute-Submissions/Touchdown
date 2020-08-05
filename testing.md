@@ -322,7 +322,7 @@ Ball Icon in title should continue rotating until game is started.
 ## Jasmine Testing (AUTOMATED) of Javascript Functions:
 Jasmine is designed for Behaviour Driven Development. I utilised this testing tool to automate tests.
 
-<a href="https://github.com/DanielBradford/Touchdown/blob/1764c24bf4be6e44136b753fb396cb1c066129c0/jasmine-testing/test.html" target="_blank">Please find the Jasmine tests here.</a>
+<a href="https://github.com/DanielBradford/Touchdown/blob/c33f9fb20595e52ed037a47b47eb7a16f78cd823/jasmine-testing/test.html" target="_blank">Please find the Jasmine tests here.</a>
 
 Although i am familiar with the Jasmine testing suite there were some limits in automating testing for this particular project.
 
