@@ -321,10 +321,20 @@ Ball Icon in title should continue rotating until game is started.
 
 ## Jasmine Testing (AUTOMATED) of Javascript Functions:
 Jasmine is designed for Behaviour Driven Development. I utilised this testing tool to automate tests.
+These tests include:
 
-<a href="https://github.com/DanielBradford/Touchdown/blob/c33f9fb20595e52ed037a47b47eb7a16f78cd823/jasmine-testing/test.html" target="_blank">Please find the Jasmine tests here.</a>
+* Verfiy the in-game settings are on default value at the start of game e.g. Life Counter = 3, Round Counter = 1, Points Counter = 0.
+* Verify the in-game settings are reset when game is restarted via restart button.
+* Verify the default difficulty is preset to "Rookie" (Game speed).
 
-Although i am familiar with the Jasmine testing suite there were some limits in automating testing for this particular project.
+Testing documents: 
+
+Test Results can be found <a href="https://danielbradford.github.io/Touchdown/jasmine-testing/test.html" target="_blank"> HERE</a>
+
+
+<a href="https://github.com/DanielBradford/Touchdown/blob/c08a79c89c54b331c5b30f4d2b2509139f268fe9/jasmine-testing/test.js" target="_blank">Please find the Jasmine tests here.</a>
+
+Although i am familiar with the Jasmine testing suite there were some limits in automating testing for this particular project due the user interaction involved.
 
 
 
