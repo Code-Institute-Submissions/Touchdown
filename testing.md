@@ -148,19 +148,23 @@ Ball Icon in title should continue rotating until game is started.
    - **Result:** During testing i found all links to modals worked correctly.
 1. **Test:** Repeat verification of functionality and responsiveness on my mobile phone and tablet.
 
-   **Result:** During testing some changes were made to the menu/navbar to improve the responsive design.
+    **Result:** During testing some changes were made to the menu/navbar to improve the responsive design.
 
-    commit 8f139368683b05d85efbb992543b67ebacf1e5a2
-    Author: Daniel Bradford <danielbradford@hotmail.co.uk>
-    Date: Sat Aug 1 16:12:33 2020 +0000
+        Git commit: 8f139368683b05d85efbb992543b67ebacf1e5a2
+        Author: Daniel Bradford <danielbradford@hotmail.co.uk>
+        Date: Sat Aug 1 16:12:33 2020 +0000
 
-    Minor changes to nav menu for improved responsive design
+        Minor changes to nav menu for improved responsive design
 
 ### **Contact Us / Feedback Form**
 
 1. **Test:** Click "Send" with empty input fields to verify the form will NOT submit and reminds the user the inputs need to be made
 
-   **Result:** Success. The user can only send the form when all input fields have been filled. (During testing this failed and the logic.js file was adapted to make this pass the test. Git commit 61f5a54e993c2b9a2a5851648223819981f3923e)
+   **Result:** Success. The user can only send the form when all input fields have been filled. 
+   
+   (During testing this failed and the logic.js file was adapted to make this pass the test. 
+   
+        Git commit 61f5a54e993c2b9a2a5851648223819981f3923e
 
 1. **Test:** Purposely enter an INVALID email address in email input to verify the form validation reminds user to enter VALID email address.
 
@@ -198,16 +202,16 @@ Ball Icon in title should continue rotating until game is started.
     <img src="https://github.com/DanielBradford/Touchdown/blob/d71fa5712e62d9da2bad03a39e57a57d1c4c1d63/assets/images/screenshots/ScreenshotRestart.png" alt="screenshot of restart check">
 
 1. **Test:** Click the ok button to verify the game is restarted:
-   EXPECTATION:
-
-   - status displays should reset and update
+   
+    **Expectation:**
+   - status displays should reset and update (Please see <a href="https://github.com/DanielBradford/Touchdown/blob/f222fe7b80efa1141f5353df48280d5f0fde8ce6/jasmine-testing/test.js" target="_blank">Jasmine Automated Tests</a>)
    - Restart sound should play
    - Arrays/Sequences should reset
    - Ball Icon should continue rotating
 
    **Result:**
 
-   - All status displays are reset and updated.
+   - All status displays are reset and updated. (Please see <a href="https://github.com/DanielBradford/Touchdown/blob/f222fe7b80efa1141f5353df48280d5f0fde8ce6/assets/images/screenshots/ScreenshotJasmine.png" target="_blank">Jasmine Automated Test Results</a>)
    - Restart sound is played (restart.mp3)
    - All game sequences/arrays are reset
    - Ball Icon in title continues rotating
@@ -366,9 +370,16 @@ This concept eliminated the issue and resolved the bug. Git commit record below:
     Selection/answer comparisson bug fixed. Full restart to the begining prevents issues with selection matching answer.
 
 
-### * **404 ERROR SHOWN IN CONSOLE**
+### **404 ERROR** (SHOWN IN CONSOLE)
 
-"GET https://8000-d9f452af-0079-4875-b36c-1deee4de621c.ws-eu01.gitpod.io/favicon.ico 404" This was solved by adding a link to the index.html file. This solution was found on <a href="https://stackoverflow.com/questions/31075893/im-getting-favicon-ico-error" target="_blank">HERE</a> on Stack Overflow. (Git commit: a41d8a8bf199e7eb1fa87f401d44b4be7e73e02d)
+    GET https://8000-d9f452af-0079-4875-b36c-1deee4de621c.ws-eu01.gitpod.io/favicon.ico 404
+This was **solved** by adding a link to the index.html file. This solution was found on <a href="https://stackoverflow.com/questions/31075893/im-getting-favicon-ico-error" target="_blank">HERE</a> on Stack Overflow. 
+
+    commit a41d8a8bf199e7eb1fa87f401d44b4be7e73e02d (HEAD -> master, origin/master, origin/HEAD)
+    Author: Daniel Bradford <danielbradford@hotmail.co.uk>
+    Date:   Wed Aug 5 18:19:16 2020 +0000
+
+    link added to index.html to stop 404 FAVICON error
 
 ### **RESPONSIVE DESIGN** (Bootstrap and Media Queries)
 
@@ -376,7 +387,13 @@ This concept eliminated the issue and resolved the bug. Git commit record below:
 
 As in any project, responsive design is an extremely important factor.
 I used a combination of Bootstrap features (index.html) and Media Queries (assets/css/style.css) to ensure the game is responsive on all screen-sizes.
-Git commit below:
+Git commits below:
+
+    commit 9775527ef4274153e769c5fcde5d74a84c721c7e
+    Author: Daniel Bradford <danielbradford@hotmail.co.uk>
+    Date:   Wed Aug 5 15:17:36 2020 +0000
+
+    Further responsive design changes to style.css. Media queries added
 
     commit 715d250faa712b8b097e42bdb1cecf2542b2a080
     Author: Daniel Bradford <danielbradford@hotmail.co.uk>
@@ -405,7 +422,7 @@ of modifying the logic.js file and the html elements in index.html. Git commit r
 ## **Future Issues to be fixed**
 Following testing there are issues that still could be improved:
 * **Validation of email address input in the "Contact Us" modal**: Although the user is reminded to include a valid email address (via a hover message), they are not currently prevented from submitting an invalid address. This can be improved.
-* **Responsive design bug with menu toggle function**: The nav menu can potentially disappear when moving between landscape and portrait on a mobile device depending on the previous toggle selection. The menu can be recovered by tapping the game title but this can be improved.
+* **Responsive design bug with menu toggle function**: The nav menu can potentially disappear when moving between landscape and portrait on a mobile device depending on the previous toggle selection. The menu can be recovered by tapping the game title but this can be improved in future development.
 
 ## **Development Tools Testing**
 
