@@ -327,12 +327,11 @@ These tests include:
 * Verify the in-game settings are reset when game is restarted via restart button.
 * Verify the default difficulty is preset to "Rookie" (Game speed).
 
-Testing documents: 
+Testing documents: <a href="https://github.com/DanielBradford/Touchdown/blob/c08a79c89c54b331c5b30f4d2b2509139f268fe9/jasmine-testing/test.js" target="_blank">Please find the Jasmine automated tests (test.js) here</a>
 
-Test Results can be found <a href="https://danielbradford.github.io/Touchdown/jasmine-testing/test.html" target="_blank"> HERE</a>
+Test Result: 
 
-
-<a href="https://github.com/DanielBradford/Touchdown/blob/c08a79c89c54b331c5b30f4d2b2509139f268fe9/jasmine-testing/test.js" target="_blank">Please find the Jasmine tests here.</a>
+<img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotJasmine.png" alt="Jasmine Testing Screenshot">
 
 Although i am familiar with the Jasmine testing suite there were some limits in automating testing for this particular project due the user interaction involved.
 
