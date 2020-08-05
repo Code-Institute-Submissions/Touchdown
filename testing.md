@@ -365,6 +365,11 @@ This concept eliminated the issue and resolved the bug. Git commit record below:
 
     Selection/answer comparisson bug fixed. Full restart to the begining prevents issues with selection matching answer.
 
+
+### * **404 ERROR SHOWN IN CONSOLE**
+
+"GET https://8000-d9f452af-0079-4875-b36c-1deee4de621c.ws-eu01.gitpod.io/favicon.ico 404" This was solved by adding a link to the index.html file. This solution was found on <a href="https://stackoverflow.com/questions/31075893/im-getting-favicon-ico-error" target="_blank">HERE</a> on Stack Overflow. (Git commit: a41d8a8bf199e7eb1fa87f401d44b4be7e73e02d)
+
 ### **RESPONSIVE DESIGN** (Bootstrap and Media Queries)
 
 <span><img height="200px" src="https://github.com/DanielBradford/Touchdown/blob/c0dca2d7451ea32a2316959e34469b8c16f78572/assets/images/screenshots/ScreenshotMobile.png" alt="Screnshot of Mobile"></span><span><img height="300px" src="https://github.com/DanielBradford/Touchdown/blob/c0dca2d7451ea32a2316959e34469b8c16f78572/assets/images/screenshots/ScreenshotTablet.png" alt="screenshot of tablet"></span>
@@ -398,8 +403,7 @@ of modifying the logic.js file and the html elements in index.html. Git commit r
     Fixed difficulty selection bug and added a modal to the menu options
 
 ## **Future Issues to be fixed**
-Following testing there are two issues that still could be improved:
-* **404 ERROR SHOWN IN CONSOLE**: "GET https://8000-d9f452af-0079-4875-b36c-1deee4de621c.ws-eu01.gitpod.io/favicon.ico 404" This remains unsolved.
+Following testing there are issues that still could be improved:
 * **Validation of email address input in the "Contact Us" modal**: Although the user is reminded to include a valid email address (via a hover message), they are not currently prevented from submitting an invalid address. This can be improved.
 * **Responsive design bug with menu toggle function**: The nav menu can potentially disappear when moving between landscape and portrait on a mobile device depending on the previous toggle selection. The menu can be recovered by tapping the game title but this can be improved.
 
