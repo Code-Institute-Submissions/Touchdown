@@ -527,13 +527,14 @@ main .wing {
     #mainBlock{
         height: 60vh;
     }
-
+}
 @media only screen and (min-width: 1200px) {
   .card:hover {
     cursor: pointer;
     box-shadow: 0 0 0 0.3em rgb(209, 178, 4);
   }
 }
+
 @media only screen and (min-width: 1700px) {
   #mainBlock {
     height: 60vh;
