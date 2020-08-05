@@ -52,7 +52,7 @@ $(document).ready(function () {
   ];
   //---------Audio/Sound Effects----------
   gameAudio = {
-    intro: new Audio("assets/audio/intro.mp3"),
+    // intro: new Audio("assets/audio/intro.mp3"),
     woo: new Audio("assets/audio/woo.mp3"),
     boo: new Audio("assets/audio/boo.mp3"),
     whistle: new Audio("assets/audio/whistle.mp3"),
@@ -63,7 +63,7 @@ $(document).ready(function () {
   };
 });
 //------------------------------------------------FUNCTIONS------------------------------------------
-//---------Restart Function--- Resets the game to the begining------
+//---------Restart Function--- Allows  user to reset the game to the begining ------
 const restart = () => {
   gameAudio.restartSound.play();
   clicked = [];
@@ -73,7 +73,7 @@ const restart = () => {
   randomOrder = [];
   currentGame = [];
 
-  $("#startGame").css("pointer-events", "auto"); //------Enables User Clicking or hovering
+  $("#startGame").css("pointer-events", "auto"); //------Enables User Clicking or hovering for interaction
 
   $(".progress-bar").css("width", "0%");
   $("#round").text("");
@@ -95,7 +95,7 @@ const restartCheck = () => {
 };
 
 //------- Check Difficulty Function ------------// Changes difficulty based on radio button input
-let checkDifficulty = () => {
+const checkDifficulty = () => {
   $("input[id=rookie]").change(function () {
     //-----ROOKIE
     if ($(this).is(":checked")) {
@@ -153,31 +153,31 @@ const resetLives = () => {
 
 //-------- CREATES A NEW AND RANDOMISED CURRENT GAME LIST-------//
 
-const makeGameSequence = () => {
+ const makeGameSequence = () => {
   var y = Math.round(Math.random() * (playOrder.length - 1));
   currentGame.push(playOrder[y]);
-  convertAnswer();
+    convertAnswer();
 };
 
 //---------CONVERT ANSWER FUNCTION TO MAKE SELECTION AND ANSWER COMPARIBLE AS STRINGS----//
 const convertAnswer = () => {
   for (let i = 0; i < currentGame.length; i++) {
-    playTypeObject = currentGame[i];
-    playTypeId = playTypeObject.getAttribute("data-id");
+    let playTypeObject = currentGame[i];
+    let playTypeId = playTypeObject.getAttribute("data-id");
     randomOrder.push(playTypeId); //--------randomOrder stores converted answer------//
   }
 };
 
 //--------PROGRESS BAR FUNCTION----------//
 const updateProgress = () => {
-  var x = round * 10;
-  var perc = `${x}%`;
+  const x = round * 10;
+  let perc = `${x}%`;
   $(".progress-bar").css("width", perc);
 };
 
 //-------- CORRECT FUNCTION------//
 const correct = () => {
-  const roundLimit = 10;
+  const roundLimit = 11;
   if (round === 5) {
     alert("Youre halfway up the field. Keep going!!!");
     $(".winning").css("visibility", "visible");
@@ -210,7 +210,7 @@ const wrong = () => {
 };
 //-------- GAME WON FUNCTION------//
 const gameWon = () => {
-  var totalPoints = lives * points;
+  const totalPoints = lives * points;
   gameAudio.touchdown.play();
   $(".touchdown").css("visibility", "visible");
   setTimeout(function () {
@@ -279,7 +279,6 @@ const startGame = () => {
   $("#status").show("slow");
   gameAudio.whistle.play();
   makeGameSequence();
-  console.log(currentGame);
   setTimeout(function () {
     main();
   }, 2000);
@@ -288,10 +287,9 @@ const startGame = () => {
 //---------CARD CLICK FUNCTION RETRIEVES DATA ID OF CARD CLICKED AND COMPARES WITH RANDOM ORDER ARRAY-------//
 const cardClick = (card) => {
   gameAudio.ping.play();
-  playType = card.getAttribute("data-id");
-  console.log(playType);
+  let playType = card.getAttribute("data-id");
   clicked.push(playType);
-  let expectedAnswer = randomOrder[0];
+  const expectedAnswer = randomOrder[0];
 
   if (playType === expectedAnswer) {
     //----Correct Answer
@@ -401,5 +399,4 @@ const sendEmail = () => {
         }
       );
   }
-  
 };
