@@ -320,7 +320,11 @@ Ball Icon in title should continue rotating until game is started.
  
 
 ## Jasmine Testing (AUTOMATED) of Javascript Functions:
-Although i am familiar with the Jasmine testing suite it was not neccessary or applicable to automate testing for this project. This was also due to using the Behaviour Driven Development strategy vs TDD or ATDD.
+Jasmine is designed for Behaviour Driven Development. I utilised this testing tool to automate tests.
+
+<a href="https://github.com/DanielBradford/Touchdown/blob/1764c24bf4be6e44136b753fb396cb1c066129c0/jasmine-testing/test.html" target="_blank">Please find the Jasmine tests here.</a>
+
+Although i am familiar with the Jasmine testing suite there were some limits in automating testing for this particular project.
 
 
 
@@ -375,7 +379,7 @@ This was then recovered using GIT CHECKOUT (commit number) -- (path):
 
 ### **SELECT DIFFICULTY BUG**
 
-During the development of the select diffculty feature there were issues in getting the user selection to be applied to the game. This took a combination
+During the development of the select difficulty feature there were issues in getting the user selection to be applied to the game. This took a combination
 of modifying the logic.js file and the html elements in index.html. Git commit record below:
 
     commit b53f510d86955dd13dbf71073a55140c3edbddb5
@@ -386,6 +390,7 @@ of modifying the logic.js file and the html elements in index.html. Git commit r
 
 ## **Future Issues to be fixed**
 Following testing there are two issues that still could be improved:
+* **404 ERROR SHOWN IN CONSOLE**: "GET https://8000-d9f452af-0079-4875-b36c-1deee4de621c.ws-eu01.gitpod.io/favicon.ico 404" This remains unsolved.
 * **Validation of email address input in the "Contact Us" modal**: Although the user is reminded to include a valid email address (via a hover message), they are not currently prevented from submitting an invalid address. This can be improved.
 * **Responsive design bug with menu toggle function**: The nav menu can potentially disappear when moving between landscape and portrait on a mobile device depending on the previous toggle selection. The menu can be recovered by tapping the game title but this can be improved.
 
@@ -418,7 +423,7 @@ By analysing these rerports i was able to make alterations in both the HTML and 
 **Search Engine Optimisation**
 
 - In initial reports the website had an average SEO rating of **98**
-- I added in some META tags to give more information about the websites content and creator.
+- I added in some META tags to give more information about th websites content and creator.
 - By making these changes the current SEO rating is now **100**
 
 **Lighthouse Desktop Report:**
