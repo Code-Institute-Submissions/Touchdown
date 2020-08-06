@@ -86,7 +86,6 @@
         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 game">
           <div class="buttons">
             <button
-              onclick="restartCheck()"
               id="restart-btn"
               class="btn btn-sm btn-danger"
             >
@@ -94,7 +93,7 @@
               Restart
             </button>
             <span></span>
-            <button id="startGame" onclick="startGame()" class="btn btn-lg">
+            <button id="startGame"  class="btn btn-lg">
               Start Game<br /><i class="fas fa-football-ball"></i>
             </button>
             <button
@@ -119,28 +118,28 @@
           </div>
           <div id="gameView" class="card-row">
             <div
-              onclick="cardClick(event.currentTarget)"
+              
               data-id="kick"
               class="card kick"
             >
               Kick <img src="assets/images/kick.webp" alt="Kicking ball" />
             </div>
             <div
-              onclick="cardClick(event.currentTarget)"
+            
               data-id="pass"
               class="card pass"
             >
               Pass<img src="assets/images/pass.webp" alt="Throwing ball" />
             </div>
             <div
-              onclick="cardClick(event.currentTarget)"
+          
               data-id="rush"
               class="card rush"
             >
               Rush <img src="assets/images/rush.webp" alt="Rushing with ball" />
             </div>
             <div
-              onclick="cardClick(event.currentTarget)"
+             
               data-id="run"
               class="card run"
             >
@@ -354,7 +353,6 @@
             </button>
             <button
               id="send-btn"
-              onclick="sendEmail()"
               type="button"
               class="btn btn-light send-btn"
             >
