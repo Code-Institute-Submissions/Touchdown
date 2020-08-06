@@ -20,7 +20,6 @@ $(document).ready(function () {
 });
 
 const game = () => {
-  console.log("ready!");
   $("#status").hide(); //------ON LOADING THE STATUS BAR STAYS HIDDEN UNTIL GAME IS STARTED-------
   $("#menu-btn").click(function () {
     $(".menu").toggle();
@@ -371,7 +370,7 @@ const game = () => {
           from_email: email,
         })
         .then(
-          function (response) {
+          function () {
             $(".star").toggleClass("star-picked");
             starCount = 0;
             $("#send-btn")
@@ -383,11 +382,9 @@ const game = () => {
             setTimeout(function () {
               $("#contactUs").modal("hide"); //-----------Waits for confirmation email has been sent before closing modal
             }, 8000);
-            console.log("SUCCESS!", response.status, response.text);
           },
-          function (error) {
+          function () {
             $("#startGame").css("pointer-events", "auto"); //------Enables User Clicking or hovering
-            console.log("FAILED...", error);
           }
         );
     }
