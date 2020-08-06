@@ -31,20 +31,20 @@ const game = () => {
   });
 
   //-------Cards to select from ---------
-  playAction = {
+  const playAction = {
     kick: document.querySelector(".kick"),
     pass: document.querySelector(".pass"),
     run: document.querySelector(".run"),
     rush: document.querySelector(".rush"),
   };
-  playOrder = [
+  const playOrder = [
     playAction.kick,
     playAction.pass,
     playAction.run,
     playAction.rush,
   ];
   //---------Audio/Sound Effects----------
-  gameAudio = {
+  const gameAudio = {
     // intro: new Audio("assets/audio/intro.mp3"),
     woo: new Audio("assets/audio/woo.mp3"),
     boo: new Audio("assets/audio/boo.mp3"),
@@ -74,12 +74,12 @@ const game = () => {
   //---------Restart Function--- Allows  user to reset the game to the begining ------
   const restart = () => {
     gameAudio.restartSound.play();
-    clicked = new Array();
+    clicked = [];
     round = 1;
     lives = 3;
     points = 0;
-    randomOrder = new Array();
-    currentGame = new Array();
+    randomOrder = [];
+    currentGame = [];
 
     $("#startGame").css("pointer-events", "auto"); //------Enables User Clicking or hovering for interaction
 
@@ -91,18 +91,7 @@ const game = () => {
     $("#ball").addClass(" rotating ");
   };
 
-  //------Restart Confirmation Function-----------// Checks if the user definitely wants to restart
-  //   const restartCheck = () => {
-  //     if (
-  //       confirm("Are you sure you want to restart? Your progress will be lost.")
-  //     ) {
-  //       restart();
-  //     } else {
-  //       return false; //----On cancel user returns to current game------//
-  //     }
-  //   };
-
-  $("restart-btn").click(function () {
+  $("#restart-btn").click(function () {
     if (
       confirm("Are you sure you want to restart? Your progress will be lost.")
     ) {
@@ -119,10 +108,8 @@ const game = () => {
       if ($(this).is(":checked")) {
         // Checkbox is checked..
         difficulty = rookie;
-        console.log("rookie is checked");
       } else {
         // Checkbox is not checked..
-        console.log("rookie not checked");
       }
     });
 
@@ -131,10 +118,8 @@ const game = () => {
       if ($(this).is(":checked")) {
         // Checkbox is checked..
         difficulty = veteran;
-        console.log("veteran is checked");
       } else {
         // Checkbox is not checked..
-        console.log("veteran not checked");
       }
     });
 
@@ -143,10 +128,8 @@ const game = () => {
       if ($(this).is(":checked")) {
         // Checkbox is checked..
         difficulty = mvp;
-        console.log("mvp is checked");
       } else {
         // Checkbox is not checked..
-        console.log("mvp not checked");
       }
     });
   };
@@ -169,7 +152,7 @@ const game = () => {
             <span class="heart"><i class="fa fa-heart"></i></span>`);
   };
 
-  //-------- CREATES A NEW AND RANDOMISED CURRENT GAME LIST-------//
+  //-------- CREATES A NEW AND RANDOMISED CURRENT GAME ARRAY-------//
 
   const makeGameSequence = () => {
     var y = Math.round(Math.random() * (playOrder.length - 1));
@@ -177,7 +160,7 @@ const game = () => {
     convertAnswer();
   };
 
-  //---------CONVERT ANSWER FUNCTION TO MAKE SELECTION AND ANSWER COMPARIBLE AS STRINGS----//
+  //---------CONVERT ANSWER FUNCTION (MAKES SELECTION AND ANSWER COMPARIBLE)----//
   const convertAnswer = () => {
     for (let i = 0; i < currentGame.length; i++) {
       let playTypeObject = currentGame[i];
@@ -226,6 +209,7 @@ const game = () => {
       $(".losing").css("visibility", "hidden");
     }, 1000);
   };
+
   //-------- GAME WON FUNCTION------//
   const gameWon = () => {
     const totalPoints = lives * points;
@@ -242,19 +226,6 @@ const game = () => {
     return false;
   };
 
-  //   //---------LIFE CHECK FUNCTION-------// 3 lives to start.
-  //   const lifeCheck = () => {
-  //     if (lives === 0) {
-  //       gameAudio.gameOver.play();
-  //       alert("GAME OVER");
-  //       $("#startGame").text("Start Game");
-  //       restart();
-  //     } else if (lives > 0) {
-  //       $("#startGame").text(`Round ${round}`);
-  //       return false;
-  //     }
-  //   };
-
   // ------- FLASH FUNCTION INITIATES HIGHLIGHT ON CARD----//
 
   const flash = (card) => {
@@ -264,7 +235,7 @@ const game = () => {
       setTimeout(() => {
         card.className = card.className.replace(" flash", "");
         setTimeout(() => {
-          //-----allows for repeating playtypes in the code so there is a gap between flashes-----
+          //-----allows for repeating playtypes (gap between flashes)-----
           resolve();
         }, 500);
       }, difficulty);
@@ -316,7 +287,6 @@ const game = () => {
     if (playType === expectedAnswer) {
       //----Correct Answer
       randomOrder.shift();
-      console.log("correct");
 
       if (randomOrder.length === 0) {
         //-------Round Complete
@@ -362,7 +332,6 @@ const game = () => {
   });
 
   //----------- REPLAY FUNCTION-------
-  //   const replay = () => {
   $("#replay-btn").click(function () {
     if (confirm("Are you sure you want to replay? You will lose 3 points!")) {
       main(); //-----------Repeats the current sequence
@@ -381,7 +350,6 @@ const game = () => {
   });
 
   //------SEND EMAIL FUNCTION using EmailJS API -------//
-  //   const sendEmail = () => {
   $("#send-btn").click(function () {
     let full_name = $("#fname").val() + " " + $("#lname").val();
     let email = $("#email").val();
@@ -425,4 +393,3 @@ const game = () => {
     }
   });
 };
-// };
