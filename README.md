@@ -8,7 +8,7 @@
 
 ## As the user progresses they will gain points and attempt to complete all 10 rounds. The difficulty can be changed which will alter the speed in which the play-cards are shown.
 
-### **Website/Game on GitHub Pages:** https://danielbradford.github.io/Touchdown/
+### **Website/Game on GitHub Pages:** <a href="https://danielbradford.github.io/Touchdown/" target="_blank">TOUCHDOWN (https://danielbradford.github.io/Touchdown/)</a>
 
 ### **Website/Game via QR Code** (Scan with device camera):
 <div align="center"><span><img src="assets/images/qrcode.png" alt="QR Code"></span><span><img height="200px" src="https://github.com/DanielBradford/Touchdown/blob/c0dca2d7451ea32a2316959e34469b8c16f78572/assets/images/screenshots/ScreenshotMobile.png" alt="Screnshot of Mobile"></span><span><img height="300px" src="https://github.com/DanielBradford/Touchdown/blob/c0dca2d7451ea32a2316959e34469b8c16f78572/assets/images/screenshots/ScreenshotTablet.png" alt="screenshot of tablet"></span></div>
