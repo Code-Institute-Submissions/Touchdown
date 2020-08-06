@@ -69,7 +69,7 @@ const game = () => {
   const mvp = 200;
   var difficulty = rookie; //-----DEFAULT DIFFICULTY
 
-  //------------------------------------------------FUNCTIONS------------------------------------------
+  //-----------------FUNCTIONS-----------
   //---------Restart Function--- Allows  user to reset the game to the begining ------
   const restart = () => {
     gameAudio.restartSound.play();
@@ -100,7 +100,8 @@ const game = () => {
     }
   });
 
-  //------- Check Difficulty Function ------------// Changes difficulty based on radio button input
+  //------- Check Difficulty Function ------------
+  // Changes difficulty based on radio button input
   const checkDifficulty = () => {
     $("input[id=rookie]").change(function () {
       //-----ROOKIE
