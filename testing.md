@@ -14,15 +14,15 @@
 
 - ALL JS written in this project has been parsed through JSHint and no errors have been found.
 
-    **Metrics:**
+  **Metrics:**
 
-    * There are 42 functions in this file.
+  - There are 42 functions in this file.
 
-    * Function with the largest signature take 2 arguments, while the median is 0.
+  - Function with the largest signature take 2 arguments, while the median is 0.
 
-    * Largest function has 39 statements in it, while the median is 2.
+  - Largest function has 39 statements in it, while the median is 2.
 
-    * The most complex function has a cyclomatic complexity value of 5 while the median is 1.
+  - The most complex function has a cyclomatic complexity value of 5 while the median is 1.
 
 ### **Client Story Testing:**
 
@@ -423,13 +423,16 @@ of modifying the logic.js file and the html elements in index.html. Git commit r
 
 ### **VARIABLE SCOPE ISSUE**
 
-During testing, no major issues were presented with the code functionality or the variable scope originally used. 
+During testing, no major issues were presented with the code functionality or the variable scope originally used.
 
 Despite this it was evident a better scope could be utilised when considering coding best practices.
 
 The 'branch' feature of Git was utilised in order to work through the issue, in a seperate environment, without altering the current logic.
 This was successful and all unneccessary Global variables were removed.
 
+The branch "variables" was merged with the MASTER branch:
+
+<img src="https://github.com/DanielBradford/Touchdown/blob/a5d464cc0be712278563fcb0ce2670773578f1ae/assets/images/ScreenshotBranchMerge.png" alt="screenshot of git branch merge>
 
 ## **Future Issues to be fixed**
 
