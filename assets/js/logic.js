@@ -312,7 +312,7 @@ const game = () => {
       if (lives === 0) {
         //------Game Over---
         gameAudio.gameOver.play();
-        alert("GAME OVER");
+        alert(`GAME OVER \n YOU SCORED ${points} POINTS!`);
         $("#startGame").text("Start Game");
         restart();
       } else {
