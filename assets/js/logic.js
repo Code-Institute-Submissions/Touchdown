@@ -140,6 +140,7 @@ const game = () => {
     clicked = [];
     $(".heart").last().remove();
     round = 1;
+    updateProgress();
     randomOrder = [];
     currentGame = [];
   };
@@ -278,7 +279,7 @@ const game = () => {
   });
 
   //---------CARD CLICK FUNCTION RETRIEVES DATA ID OF CARD CLICKED AND COMPARES WITH RANDOM ORDER ARRAY-------//
-  $(".card").click(function (card) {
+  $(".card").click(function () {
     gameAudio.ping.play();
     let playType = $(this).attr("data-id");
     clicked.push(playType);
@@ -321,7 +322,6 @@ const game = () => {
         showPoints();
         loseLife();
         wrong();
-        $("#play-btn").text("Try Again!");
         makeGameSequence();
         $(".card").css("pointer-events", "none"); //------Prevents User Clicking or hovering------
         setTimeout(function () {
