@@ -160,12 +160,12 @@ const game = () => {
     convertAnswer();
   };
 
-  //---------CONVERT ANSWER FUNCTION (MAKES SELECTION AND ANSWER COMPARIBLE)----//
+  //----CONVERT ANSWER FUNCTION (MAKES SELECTION AND ANSWER COMPARIBLE)----//
   const convertAnswer = () => {
     for (let i = 0; i < currentGame.length; i++) {
       let playTypeObject = currentGame[i];
       let playTypeId = playTypeObject.getAttribute("data-id");
-      randomOrder.push(playTypeId); //--------randomOrder stores converted answer------//
+      randomOrder.push(playTypeId); //---randomOrder stores converted answer---//
     }
   };
 
@@ -220,7 +220,10 @@ const game = () => {
     }, 3000);
     setTimeout(function () {
       alert(
-        `TOUCHDOWN YOU WIN! \n YOU SCORED ${points} points. \n YOU HAD ${lives} LIVES LEFT. \n TOTAL SCORE = POINTS X LIVES LEFT \n YOUR TOTAL SCORE IS ${totalPoints} POINTS! \n `
+        `TOUCHDOWN YOU WIN! \n YOU SCORED ${points} points. 
+        \n YOU HAD ${lives} LIVES LEFT. 
+        \n TOTAL SCORE = POINTS X LIVES LEFT 
+        \n YOUR TOTAL SCORE IS ${totalPoints} POINTS!`
       );
     }, 3000);
     return false;
@@ -248,7 +251,8 @@ const game = () => {
     $("#currentPoints").text(points);
   };
 
-  //----------MAIN FUNCTION -- iterates through currentGame (randomised sequence) and flashes each card
+  //----------MAIN FUNCTION -- 
+  //---iterates through currentGame (randomised sequence) and flashes each card
   const main = async () => {
     $("#round").text(round);
     $("#ball").removeClass("rotating");
@@ -258,13 +262,13 @@ const game = () => {
       await flash(card);
     }
     $("#startGame").text(`Round: ${round}`);
-    $(".card").css("pointer-events", "auto"); //------Enables User Clicking or hovering
+    $(".card").css("pointer-events", "auto"); //--Enables User Clicking or hovering
   };
 
-  //--------- START GAME FUNCTION ----- makes user select difficulty----
+  //-- START GAME FUNCTION ----- makes user select difficulty----
   const startGame = () => {
-    $(".card").css("pointer-events", "none"); //------Prevents User Clicking or hovering on cards
-    $("#startGame").css("pointer-events", "none"); //------Prevents User Clicking or hovering on button
+    $(".card").css("pointer-events", "none"); //--Prevents User Clicking or hovering on cards
+    $("#startGame").css("pointer-events", "none"); //--Prevents User Clicking or hovering on button
     $("#status").show("slow");
     gameAudio.whistle.play();
     makeGameSequence();
@@ -277,7 +281,8 @@ const game = () => {
     startGame();
   });
 
-  //---------CARD CLICK FUNCTION RETRIEVES DATA ID OF CARD CLICKED AND COMPARES WITH RANDOM ORDER ARRAY-------//
+  //--CARD CLICK FUNCTION RETRIEVES DATA ID OF CARD CLICKED 
+  //--AND COMPARES WITH RANDOM ORDER ARRAY-------//
   $(".card").click(function () {
     gameAudio.ping.play();
     let playType = $(this).attr("data-id");
@@ -294,17 +299,17 @@ const game = () => {
         showPoints();
         updateProgress();
         round += 1;
-        $("#round").text(round); //---------Increase Round and update round count to user-------
+        $("#round").text(round); //--Increase Round and update round count to user--
         clicked = []; //---------Reset clicked Array--------------
         gameAudio.woo.play();
         correct();
 
         $("#startGame").text(`Round ${round}`);
-        makeGameSequence(); //------Adds another random card to the sequence---------
-        $(".card").css("pointer-events", "none"); //------Prevents User Clicking or hovering
+        makeGameSequence(); //------Adds another random card to the sequence---
+        $(".card").css("pointer-events", "none"); //--Prevents User Clicking or hovering
         setTimeout(function () {
           main();
-        }, 3000); //-----------Plays next sequence of card flashes--------
+        }, 3000); //--Plays next sequence of card flashes--------
       }
     } else if (playType !== expectedAnswer) {
       //----Wrong Answer
@@ -322,7 +327,7 @@ const game = () => {
         loseLife();
         wrong();
         makeGameSequence();
-        $(".card").css("pointer-events", "none"); //------Prevents User Clicking or hovering------
+        $(".card").css("pointer-events", "none"); //--Prevents User Clicking or hovering----
         setTimeout(function () {
           main();
         }, 3000); //------Plays Sequence of card flashes-------
@@ -380,7 +385,7 @@ const game = () => {
             $("#send-btn").text("EMAIL SENT");
             $("#contactUs").modal("hide");
             setTimeout(function () {
-              $("#contactUs").modal("hide"); //-----------Waits for confirmation email has been sent before closing modal
+              $("#contactUs").modal("hide"); //--Waits for confirmation email has been sent before closing modal
             }, 8000);
           },
           function () {
