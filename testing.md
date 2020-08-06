@@ -432,7 +432,7 @@ This was successful and all unneccessary Global variables were removed.
 
 The branch "variables" was merged with the MASTER branch:
 
-<img src="https://github.com/DanielBradford/Touchdown/blob/a5d464cc0be712278563fcb0ce2670773578f1ae/assets/images/ScreenshotBranchMerge.png" alt="screenshot of git branch merge>
+<img src="assets/images/ScreenshotBranchMerge.png" alt="screenshot of git branch merge">
 
 ## **Future Issues to be fixed**
 
