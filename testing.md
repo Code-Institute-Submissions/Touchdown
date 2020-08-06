@@ -1,25 +1,28 @@
 # **<p align="center"> Testing </p>**
 
-HTML VALIDATION - https://validator.w3.org/
+**HTML VALIDATION** - https://validator.w3.org/
 
 - All HTML written in this project has been submitted for validation via the above software.
 - ALL pages returned the vaildation that "Document checking completed. No errors or warnings to show."
 
-CSS VALIDATION - https://jigsaw.w3.org/css-validator/
+**CSS VALIDATION** - https://jigsaw.w3.org/css-validator/
 
 - All CSS written in this project has been submitted for validation via the above software.
   <img src="https://github.com/DanielBradford/bamboo-fitness/blob/master/assets/images/TESTING%20SCREENSHOTS/CSS%20-%20Validation.png" alt="CSS Validation">
 
-JAVASCRIPT VALIDATION - https://jshint.com/
+**JAVASCRIPT VALIDATION** - https://jshint.com/
 
 - ALL JS written in this project has been parsed through JSHint and no errors have been found.
 
-    Metrics:
-    
-    There are 41 functions in this file.
-    Function with the largest signature take 2 arguments, while the median is 0.
-    Largest function has 35 statements in it, while the median is 3.
-    The most complex function has a cyclomatic complexity value of 5 while the median is 1.
+    **Metrics:**
+
+    * There are 42 functions in this file.
+
+    * Function with the largest signature take 2 arguments, while the median is 0.
+
+    * Largest function has 39 statements in it, while the median is 2.
+
+    * The most complex function has a cyclomatic complexity value of 5 while the median is 1.
 
 ### **Client Story Testing:**
 
@@ -125,7 +128,7 @@ This is the main landing page the user sees when the screen has loaded. An intro
 
 **Test**:
 Verify the sizing of the box adjusts from desktop > tablet > mobile and that no over flow distorts the layout:
-  
+
 **Expectation**:
 CSS Key Frames Animation should initiate.
 Ball Icon in title should continue rotating until game is started.
@@ -138,15 +141,15 @@ Ball Icon in title should continue rotating until game is started.
 
 ### **MENU / NAVIGATION Bar**
 
-1. **Test:** Verify that the sizing of the navigation bar adjusts with screen size changes:
-   - **Result:** I made the navigation menu adapt to all screen sizes. For mobile, a hamburger button is used. This maximises screen real estate for smaller devices.
-1. **Test:** Verify that the menu drops down and that the menu text is clear and visible.
-   - **Result:** I had difficulties during accessbility testing but found a color to make this work.
-1. **Test:** Hover over the navigation links and verify the CSS styling changes
-   - **Result:** Some CSS styling choices were changed during testing due to accessbility/contrast issues
-1. **Test:** Click on each of the navigation links and verify that it opens the corresponding modals
-   - **Result:** During testing i found all links to modals worked correctly.
-1. **Test:** Repeat verification of functionality and responsiveness on my mobile phone and tablet.
+1.  **Test:** Verify that the sizing of the navigation bar adjusts with screen size changes:
+    - **Result:** I made the navigation menu adapt to all screen sizes. For mobile, a hamburger button is used. This maximises screen real estate for smaller devices.
+1.  **Test:** Verify that the menu drops down and that the menu text is clear and visible.
+    - **Result:** I had difficulties during accessbility testing but found a color to make this work.
+1.  **Test:** Hover over the navigation links and verify the CSS styling changes
+    - **Result:** Some CSS styling choices were changed during testing due to accessbility/contrast issues
+1.  **Test:** Click on each of the navigation links and verify that it opens the corresponding modals
+    - **Result:** During testing i found all links to modals worked correctly.
+1.  **Test:** Repeat verification of functionality and responsiveness on my mobile phone and tablet.
 
     **Result:** During testing some changes were made to the menu/navbar to improve the responsive design.
 
@@ -158,34 +161,34 @@ Ball Icon in title should continue rotating until game is started.
 
 ### **Contact Us / Feedback Form**
 
-1. **Test:** Click "Send" with empty input fields to verify the form will NOT submit and reminds the user the inputs need to be made
+1.  **Test:** Click "Send" with empty input fields to verify the form will NOT submit and reminds the user the inputs need to be made
 
-   **Result:** Success. The user can only send the form when all input fields have been filled. 
-   
-   (During testing this failed and the logic.js file was adapted to make this pass the test. 
-   
-        Git commit 61f5a54e993c2b9a2a5851648223819981f3923e
+    **Result:** Success. The user can only send the form when all input fields have been filled.
 
-1. **Test:** Purposely enter an INVALID email address in email input to verify the form validation reminds user to enter VALID email address.
+    (During testing this failed and the logic.js file was adapted to make this pass the test.
 
-   **Result:** Currently a work in progress. (current onclick conflicts with bootstrap settings)
+         Git commit 61f5a54e993c2b9a2a5851648223819981f3923e
 
-1. **Test:** Click Send with VALID inputs to verify the form is sent via EmailJS API and closes at completion.
+1.  **Test:** Purposely enter an INVALID email address in email input to verify the form validation reminds user to enter VALID email address.
 
-    <img src="https://github.com/DanielBradford/Touchdown/blob/faa77ad3a53784464ff60ea63a9f8e61b4686374/assets/images/ScreenshotTestForm.png" alt="screenshot of test form">
+    **Result:** Currently a work in progress. (current onclick conflicts with bootstrap settings)
 
-   **Result:** The form is sent via EmailJS and received with the correct form data.
-   Here is a screenshot of an examplary email received:
+1.  **Test:** Click Send with VALID inputs to verify the form is sent via EmailJS API and closes at completion.
 
-   <img src="https://github.com/DanielBradford/Touchdown/blob/12bb437a1a9056353f53a23729e9ae428a7c84ea/assets/images/screenshots/ScreenshotEmailRecieved.png" alt="screenshot of email recieved through EmailJS API">
+     <img src="https://github.com/DanielBradford/Touchdown/blob/faa77ad3a53784464ff60ea63a9f8e61b4686374/assets/images/ScreenshotTestForm.png" alt="screenshot of test form">
 
-1. **Test:** Click Close button to verify the modal closes correctly.
+    **Result:** The form is sent via EmailJS and received with the correct form data.
+    Here is a screenshot of an examplary email received:
 
-   **Result:** The modal closes correctly.
+    <img src="https://github.com/DanielBradford/Touchdown/blob/12bb437a1a9056353f53a23729e9ae428a7c84ea/assets/images/screenshots/ScreenshotEmailRecieved.png" alt="screenshot of email recieved through EmailJS API">
 
-1. **Test:** Verify the form is visible and functional in tablet and mobile.
+1.  **Test:** Click Close button to verify the modal closes correctly.
 
-   **Result:** The form is fully visible on all devices.
+    **Result:** The modal closes correctly.
+
+1.  **Test:** Verify the form is visible and functional in tablet and mobile.
+
+    **Result:** The form is fully visible on all devices.
 
 ### **"Restart" Button**
 
@@ -202,8 +205,9 @@ Ball Icon in title should continue rotating until game is started.
     <img src="https://github.com/DanielBradford/Touchdown/blob/d71fa5712e62d9da2bad03a39e57a57d1c4c1d63/assets/images/screenshots/ScreenshotRestart.png" alt="screenshot of restart check">
 
 1. **Test:** Click the ok button to verify the game is restarted:
-   
-    **Expectation:**
+
+   **Expectation:**
+
    - status displays should reset and update (Please see <a href="https://github.com/DanielBradford/Touchdown/blob/f222fe7b80efa1141f5353df48280d5f0fde8ce6/jasmine-testing/test.js" target="_blank">Jasmine Automated Tests</a>)
    - Restart sound should play
    - Arrays/Sequences should reset
@@ -246,24 +250,22 @@ Ball Icon in title should continue rotating until game is started.
 
    **Result:** On every test, the current round is replayed succesfully.
 
-
-
 ### **GAME PLAY CARDS**
 
 1. **Test:** Verfiy the cards operate consistantly on all devices and screen sizes.
 
-    **Result:** During testing the cards remained hightlighted on touchscreen devices which added confusion to the game play. 
-    This was corrected by only applying the hover class on larger screens using a mouse interaction (over 1200px). 
-    
-    Git commit: 817426cdb02f006feff89ced5ab0110c13ac8d82
+   **Result:** During testing the cards remained hightlighted on touchscreen devices which added confusion to the game play.
+   This was corrected by only applying the hover class on larger screens using a mouse interaction (over 1200px).
+
+   Git commit: 817426cdb02f006feff89ced5ab0110c13ac8d82
 
 1. **Test:** Verfiy the cards can be clicked and the function operates correctly
 
-    **Result:** Cards can be clicked and the onclick function operates correctly.
+   **Result:** Cards can be clicked and the onclick function operates correctly.
+
 1. **Test:** (On Desktop) Verify the cards 'highlight' when hovered over
 
-    **Result:** All cards take on the highlight class when hovered over. (Only on larger screens)
-
+   **Result:** All cards take on the highlight class when hovered over. (Only on larger screens)
 
 ## **Status Bar**
 
@@ -289,30 +291,32 @@ Ball Icon in title should continue rotating until game is started.
 
 1. **Test:** Hover over the icons to verify the hover color change is applied
 
-    **Result:** All styles are correct and corresponding with the CSS styles set.
+   **Result:** All styles are correct and corresponding with the CSS styles set.
 
 1. **Test:** Click each of the Social Media Icons and verify the user is taken to the corresponding websites.
-    
-    (During testing one link lead to a 404 error. This was then rectified. Git commit: b17465a7c52e8e537a710a4ea7977bc7bbc029c6)
-    
-    **Result:** All icons take the user to corresponding website.
+
+   (During testing one link lead to a 404 error. This was then rectified. Git commit: b17465a7c52e8e537a710a4ea7977bc7bbc029c6)
+
+   **Result:** All icons take the user to corresponding website.
 
 1. **Test:** Verfiy the icons are visible
-   
-    **Result:** All icons are visible. (During testing i altered the color of the icons to give a higher contrast rating to make them more visible)
+
+   **Result:** All icons are visible. (During testing i altered the color of the icons to give a higher contrast rating to make them more visible)
 
 1. **Test:** Click "Rate this game" link to verify the contact us modal is opened.
 
-    **Result:** Successful.
+   **Result:** Successful.
 
 1. **Test:** Reduce and expand width of window to verify that the footer is responsive and looks good on all device widths.
 
-    **Result:** Successful.
+   **Result:** Successful.
 
 ## **Audio / Sound Effect Testing**
+
 **Test:** Verify all audio effects are clear and played at the correct time.
 
 **Result:**
+
 1. intro: new Audio("assets/audio/intro.mp3") **PLAYS ON PAGE LOAD**
 1. woo: new Audio("assets/audio/woo.mp3") **PLAYS WHEN CORRECT ANSWER GIVEN**
 1. boo: new Audio("assets/audio/boo.mp3") **PLAYS WHEN INCORRECT ANSWER GIVEN**
@@ -321,25 +325,23 @@ Ball Icon in title should continue rotating until game is started.
 1. restartSound: new Audio("assets/audio/restart.mp3") **PLAYS WHEN GAME IS RESTARTED**
 1. gameOver: new Audio("assets/audio/gameOver.mp3") **PLAYS WHEN USER HAS LOST THE GAME**
 1. touchdown: new Audio("assets/audio/touchdown.mp3") **PLAYS WHEN USER COMPLETES THE GAME**
- 
 
 ## Jasmine Testing (AUTOMATED) of Javascript Functions:
+
 Jasmine is designed for Behaviour Driven Development. I utilised this testing tool to automate tests.
 These tests include:
 
-* Verfiy the in-game settings are on default value at the start of game e.g. Life Counter = 3, Round Counter = 1, Points Counter = 0.
-* Verify the in-game settings are reset when game is restarted via restart button.
-* Verify the default difficulty is preset to "Rookie" (Game speed).
+- Verfiy the in-game settings are on default value at the start of game e.g. Life Counter = 3, Round Counter = 1, Points Counter = 0.
+- Verify the in-game settings are reset when game is restarted via restart button.
+- Verify the default difficulty is preset to "Rookie" (Game speed).
 
 Testing documents: <a href="https://github.com/DanielBradford/Touchdown/blob/c08a79c89c54b331c5b30f4d2b2509139f268fe9/jasmine-testing/test.js" target="_blank">Please find the Jasmine automated tests (test.js) here</a>
 
-Test Result: 
+Test Result:
 
 <img src="https://github.com/DanielBradford/Touchdown/blob/master/assets/images/screenshots/ScreenshotJasmine.png" alt="Jasmine Testing Screenshot">
 
 Although i am familiar with the Jasmine testing suite there were some limits in automating testing for this particular project due the user interaction involved.
-
-
 
 ## Development Issues / De-bugging:
 
@@ -369,11 +371,11 @@ This concept eliminated the issue and resolved the bug. Git commit record below:
 
     Selection/answer comparisson bug fixed. Full restart to the begining prevents issues with selection matching answer.
 
-
 ### **404 ERROR** (SHOWN IN CONSOLE)
 
     GET https://8000-d9f452af-0079-4875-b36c-1deee4de621c.ws-eu01.gitpod.io/favicon.ico 404
-This was **solved** by adding a link to the index.html file. This solution was found on <a href="https://stackoverflow.com/questions/31075893/im-getting-favicon-ico-error" target="_blank">HERE</a> on Stack Overflow. 
+
+This was **solved** by adding a link to the head of the index.html file. The favicon is now a Touchdown graphic (winning.webp). This solution was found on <a href="https://stackoverflow.com/questions/31075893/im-getting-favicon-ico-error" target="_blank">HERE</a> on Stack Overflow.
 
     commit a41d8a8bf199e7eb1fa87f401d44b4be7e73e02d (HEAD -> master, origin/master, origin/HEAD)
     Author: Daniel Bradford <danielbradford@hotmail.co.uk>
@@ -419,10 +421,22 @@ of modifying the logic.js file and the html elements in index.html. Git commit r
 
     Fixed difficulty selection bug and added a modal to the menu options
 
+### **VARIABLE SCOPE ISSUE**
+
+During testing, no major issues were presented with the code functionality or the variable scope originally used. 
+
+Despite this it was evident a better scope could be utilised when considering coding best practices.
+
+The 'branch' feature of Git was utilised in order to work through the issue, in a seperate environment, without altering the current logic.
+This was successful and all unneccessary Global variables were removed.
+
+
 ## **Future Issues to be fixed**
+
 Following testing there are issues that still could be improved:
-* **Validation of email address input in the "Contact Us" modal**: Although the user is reminded to include a valid email address (via a hover message), they are not currently prevented from submitting an invalid address. This can be improved.
-* **Responsive design bug with menu toggle function**: The nav menu can potentially disappear when moving between landscape and portrait on a mobile device depending on the previous toggle selection. The menu can be recovered by tapping the game title but this can be improved in future development.
+
+- **Validation of email address input in the "Contact Us" modal**: Although the user is reminded to include a valid email address (via a hover message), they are not currently prevented from submitting an invalid address. This can be improved.
+- **Responsive design bug with menu toggle function**: The nav menu can potentially disappear when moving between landscape and portrait on a mobile device depending on the previous toggle selection. The menu can be recovered by tapping the game title but this can be improved in future development.
 
 ## **Development Tools Testing**
 
